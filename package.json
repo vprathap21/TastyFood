@@ -4,6 +4,7 @@
   "description": "simple food ordering app",
   "main": "App.js",
   "scripts": {
+    "start":"parcel index.html",
     "test": "jest"
   },
   "author": "prathp",

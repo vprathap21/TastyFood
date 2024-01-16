@@ -1,0 +1,64 @@
+.header {
+    /* background-color: hsl(0, 0%, 90%); */
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  border: 1px solid black;
+  
+}
+.nav-container > ul > li {
+  font-size: 24px;
+  padding: 10px;
+  margin: 10px;
+}
+.logo {
+  width: 300px;
+}
+.navitems {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+.navitems > li:hover {
+    cursor: pointer;
+    color: blue;
+}
+.resimg {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+.res-card {
+  width: 200px;
+  height: 450px;
+  padding: 10px;
+  word-wrap: break-word;
+}
+.res-card > h4 {
+  color: rgba(2, 6, 12, 0.6);
+}
+
+.res-card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  /* padding: 50px; */
+  font-size: 40px;
+}
+.input {
+  width: 400px; /* Add this line to adjust the width */
+  height: 30px;
+}
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
