@@ -3,24 +3,24 @@
   margin: 50px;
   display: flex;
   justify-content: space-between;
-  padding-left: 100px;
+  padding-left: 50px;
   border: 1px solid black;
   
 }
 .nav-container > ul > li {
   font-size: 24px;
-  padding: 10px;
+  padding: 0 10px;
   margin: 10px;
 }
 .logo {
-  width: 300px;
+  width: 200px;
 }
 .navitems {
   display: flex;
   text-decoration: none;
   list-style: none;
   justify-content: space-between;
-  padding-right: 100px;
+  padding-right: 50px;
 }
 .navitems > li:hover {
     cursor: pointer;
@@ -46,12 +46,15 @@
   cursor: pointer;
 }
 .search {
-  display: flex;
+ 
   justify-content: center;
   align-items: center;
   margin: 20px;
   /* padding: 50px; */
   font-size: 40px;
+}
+.searchtext {
+  display: flex;
 }
 .input {
   width: 400px; /* Add this line to adjust the width */
@@ -60,5 +63,21 @@
 .res-container {
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+.shimmer {
+  margin: 20px;
+  width: 200px;
+  height: 450px;
+  background-color: #f0f0f0;
+  
+}
+.shimmer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+.login{
+  padding: 0 30px;
+  border-radius: 5px;
 }
