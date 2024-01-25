@@ -2,6 +2,7 @@ import Rescard from "./Rescard";
 import { RESOBJ } from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState([]);
@@ -13,15 +14,16 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.9415915&lng=79.8083133&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0085334&lng=80.0034695&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+
     setlistofRestaurant(
-      json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
     );
-    setfilleterdrestraunt(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
-   
+    setfilleterdrestraunt(
+      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+    );
   };
   if (listofRestaurant.length === 0) {
     return <Shimmer />;
@@ -30,14 +32,17 @@ const Body = () => {
     <div>
       <div className="search">
         <div className="searchtext">
-          <input type="text" value={serchtext} onChange={(e) => {
-            setserchtext(e.target.value);
-            let newlist = listofRestaurant.filter(
-              (Data) => Data.info.name.toLowerCase().includes(serchtext.toLowerCase())
-            );
-            setfilleterdrestraunt(newlist);
-          }
-          } />
+          <input
+            type="text"
+            value={serchtext}
+            onChange={(e) => {
+              setserchtext(e.target.value);
+              let newlist = listofRestaurant.filter((Data) =>
+                Data.info.name.toLowerCase().includes(serchtext.toLowerCase())
+              );
+              setfilleterdrestraunt(newlist);
+            }}
+          />
           <button>search</button>
         </div>
         <button
@@ -54,7 +59,11 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filleterdrestraunt.map((Data) => {
-          return <Rescard key={Data.info.id} resData={Data} />;
+          return (
+            <Link key={Data.info.id} to={"/restaurent/" + Data.info.id}>
+              <Rescard resData={Data} />
+            </Link>
+          );
         })}
       </div>
     </div>
