@@ -65,7 +65,7 @@
 .res-container {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 .shimmer {
   margin: 20px;
@@ -82,4 +82,8 @@
 .login{
   padding: 0 30px;
   border-radius: 5px;
+}
+.User {
+  padding: 10px;
+  border: 1px solid black;
 }

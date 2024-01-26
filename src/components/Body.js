@@ -3,28 +3,32 @@ import { RESOBJ } from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlinestatus from "../utils/useOnliestatus";
 
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState([]);
   const [filleterdrestraunt, setfilleterdrestraunt] = useState([]); //listofRestaurant.filter((Data) => Data.info.avgRating > 4.5)
   const [serchtext, setserchtext] = useState("");
+  const onlinestatus = useOnlinestatus();
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0085334&lng=80.0034695&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
 
     setlistofRestaurant(
-      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
     setfilleterdrestraunt(
-      json.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+  
+   if(!onlinestatus) return <h1>it seems like your in offline!!!</h1>
   if (listofRestaurant.length === 0) {
     return <Shimmer />;
   }
@@ -50,8 +54,8 @@ const Body = () => {
             let newlist = listofRestaurant.filter(
               (Data) => Data.info.avgRating > 4.5
             );
-            setlistofRestaurant(newlist);
-            console.log(listofRestaurant);
+            setfilleterdrestraunt(newlist);
+            console.log(newlist);
           }}
         >
           Top Rated Restaurant
