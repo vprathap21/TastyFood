@@ -1,30 +1,30 @@
 const Shimmer = () => {
   return (
-    <div className="shimmer-wrapper">
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
-      <div className="shimmer"></div>
+    <div className="flex flex-wrap">
+    
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
+      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
     </div>
   );
 };
