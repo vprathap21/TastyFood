@@ -11,6 +11,7 @@ import { Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
+import Collections from "./components/Collections";
 const Applayet = () => {
   return (
     <Provider store={appStore}>
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
       {
         path : "/cart",
         element: <Cart />
+      },
+      {
+        path: "/collection/:id",
+        element: <Collections/>   
       }
     ],
 

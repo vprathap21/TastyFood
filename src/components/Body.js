@@ -32,7 +32,7 @@ const Body = () => {
       ...listofRestaurants,
       ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
     ];
-    setminddata(json2.data.cards[0].card.card);
+    setminddata(json2.data.cards[0]);
     setlistofRestaurant(merge);
     setfilleterdrestraunt(merge);
   };
@@ -81,7 +81,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-wrap ">
+      <div className="flex flex-wrap justify-center ">
         {filleterdrestraunt.map((Data) => {
           return (
             
