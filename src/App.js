@@ -12,10 +12,11 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 import Collections from "./components/Collections";
+import Login from "./components/Login";
 const Applayet = () => {
   return (
     <Provider store={appStore}>
-      <div className="app">
+      <div className="app bg-gray-50 font-serif box-border">
         <Header />
         <Outlet />
       </div>
@@ -39,22 +40,31 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+
       {
         path: "/restaurent/:id",
         element: <RestaurentMenu />,
       },
       {
-        path : "/cart",
-        element: <Cart />
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/collection/:id",
-        element: <Collections/>   
-      }
+        element: <Collections />,
+      },
     ],
-
-    errorElement: <Error />,
+    
   },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "*",
+    element: <Error />,
+  },
+ 
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

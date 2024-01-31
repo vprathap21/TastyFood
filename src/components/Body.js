@@ -19,7 +19,7 @@ const Body = () => {
 
   const fetchData = async () => {
     const data1 = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0040626&lng=79.99372489999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING"
     );
     const json1 = await data1.json();
     const data2 = await fetch(
@@ -27,10 +27,10 @@ const Body = () => {
     );
     const json2 = await data2.json();
     let listofRestaurants =
-      json1.data.cards[2].card.card.gridElements.infoWithStyle.restaurants;
+      json1.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
     const merge = [
       ...listofRestaurants,
-      ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
+       ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
     ];
     setminddata(json2.data.cards[0]);
     setlistofRestaurant(merge);
@@ -46,8 +46,9 @@ const Body = () => {
     );
   }
   return (
-    <div className="px-12 m-12 ">
+    <div className="px-12 my-2 ">
       <Mind data = {minddata}/>
+     
       <div className="flex items-center justify-center p-4 m-4 ">
         <div className="search ">
           <input

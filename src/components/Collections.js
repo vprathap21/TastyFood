@@ -26,6 +26,9 @@ const Collections = () => {
   //const {title,description} = mindrestaruants[0]?.card?.card;
   return (
     <div className="px-12 m-12 ">
+      <img
+        className="w-11/12 h-60 rounded-lg"
+        src={mindrestaruants[0]?.card?.card?.imageUrl}></img>
       <div className="w-9/12 m-auto p-5">
         <h1 className="font-bold text-3xl py-2">{mindrestaruants[0]?.card?.card?.title}</h1>
         <h1 className="pb-4">{mindrestaruants[0]?.card?.card?.description}</h1>
