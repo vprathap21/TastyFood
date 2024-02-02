@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnliestatus";
-import { list } from "postcss";
+
 import Mind from "../utils/Mind";
 
 const Body = () => {
