@@ -24,13 +24,14 @@ const ItemList = ({ data }) => {
               <p className="text-left py-2">{item.card.info.description}</p>
             </div>
             <div className="w-3/12">
-              <div className="absolute">
-                <button className="p-2 bg-green-200 rounded-md" onClick={() => addHandler(item)}>Add +</button>
-              </div>
+             
               <img
                 className="rounded-lg "
                 src={CDN_LINK + item.card.info.imageId}
               ></img>
+               <div className="">
+                <button className="p-2 bg-green-200 rounded-md" onClick={() => addHandler(item)}>Add +</button>
+              </div>
             </div>
           </div>
         );

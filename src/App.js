@@ -13,12 +13,14 @@ import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 import Collections from "./components/Collections";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 const Applayet = () => {
   return (
     <Provider store={appStore}>
-      <div className="app bg-gray-50 font-serif box-border">
+      <div className="app flex flex-col h-screen bg-gray-50 font-serif box-border">
         <Header />
         <Outlet />
+        <Footer/>
       </div>
     </Provider>
   );

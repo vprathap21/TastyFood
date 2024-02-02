@@ -10,28 +10,28 @@ const Header = () => {
   const cartitems = useSelector((store) => store.cart.items);
   console.log(cartitems);
   return (
-    <div className="flex justify-between bg-white  shadow-lg" >
-      <div className="logo-container">
+    <div className="flex justify-between bg-white  shadow-lg">
+      <div className="pl-2">
         <Link to={"/"}>
-        <img className="pt-2 w-20" src={LOGO}></img>
+          <img className=" w-12 sm:w-24" src={LOGO}></img>
         </Link>
       </div>
       <div className="flex items-center">
-        <ul className="flex p-4 m-4">
-          <li className="px-4 font-bold hover:text-orange-500">
+        <ul className="flex sm:p-4 mx-4">
+          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500  hover:text-orange-500">
             <Link to="/">Home</Link>
           </li>
-          <li className="px-4 font-bold hover:text-orange-500">
+          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500">
             <Link to="/about">About</Link>
           </li>
-          <li className="px-4 font-bold hover:text-orange-500">
+          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="px-4 font-bold hover:text-orange-500">
+          <li className="sm:px-4 sm:text-xl font-bold text-gray-500 hover:text-orange-500">
             <Link to="/cart">
               <div class="relative pb-2 ">
                 <div class="t-0 absolute left-4 bottom-5">
-                  <p class="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">
+                  <p class="flex h-1 w-1 sm:h-2 sm:w-2 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">
                     {cartitems.length}
                   </p>
                 </div>
@@ -52,16 +52,16 @@ const Header = () => {
               </div>
             </Link>
           </li>
-          <li className="px-4 font-bold hover:text-orange-500">
+          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500">
             <Link to={"/login"}>
-            <button
-              className="login"
-              onClick={() => {
-                btn === "Login" ? setbtn("Logout") : setbtn("Login");
-              }}
-            >
-              {btn}
-            </button>
+              <button
+                className="login"
+                onClick={() => {
+                  btn === "Login" ? setbtn("Logout") : setbtn("Login");
+                }}
+              >
+                {btn}
+              </button>
             </Link>
           </li>
           {/* <li className="w-1">{onlinestatus ? "" : "🔴️"}</li> */}

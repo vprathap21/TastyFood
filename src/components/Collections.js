@@ -15,7 +15,8 @@ const Collections = () => {
     const json = await data.json();
     setmindrestaruants(json.data.cards);
   };
-  console.log(mindrestaruants[0]?.card?.card?.description);
+  console.log(mindrestaruants);
+  // console.log(mindrestaruants[0]?.card?.card?.description);
 
   const mindlist = mindrestaruants.filter(
     (c) =>
@@ -25,10 +26,10 @@ const Collections = () => {
   console.log(mindlist);
   //const {title,description} = mindrestaruants[0]?.card?.card;
   return (
-    <div className="px-12 m-12 ">
-      <img
+    <div className="  ">
+      {/* <img
         className="w-11/12 h-60 rounded-lg"
-        src={mindrestaruants[0]?.card?.card?.imageUrl}></img>
+        src={mindrestaruants[0]?.card?.card?.imageUrl}></img> */}
       <div className="w-9/12 m-auto p-5">
         <h1 className="font-bold text-3xl py-2">{mindrestaruants[0]?.card?.card?.title}</h1>
         <h1 className="pb-4">{mindrestaruants[0]?.card?.card?.description}</h1>
@@ -36,10 +37,10 @@ const Collections = () => {
         <hr></hr>
       </div>
       
-      <div className="flex flex-wrap w-9/12 m-auto ">
+      <div className=" sm:w-10/12 sm:m-auto  grid grid-cols-2 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 ">
         {mindlist.map((Data) => {
           return (
-            <Link key={Data.card.card.info.id}>
+            <Link key={Data.card.card.info.id} to={"/restaurent/" +Data.card.card.info.id}>
               <Rescard resData={Data.card.card} />
             </Link>
           );
