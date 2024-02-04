@@ -7,7 +7,7 @@ const RestaurentCatogory = ({ data, showitem, setshowindex }) => {
   };
   return (
     <div>
-      <div className="sm:w-6/12 bg-gray-50 mx-auto my-4 shadow-lg p-4 rounded-lg">
+      <div className="sm:w-6/12 bg-gray-50 mx-auto my-8 shadow-sm p-4 rounded-lg">
         <div
           onClick={onclickHandler}
           className="flex justify-between hover:cursor-pointer"

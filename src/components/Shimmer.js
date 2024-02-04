@@ -1,31 +1,11 @@
 const Shimmer = () => {
   return (
-    <div className="flex flex-wrap justify-center ">
-    
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-      <div className="p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"></div>
-    </div>
+    <div className='animate-pulse space-y-2 m-4'>
+    <div className='w-full bg-gray-200 rounded-md aspect-video min-h-[180px] object-cover block card-img relative'></div>
+
+    <h2 className='text-lg font-semibold mt-2 h-4 rounded-md bg-gray-200'></h2>
+    <div className='flex items-center gap-2 w-1/3 h-2 rounded-md bg-gray-200'></div>
+  </div>
   );
 };
 

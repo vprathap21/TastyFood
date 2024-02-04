@@ -4,16 +4,27 @@ import useRestaurentMenu from "../utils/useRestaurent";
 import RestaurentCatogory from "./RestaurentCatogory";
 import { useState } from "react";
 import { CDN_LINK } from "../utils/constant";
+import { StarIcon } from "@heroicons/react/24/solid";
 const RestaurentMenu = () => {
   const { id } = useParams();
   const MenuData = useRestaurentMenu(id);
-  console.log(MenuData)
+  console.log(MenuData);
   const [showindex, setshowindex] = useState(null);
   if (MenuData === null) {
     return <Shimmer />;
   }
-  const { name, cuisines, costForTwoMessage, areaName ,cloudinaryImageId} =
-    MenuData.cards[0]?.card?.card?.info;
+  console.log(MenuData);
+  const {
+    name,
+    cuisines,
+    costForTwoMessage,
+    areaName,
+    avgRating,
+    city,
+    totalRatingsString,
+    cloudinaryImageId,
+    sla,
+  } = MenuData.cards[0]?.card?.card?.info;
   const { itemCards } =
     MenuData.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
   const catagories =
@@ -24,14 +35,30 @@ const RestaurentMenu = () => {
     );
 
   return (
-    <div className="text-center">
-      <div>
-        <img className="w-30 h-20" src={CDN_LINK+ cloudinaryImageId}></img>
+    <div className="mx-4">
+      <div className="flex justify-between sm:w-6/12 m-auto border-b-2 mt-8 pb-2">
+        <div>
+          <h1 className="text-xl font-bold">{name}</h1>
+          <h1>{cuisines.join(", ")}</h1>
+          <h1>
+            {city + ", "} {areaName} - {sla.lastMileTravelString}
+          </h1>
+        </div>
+        <div className="border rounded-lg  p-2  h-20 items-center justify-center">
+          <div className="flex  mb-2 ">
+            {avgRating >= "4" ? (
+              <StarIcon className=" w-6 h-6 rounded-full p-1 text-white bg-green-500"></StarIcon>
+            ) : (
+              <StarIcon className=" w-6 h-6 rounded-full p-1 text-white bg-red-500"></StarIcon>
+            )}
+
+            <div className="font-bold ml-2 text-black text-xl">{avgRating}</div>
+          </div>
+
+          <h1 className="border-t-2">{totalRatingsString}</h1>
+        </div>
       </div>
-      <h1 className="font-bold my-6 text-2xl">{name}</h1>
-      <p className="font-bold text-lg  ">
-        {cuisines.join(",")} - {costForTwoMessage}
-      </p>
+
       {catagories.map((catogory, index) => {
         return (
           <RestaurentCatogory

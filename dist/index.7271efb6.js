@@ -2956,9 +2956,9 @@ var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _body = require("./components/Body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
-var _about = require("./components/About");
+var _about = require("./mainpages/About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
-var _contact = require("./components/Contact");
+var _contact = require("./mainpages/Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
@@ -2968,62 +2968,97 @@ var _reactRouterDom = require("react-router-dom");
 var _reactRedux = require("react-redux");
 var _appStore = require("./utils/appStore");
 var _appStoreDefault = parcelHelpers.interopDefault(_appStore);
-var _cart = require("./components/Cart");
+var _cart = require("./mainpages/Cart");
 var _cartDefault = parcelHelpers.interopDefault(_cart);
 var _collections = require("./components/Collections");
 var _collectionsDefault = parcelHelpers.interopDefault(_collections);
-var _login = require("./components/Login");
+var _login = require("./mainpages/Login");
 var _loginDefault = parcelHelpers.interopDefault(_login);
 var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
+var _useOnliestatus = require("./utils/useOnliestatus");
+var _useOnliestatusDefault = parcelHelpers.interopDefault(_useOnliestatus);
+var _home = require("./mainpages/Home");
+var _homeDefault = parcelHelpers.interopDefault(_home);
+var _s = $RefreshSig$();
 const Applayet = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
+    _s();
+    const onlinestatus = (0, _useOnliestatusDefault.default)();
+    return onlinestatus ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
         store: (0, _appStoreDefault.default),
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "app flex flex-col h-screen bg-gray-50 font-serif box-border",
+            className: "app flex flex-col min-h-screen bg-gray-50 font-serif box-border",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 21,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 22,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 23,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.js",
-            lineNumber: 20,
+            lineNumber: 23,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 19,
+        lineNumber: 22,
+        columnNumber: 5
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " justify-center items-center ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-4xl font-bold",
+                children: "Oops! Connection lost"
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 31,
+                columnNumber: 11
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "Looks like you're offline, please check your internet connection."
+            }, void 0, false, {
+                fileName: "src/App.js",
+                lineNumber: 32,
+                columnNumber: 11
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.js",
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
+_s(Applayet, "k4ejIDwrUU08bg7D49MIfu+JAIQ=", false, function() {
+    return [
+        (0, _useOnliestatusDefault.default)
+    ];
+});
 _c = Applayet;
 const router = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayet, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 31,
+            lineNumber: 41,
             columnNumber: 14
         }, undefined),
         children: [
             {
                 path: "/",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homeDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 35,
+                    lineNumber: 45,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3031,7 +3066,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 39,
+                    lineNumber: 49,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3039,7 +3074,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 43,
+                    lineNumber: 53,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3047,7 +3082,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurent/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurentMenuDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 48,
+                    lineNumber: 58,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3055,7 +3090,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 52,
+                    lineNumber: 62,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3063,7 +3098,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/collection/:id",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _collectionsDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 56,
+                    lineNumber: 66,
                     columnNumber: 18
                 }, undefined)
             }
@@ -3073,7 +3108,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         path: "/login",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loginDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 63,
+            lineNumber: 73,
             columnNumber: 14
         }, undefined)
     },
@@ -3081,7 +3116,7 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         path: "*",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 67,
+            lineNumber: 77,
             columnNumber: 14
         }, undefined)
     }
@@ -3091,7 +3126,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: router
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 73,
+    lineNumber: 83,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3102,7 +3137,7 @@ $RefreshReg$(_c, "Applayet");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/About":"9R1Eu","./components/Contact":"cgAOG","./components/Error":"kvula","./components/RestaurentMenu":"cNtZy","react-router-dom":"9xmpe","react-redux":"62sf7","./utils/appStore":"6A5Ux","./components/Cart":"h8J3U","./components/Collections":"8tKbk","./components/Login":"hsmcH","./components/Footer":"8pPOA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./mainpages/About":"bj4e5","./mainpages/Contact":"hKnmw","./components/Error":"kvula","./components/RestaurentMenu":"cNtZy","react-router-dom":"9xmpe","react-redux":"62sf7","./utils/appStore":"6A5Ux","./mainpages/Cart":"jSzqV","./components/Collections":"8tKbk","./mainpages/Login":"73XJg","./components/Footer":"8pPOA","./utils/useOnliestatus":"av4Pf","./mainpages/Home":"dzzXp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27301,197 +27336,438 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _constant = require("../utils/constant");
 var _react = require("react");
+var _solid = require("@heroicons/react/24/solid");
 var _reactRouterDom = require("react-router-dom");
-var _useOnliestatus = require("../utils/useOnliestatus");
-var _useOnliestatusDefault = parcelHelpers.interopDefault(_useOnliestatus);
 var _reactRedux = require("react-redux");
+var _appSlices = require("../features/app/appSlices");
 var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
     const [btn, setbtn] = (0, _react.useState)("Login");
-    const onlinestatus = (0, _useOnliestatusDefault.default)();
+    const { isMenuOpen } = (0, _reactRedux.useSelector)((store)=>store.app);
+    const dispatch = (0, _reactRedux.useDispatch)();
+    const handleToggleMenu = ()=>dispatch((0, _appSlices.toggleMenu)());
     const cartitems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
-    console.log(cartitems);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-between bg-white  shadow-lg",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "pl-2",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    to: "/",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: " w-12 sm:w-24",
-                        src: (0, _constant.LOGO)
+    const loginHandle = ()=>{
+        if (btn === "Login") setbtn("Logout");
+        else setbtn("Login");
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
+        className: "sticky w-full  bg-white z-20 px-4 border-b shadow-sm border-gray-200",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "container-max flex justify-between items-center",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex items-center gap-2 md:gap-4",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: " w-12 sm:w-24 hover:scale-105",
+                            src: (0, _constant.LOGO)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 33,
+                            columnNumber: 13
+                        }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 16,
+                        lineNumber: 32,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 15,
+                    lineNumber: 31,
                     columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex items-center",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    className: "flex sm:p-4 mx-4",
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    className: "text-zinc-700 ml-auto gap-2 md:gap-4 items-center hidden md:flex",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "px-2 sm:text-xl sm:px-4 font-bold text-gray-500  hover:text-orange-500",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/",
-                                children: "Home"
-                            }, void 0, false, {
+                                className: "p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.HomeIcon), {
+                                        className: "w-5 h-5 "
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 43,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    " ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "hidden md:block",
+                                        children: "Home"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 44,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 22,
+                                lineNumber: 39,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 21,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/about",
-                                children: "About"
-                            }, void 0, false, {
+                                className: "p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.BuildingOfficeIcon), {
+                                        className: "w-5 h-5"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 52,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    " ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "hidden md:block",
+                                        children: "About"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 53,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 25,
+                                lineNumber: 48,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 24,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/contact",
-                                children: "Contact"
-                            }, void 0, false, {
+                                className: "p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.PhoneIcon), {
+                                        className: "w-5 h-5 "
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 61,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    " ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "hidden md:block",
+                                        children: "Contact"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 62,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 28,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 27,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "sm:px-4 sm:text-xl font-bold text-gray-500 hover:text-orange-500",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                 to: "/cart",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    class: "relative pb-2 ",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                            class: "t-0 absolute left-4 bottom-5",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                                class: "flex h-1 w-1 sm:h-2 sm:w-2 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white",
-                                                children: cartitems.length
-                                            }, void 0, false, {
-                                                fileName: "src/components/Header.js",
-                                                lineNumber: 34,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/Header.js",
-                                            lineNumber: 33,
-                                            columnNumber: 17
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                            xmlns: "http://www.w3.org/2000/svg",
-                                            fill: "none",
-                                            viewBox: "0 0 24 24",
-                                            "stroke-width": "1.5",
-                                            stroke: "currentColor",
-                                            class: "file: h-6 w-6",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                "stroke-linecap": "round",
-                                                "stroke-linejoin": "round",
-                                                d: "M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                                            }, void 0, false, {
-                                                fileName: "src/components/Header.js",
-                                                lineNumber: 46,
-                                                columnNumber: 19
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/Header.js",
-                                            lineNumber: 38,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/Header.js",
-                                    lineNumber: 32,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
+                                className: "p-2 relative md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.ShoppingCartIcon), {
+                                        className: "w-5 h-5 "
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 70,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    " ",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "hidden md:block",
+                                        children: "Cart"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 71,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "absolute top-1 right-1 bg-orange-500 text-white flex justify-center items-center w-4 h-4 text-xs rounded-full",
+                                        children: cartitems.length
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 73,
+                                        columnNumber: 17
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 31,
+                                lineNumber: 66,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 30,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/login",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: "login",
-                                    onClick: ()=>{
-                                        btn === "Login" ? setbtn("Logout") : setbtn("Login");
-                                    },
-                                    children: btn
-                                }, void 0, false, {
-                                    fileName: "src/components/Header.js",
-                                    lineNumber: 57,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
+                                to: "",
+                                className: "p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                        className: "hidden md:block",
+                                        onClick: loginHandle,
+                                        children: btn
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 85,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    btn === "Logout" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.UserCircleIcon), {
+                                        className: "w-5 h-5"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 86,
+                                        columnNumber: 31
+                                    }, undefined) : ""
+                                ]
+                            }, void 0, true, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 56,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 55,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 20,
+                    lineNumber: 37,
+                    columnNumber: 9
+                }, undefined),
+                !isMenuOpen ? null : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "shadow-lg transition-all md:hidden  absolute top-full right-0 bg-white h-screen p-4 px-8",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                            className: "text-zinc-700 space-y-4",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/",
+                                        className: "p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold rounded-md flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.HomeIcon), {
+                                                className: "w-4 h-4 "
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 100,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            " ",
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                children: "Home"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 100,
+                                                columnNumber: 55
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 96,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 95,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/about",
+                                        className: "p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold rounded-md flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.BuildingOfficeIcon), {
+                                                className: "w-4 h-4 "
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 108,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            " ",
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                children: "About"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 108,
+                                                columnNumber: 65
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 104,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 103,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/contact",
+                                        className: "p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold  flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.PhoneIcon), {
+                                                className: "w-4 h-4 "
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 116,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            " ",
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                children: "Contact"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 116,
+                                                columnNumber: 56
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 112,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 111,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "/cart",
+                                        className: "p-2 relative md:px-4 text-gray-500 hover:text-orange-500 font-bold rounded-md flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.ShoppingCartIcon), {
+                                                className: "w-4 h-4 "
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 124,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            " ",
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                children: "Cart"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 124,
+                                                columnNumber: 63
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "absolute top-1 right-1 bg-orange-500 text-white flex justify-center items-center w-4 h-4 text-xs rounded-full",
+                                                children: cartitems.length
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 126,
+                                                columnNumber: 23
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 120,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 119,
+                                    columnNumber: 17
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                        to: "",
+                                        className: "p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold  flex items-center gap-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.UserCircleIcon), {
+                                                className: "w-5 h-5"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 137,
+                                                columnNumber: 21
+                                            }, undefined),
+                                            " ",
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                children: "Login"
+                                            }, void 0, false, {
+                                                fileName: "src/components/Header.js",
+                                                lineNumber: 137,
+                                                columnNumber: 60
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/Header.js",
+                                        lineNumber: 133,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 132,
+                                    columnNumber: 17
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 94,
+                            columnNumber: 15
+                        }, undefined)
+                    }, void 0, false)
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 92,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    className: "block md:hidden",
+                    onClick: handleToggleMenu,
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.Bars3Icon), {
+                        className: "w-6 h-6"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 146,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 145,
                     columnNumber: 9
                 }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Header.js",
+            lineNumber: 30,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 13,
+        lineNumber: 29,
         columnNumber: 5
     }, undefined);
 };
-_s(Header, "BHPWhIqSP70tnY2YccVwl7F+FSc=", false, function() {
+_s(Header, "VZhk8S7gf5CXwP/hOYxZLrz73tk=", false, function() {
     return [
-        (0, _useOnliestatusDefault.default),
+        (0, _reactRedux.useSelector),
+        (0, _reactRedux.useDispatch),
         (0, _reactRedux.useSelector)
     ];
 });
@@ -27505,10 +27781,11 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utils/constant":"6mqGZ","react":"21dqq","react-router-dom":"9xmpe","../utils/useOnliestatus":"av4Pf","react-redux":"62sf7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6mqGZ":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utils/constant":"6mqGZ","react":"21dqq","@heroicons/react/24/solid":"e3DHC","react-router-dom":"9xmpe","react-redux":"62sf7","../features/app/appSlices":"48GNY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6mqGZ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CDN_LINK", ()=>CDN_LINK);
+parcelHelpers.export(exports, "GET_RESTAURANTS_URL", ()=>GET_RESTAURANTS_URL);
 parcelHelpers.export(exports, "LOGO", ()=>LOGO);
 parcelHelpers.export(exports, "MENU_LINK", ()=>MENU_LINK);
 parcelHelpers.export(exports, "COLLECTION_LINK1", ()=>COLLECTION_LINK1);
@@ -27522,6 +27799,7 @@ parcelHelpers.export(exports, "Github_Link", ()=>Github_Link);
 parcelHelpers.export(exports, "Email_Link", ()=>Email_Link);
 parcelHelpers.export(exports, "options", ()=>options);
 const CDN_LINK = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+const GET_RESTAURANTS_URL = undefined;
 const LOGO = "https://upload.wikimedia.org/wikipedia/commons/c/cd/Logo_Red_Food.PNG";
 const MENU_LINK = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0085334&lng=80.0034695&restaurantId=";
 const COLLECTION_LINK1 = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&collection=";
@@ -27570,7 +27848,1065 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"9xmpe":[function(require,module,exports) {
+},{}],"e3DHC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AcademicCapIcon", ()=>(0, _academicCapIconJsDefault.default));
+parcelHelpers.export(exports, "AdjustmentsHorizontalIcon", ()=>(0, _adjustmentsHorizontalIconJsDefault.default));
+parcelHelpers.export(exports, "AdjustmentsVerticalIcon", ()=>(0, _adjustmentsVerticalIconJsDefault.default));
+parcelHelpers.export(exports, "ArchiveBoxArrowDownIcon", ()=>(0, _archiveBoxArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArchiveBoxXMarkIcon", ()=>(0, _archiveBoxXMarkIconJsDefault.default));
+parcelHelpers.export(exports, "ArchiveBoxIcon", ()=>(0, _archiveBoxIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownCircleIcon", ()=>(0, _arrowDownCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownLeftIcon", ()=>(0, _arrowDownLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownOnSquareStackIcon", ()=>(0, _arrowDownOnSquareStackIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownOnSquareIcon", ()=>(0, _arrowDownOnSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownRightIcon", ()=>(0, _arrowDownRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownTrayIcon", ()=>(0, _arrowDownTrayIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownIcon", ()=>(0, _arrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftCircleIcon", ()=>(0, _arrowLeftCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftEndOnRectangleIcon", ()=>(0, _arrowLeftEndOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftOnRectangleIcon", ()=>(0, _arrowLeftOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftStartOnRectangleIcon", ()=>(0, _arrowLeftStartOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftIcon", ()=>(0, _arrowLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongDownIcon", ()=>(0, _arrowLongDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongLeftIcon", ()=>(0, _arrowLongLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongRightIcon", ()=>(0, _arrowLongRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongUpIcon", ()=>(0, _arrowLongUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowPathRoundedSquareIcon", ()=>(0, _arrowPathRoundedSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowPathIcon", ()=>(0, _arrowPathIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightCircleIcon", ()=>(0, _arrowRightCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightEndOnRectangleIcon", ()=>(0, _arrowRightEndOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightOnRectangleIcon", ()=>(0, _arrowRightOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightStartOnRectangleIcon", ()=>(0, _arrowRightStartOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightIcon", ()=>(0, _arrowRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallDownIcon", ()=>(0, _arrowSmallDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallLeftIcon", ()=>(0, _arrowSmallLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallRightIcon", ()=>(0, _arrowSmallRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallUpIcon", ()=>(0, _arrowSmallUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowTopRightOnSquareIcon", ()=>(0, _arrowTopRightOnSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowTrendingDownIcon", ()=>(0, _arrowTrendingDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowTrendingUpIcon", ()=>(0, _arrowTrendingUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpCircleIcon", ()=>(0, _arrowUpCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpLeftIcon", ()=>(0, _arrowUpLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpOnSquareStackIcon", ()=>(0, _arrowUpOnSquareStackIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpOnSquareIcon", ()=>(0, _arrowUpOnSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpRightIcon", ()=>(0, _arrowUpRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpTrayIcon", ()=>(0, _arrowUpTrayIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpIcon", ()=>(0, _arrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnDownIcon", ()=>(0, _arrowUturnDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnLeftIcon", ()=>(0, _arrowUturnLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnRightIcon", ()=>(0, _arrowUturnRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnUpIcon", ()=>(0, _arrowUturnUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsPointingInIcon", ()=>(0, _arrowsPointingInIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsPointingOutIcon", ()=>(0, _arrowsPointingOutIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsRightLeftIcon", ()=>(0, _arrowsRightLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsUpDownIcon", ()=>(0, _arrowsUpDownIconJsDefault.default));
+parcelHelpers.export(exports, "AtSymbolIcon", ()=>(0, _atSymbolIconJsDefault.default));
+parcelHelpers.export(exports, "BackspaceIcon", ()=>(0, _backspaceIconJsDefault.default));
+parcelHelpers.export(exports, "BackwardIcon", ()=>(0, _backwardIconJsDefault.default));
+parcelHelpers.export(exports, "BanknotesIcon", ()=>(0, _banknotesIconJsDefault.default));
+parcelHelpers.export(exports, "Bars2Icon", ()=>(0, _bars2IconJsDefault.default));
+parcelHelpers.export(exports, "Bars3BottomLeftIcon", ()=>(0, _bars3BottomLeftIconJsDefault.default));
+parcelHelpers.export(exports, "Bars3BottomRightIcon", ()=>(0, _bars3BottomRightIconJsDefault.default));
+parcelHelpers.export(exports, "Bars3CenterLeftIcon", ()=>(0, _bars3CenterLeftIconJsDefault.default));
+parcelHelpers.export(exports, "Bars3Icon", ()=>(0, _bars3IconJsDefault.default));
+parcelHelpers.export(exports, "Bars4Icon", ()=>(0, _bars4IconJsDefault.default));
+parcelHelpers.export(exports, "BarsArrowDownIcon", ()=>(0, _barsArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "BarsArrowUpIcon", ()=>(0, _barsArrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "Battery0Icon", ()=>(0, _battery0IconJsDefault.default));
+parcelHelpers.export(exports, "Battery100Icon", ()=>(0, _battery100IconJsDefault.default));
+parcelHelpers.export(exports, "Battery50Icon", ()=>(0, _battery50IconJsDefault.default));
+parcelHelpers.export(exports, "BeakerIcon", ()=>(0, _beakerIconJsDefault.default));
+parcelHelpers.export(exports, "BellAlertIcon", ()=>(0, _bellAlertIconJsDefault.default));
+parcelHelpers.export(exports, "BellSlashIcon", ()=>(0, _bellSlashIconJsDefault.default));
+parcelHelpers.export(exports, "BellSnoozeIcon", ()=>(0, _bellSnoozeIconJsDefault.default));
+parcelHelpers.export(exports, "BellIcon", ()=>(0, _bellIconJsDefault.default));
+parcelHelpers.export(exports, "BoltSlashIcon", ()=>(0, _boltSlashIconJsDefault.default));
+parcelHelpers.export(exports, "BoltIcon", ()=>(0, _boltIconJsDefault.default));
+parcelHelpers.export(exports, "BookOpenIcon", ()=>(0, _bookOpenIconJsDefault.default));
+parcelHelpers.export(exports, "BookmarkSlashIcon", ()=>(0, _bookmarkSlashIconJsDefault.default));
+parcelHelpers.export(exports, "BookmarkSquareIcon", ()=>(0, _bookmarkSquareIconJsDefault.default));
+parcelHelpers.export(exports, "BookmarkIcon", ()=>(0, _bookmarkIconJsDefault.default));
+parcelHelpers.export(exports, "BriefcaseIcon", ()=>(0, _briefcaseIconJsDefault.default));
+parcelHelpers.export(exports, "BugAntIcon", ()=>(0, _bugAntIconJsDefault.default));
+parcelHelpers.export(exports, "BuildingLibraryIcon", ()=>(0, _buildingLibraryIconJsDefault.default));
+parcelHelpers.export(exports, "BuildingOffice2Icon", ()=>(0, _buildingOffice2IconJsDefault.default));
+parcelHelpers.export(exports, "BuildingOfficeIcon", ()=>(0, _buildingOfficeIconJsDefault.default));
+parcelHelpers.export(exports, "BuildingStorefrontIcon", ()=>(0, _buildingStorefrontIconJsDefault.default));
+parcelHelpers.export(exports, "CakeIcon", ()=>(0, _cakeIconJsDefault.default));
+parcelHelpers.export(exports, "CalculatorIcon", ()=>(0, _calculatorIconJsDefault.default));
+parcelHelpers.export(exports, "CalendarDaysIcon", ()=>(0, _calendarDaysIconJsDefault.default));
+parcelHelpers.export(exports, "CalendarIcon", ()=>(0, _calendarIconJsDefault.default));
+parcelHelpers.export(exports, "CameraIcon", ()=>(0, _cameraIconJsDefault.default));
+parcelHelpers.export(exports, "ChartBarSquareIcon", ()=>(0, _chartBarSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ChartBarIcon", ()=>(0, _chartBarIconJsDefault.default));
+parcelHelpers.export(exports, "ChartPieIcon", ()=>(0, _chartPieIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleBottomCenterTextIcon", ()=>(0, _chatBubbleBottomCenterTextIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleBottomCenterIcon", ()=>(0, _chatBubbleBottomCenterIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleLeftEllipsisIcon", ()=>(0, _chatBubbleLeftEllipsisIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleLeftRightIcon", ()=>(0, _chatBubbleLeftRightIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleLeftIcon", ()=>(0, _chatBubbleLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleOvalLeftEllipsisIcon", ()=>(0, _chatBubbleOvalLeftEllipsisIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleOvalLeftIcon", ()=>(0, _chatBubbleOvalLeftIconJsDefault.default));
+parcelHelpers.export(exports, "CheckBadgeIcon", ()=>(0, _checkBadgeIconJsDefault.default));
+parcelHelpers.export(exports, "CheckCircleIcon", ()=>(0, _checkCircleIconJsDefault.default));
+parcelHelpers.export(exports, "CheckIcon", ()=>(0, _checkIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleDownIcon", ()=>(0, _chevronDoubleDownIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleLeftIcon", ()=>(0, _chevronDoubleLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleRightIcon", ()=>(0, _chevronDoubleRightIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleUpIcon", ()=>(0, _chevronDoubleUpIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDownIcon", ()=>(0, _chevronDownIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronLeftIcon", ()=>(0, _chevronLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronRightIcon", ()=>(0, _chevronRightIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronUpDownIcon", ()=>(0, _chevronUpDownIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronUpIcon", ()=>(0, _chevronUpIconJsDefault.default));
+parcelHelpers.export(exports, "CircleStackIcon", ()=>(0, _circleStackIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardDocumentCheckIcon", ()=>(0, _clipboardDocumentCheckIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardDocumentListIcon", ()=>(0, _clipboardDocumentListIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardDocumentIcon", ()=>(0, _clipboardDocumentIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardIcon", ()=>(0, _clipboardIconJsDefault.default));
+parcelHelpers.export(exports, "ClockIcon", ()=>(0, _clockIconJsDefault.default));
+parcelHelpers.export(exports, "CloudArrowDownIcon", ()=>(0, _cloudArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "CloudArrowUpIcon", ()=>(0, _cloudArrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "CloudIcon", ()=>(0, _cloudIconJsDefault.default));
+parcelHelpers.export(exports, "CodeBracketSquareIcon", ()=>(0, _codeBracketSquareIconJsDefault.default));
+parcelHelpers.export(exports, "CodeBracketIcon", ()=>(0, _codeBracketIconJsDefault.default));
+parcelHelpers.export(exports, "Cog6ToothIcon", ()=>(0, _cog6ToothIconJsDefault.default));
+parcelHelpers.export(exports, "Cog8ToothIcon", ()=>(0, _cog8ToothIconJsDefault.default));
+parcelHelpers.export(exports, "CogIcon", ()=>(0, _cogIconJsDefault.default));
+parcelHelpers.export(exports, "CommandLineIcon", ()=>(0, _commandLineIconJsDefault.default));
+parcelHelpers.export(exports, "ComputerDesktopIcon", ()=>(0, _computerDesktopIconJsDefault.default));
+parcelHelpers.export(exports, "CpuChipIcon", ()=>(0, _cpuChipIconJsDefault.default));
+parcelHelpers.export(exports, "CreditCardIcon", ()=>(0, _creditCardIconJsDefault.default));
+parcelHelpers.export(exports, "CubeTransparentIcon", ()=>(0, _cubeTransparentIconJsDefault.default));
+parcelHelpers.export(exports, "CubeIcon", ()=>(0, _cubeIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyBangladeshiIcon", ()=>(0, _currencyBangladeshiIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyDollarIcon", ()=>(0, _currencyDollarIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyEuroIcon", ()=>(0, _currencyEuroIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyPoundIcon", ()=>(0, _currencyPoundIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyRupeeIcon", ()=>(0, _currencyRupeeIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyYenIcon", ()=>(0, _currencyYenIconJsDefault.default));
+parcelHelpers.export(exports, "CursorArrowRaysIcon", ()=>(0, _cursorArrowRaysIconJsDefault.default));
+parcelHelpers.export(exports, "CursorArrowRippleIcon", ()=>(0, _cursorArrowRippleIconJsDefault.default));
+parcelHelpers.export(exports, "DevicePhoneMobileIcon", ()=>(0, _devicePhoneMobileIconJsDefault.default));
+parcelHelpers.export(exports, "DeviceTabletIcon", ()=>(0, _deviceTabletIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentArrowDownIcon", ()=>(0, _documentArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentArrowUpIcon", ()=>(0, _documentArrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentChartBarIcon", ()=>(0, _documentChartBarIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentCheckIcon", ()=>(0, _documentCheckIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentDuplicateIcon", ()=>(0, _documentDuplicateIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentMagnifyingGlassIcon", ()=>(0, _documentMagnifyingGlassIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentMinusIcon", ()=>(0, _documentMinusIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentPlusIcon", ()=>(0, _documentPlusIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentTextIcon", ()=>(0, _documentTextIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentIcon", ()=>(0, _documentIconJsDefault.default));
+parcelHelpers.export(exports, "EllipsisHorizontalCircleIcon", ()=>(0, _ellipsisHorizontalCircleIconJsDefault.default));
+parcelHelpers.export(exports, "EllipsisHorizontalIcon", ()=>(0, _ellipsisHorizontalIconJsDefault.default));
+parcelHelpers.export(exports, "EllipsisVerticalIcon", ()=>(0, _ellipsisVerticalIconJsDefault.default));
+parcelHelpers.export(exports, "EnvelopeOpenIcon", ()=>(0, _envelopeOpenIconJsDefault.default));
+parcelHelpers.export(exports, "EnvelopeIcon", ()=>(0, _envelopeIconJsDefault.default));
+parcelHelpers.export(exports, "ExclamationCircleIcon", ()=>(0, _exclamationCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ExclamationTriangleIcon", ()=>(0, _exclamationTriangleIconJsDefault.default));
+parcelHelpers.export(exports, "EyeDropperIcon", ()=>(0, _eyeDropperIconJsDefault.default));
+parcelHelpers.export(exports, "EyeSlashIcon", ()=>(0, _eyeSlashIconJsDefault.default));
+parcelHelpers.export(exports, "EyeIcon", ()=>(0, _eyeIconJsDefault.default));
+parcelHelpers.export(exports, "FaceFrownIcon", ()=>(0, _faceFrownIconJsDefault.default));
+parcelHelpers.export(exports, "FaceSmileIcon", ()=>(0, _faceSmileIconJsDefault.default));
+parcelHelpers.export(exports, "FilmIcon", ()=>(0, _filmIconJsDefault.default));
+parcelHelpers.export(exports, "FingerPrintIcon", ()=>(0, _fingerPrintIconJsDefault.default));
+parcelHelpers.export(exports, "FireIcon", ()=>(0, _fireIconJsDefault.default));
+parcelHelpers.export(exports, "FlagIcon", ()=>(0, _flagIconJsDefault.default));
+parcelHelpers.export(exports, "FolderArrowDownIcon", ()=>(0, _folderArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "FolderMinusIcon", ()=>(0, _folderMinusIconJsDefault.default));
+parcelHelpers.export(exports, "FolderOpenIcon", ()=>(0, _folderOpenIconJsDefault.default));
+parcelHelpers.export(exports, "FolderPlusIcon", ()=>(0, _folderPlusIconJsDefault.default));
+parcelHelpers.export(exports, "FolderIcon", ()=>(0, _folderIconJsDefault.default));
+parcelHelpers.export(exports, "ForwardIcon", ()=>(0, _forwardIconJsDefault.default));
+parcelHelpers.export(exports, "FunnelIcon", ()=>(0, _funnelIconJsDefault.default));
+parcelHelpers.export(exports, "GifIcon", ()=>(0, _gifIconJsDefault.default));
+parcelHelpers.export(exports, "GiftTopIcon", ()=>(0, _giftTopIconJsDefault.default));
+parcelHelpers.export(exports, "GiftIcon", ()=>(0, _giftIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeAltIcon", ()=>(0, _globeAltIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeAmericasIcon", ()=>(0, _globeAmericasIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeAsiaAustraliaIcon", ()=>(0, _globeAsiaAustraliaIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeEuropeAfricaIcon", ()=>(0, _globeEuropeAfricaIconJsDefault.default));
+parcelHelpers.export(exports, "HandRaisedIcon", ()=>(0, _handRaisedIconJsDefault.default));
+parcelHelpers.export(exports, "HandThumbDownIcon", ()=>(0, _handThumbDownIconJsDefault.default));
+parcelHelpers.export(exports, "HandThumbUpIcon", ()=>(0, _handThumbUpIconJsDefault.default));
+parcelHelpers.export(exports, "HashtagIcon", ()=>(0, _hashtagIconJsDefault.default));
+parcelHelpers.export(exports, "HeartIcon", ()=>(0, _heartIconJsDefault.default));
+parcelHelpers.export(exports, "HomeModernIcon", ()=>(0, _homeModernIconJsDefault.default));
+parcelHelpers.export(exports, "HomeIcon", ()=>(0, _homeIconJsDefault.default));
+parcelHelpers.export(exports, "IdentificationIcon", ()=>(0, _identificationIconJsDefault.default));
+parcelHelpers.export(exports, "InboxArrowDownIcon", ()=>(0, _inboxArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "InboxStackIcon", ()=>(0, _inboxStackIconJsDefault.default));
+parcelHelpers.export(exports, "InboxIcon", ()=>(0, _inboxIconJsDefault.default));
+parcelHelpers.export(exports, "InformationCircleIcon", ()=>(0, _informationCircleIconJsDefault.default));
+parcelHelpers.export(exports, "KeyIcon", ()=>(0, _keyIconJsDefault.default));
+parcelHelpers.export(exports, "LanguageIcon", ()=>(0, _languageIconJsDefault.default));
+parcelHelpers.export(exports, "LifebuoyIcon", ()=>(0, _lifebuoyIconJsDefault.default));
+parcelHelpers.export(exports, "LightBulbIcon", ()=>(0, _lightBulbIconJsDefault.default));
+parcelHelpers.export(exports, "LinkIcon", ()=>(0, _linkIconJsDefault.default));
+parcelHelpers.export(exports, "ListBulletIcon", ()=>(0, _listBulletIconJsDefault.default));
+parcelHelpers.export(exports, "LockClosedIcon", ()=>(0, _lockClosedIconJsDefault.default));
+parcelHelpers.export(exports, "LockOpenIcon", ()=>(0, _lockOpenIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassCircleIcon", ()=>(0, _magnifyingGlassCircleIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassMinusIcon", ()=>(0, _magnifyingGlassMinusIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassPlusIcon", ()=>(0, _magnifyingGlassPlusIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassIcon", ()=>(0, _magnifyingGlassIconJsDefault.default));
+parcelHelpers.export(exports, "MapPinIcon", ()=>(0, _mapPinIconJsDefault.default));
+parcelHelpers.export(exports, "MapIcon", ()=>(0, _mapIconJsDefault.default));
+parcelHelpers.export(exports, "MegaphoneIcon", ()=>(0, _megaphoneIconJsDefault.default));
+parcelHelpers.export(exports, "MicrophoneIcon", ()=>(0, _microphoneIconJsDefault.default));
+parcelHelpers.export(exports, "MinusCircleIcon", ()=>(0, _minusCircleIconJsDefault.default));
+parcelHelpers.export(exports, "MinusSmallIcon", ()=>(0, _minusSmallIconJsDefault.default));
+parcelHelpers.export(exports, "MinusIcon", ()=>(0, _minusIconJsDefault.default));
+parcelHelpers.export(exports, "MoonIcon", ()=>(0, _moonIconJsDefault.default));
+parcelHelpers.export(exports, "MusicalNoteIcon", ()=>(0, _musicalNoteIconJsDefault.default));
+parcelHelpers.export(exports, "NewspaperIcon", ()=>(0, _newspaperIconJsDefault.default));
+parcelHelpers.export(exports, "NoSymbolIcon", ()=>(0, _noSymbolIconJsDefault.default));
+parcelHelpers.export(exports, "PaintBrushIcon", ()=>(0, _paintBrushIconJsDefault.default));
+parcelHelpers.export(exports, "PaperAirplaneIcon", ()=>(0, _paperAirplaneIconJsDefault.default));
+parcelHelpers.export(exports, "PaperClipIcon", ()=>(0, _paperClipIconJsDefault.default));
+parcelHelpers.export(exports, "PauseCircleIcon", ()=>(0, _pauseCircleIconJsDefault.default));
+parcelHelpers.export(exports, "PauseIcon", ()=>(0, _pauseIconJsDefault.default));
+parcelHelpers.export(exports, "PencilSquareIcon", ()=>(0, _pencilSquareIconJsDefault.default));
+parcelHelpers.export(exports, "PencilIcon", ()=>(0, _pencilIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneArrowDownLeftIcon", ()=>(0, _phoneArrowDownLeftIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneArrowUpRightIcon", ()=>(0, _phoneArrowUpRightIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneXMarkIcon", ()=>(0, _phoneXMarkIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneIcon", ()=>(0, _phoneIconJsDefault.default));
+parcelHelpers.export(exports, "PhotoIcon", ()=>(0, _photoIconJsDefault.default));
+parcelHelpers.export(exports, "PlayCircleIcon", ()=>(0, _playCircleIconJsDefault.default));
+parcelHelpers.export(exports, "PlayPauseIcon", ()=>(0, _playPauseIconJsDefault.default));
+parcelHelpers.export(exports, "PlayIcon", ()=>(0, _playIconJsDefault.default));
+parcelHelpers.export(exports, "PlusCircleIcon", ()=>(0, _plusCircleIconJsDefault.default));
+parcelHelpers.export(exports, "PlusSmallIcon", ()=>(0, _plusSmallIconJsDefault.default));
+parcelHelpers.export(exports, "PlusIcon", ()=>(0, _plusIconJsDefault.default));
+parcelHelpers.export(exports, "PowerIcon", ()=>(0, _powerIconJsDefault.default));
+parcelHelpers.export(exports, "PresentationChartBarIcon", ()=>(0, _presentationChartBarIconJsDefault.default));
+parcelHelpers.export(exports, "PresentationChartLineIcon", ()=>(0, _presentationChartLineIconJsDefault.default));
+parcelHelpers.export(exports, "PrinterIcon", ()=>(0, _printerIconJsDefault.default));
+parcelHelpers.export(exports, "PuzzlePieceIcon", ()=>(0, _puzzlePieceIconJsDefault.default));
+parcelHelpers.export(exports, "QrCodeIcon", ()=>(0, _qrCodeIconJsDefault.default));
+parcelHelpers.export(exports, "QuestionMarkCircleIcon", ()=>(0, _questionMarkCircleIconJsDefault.default));
+parcelHelpers.export(exports, "QueueListIcon", ()=>(0, _queueListIconJsDefault.default));
+parcelHelpers.export(exports, "RadioIcon", ()=>(0, _radioIconJsDefault.default));
+parcelHelpers.export(exports, "ReceiptPercentIcon", ()=>(0, _receiptPercentIconJsDefault.default));
+parcelHelpers.export(exports, "ReceiptRefundIcon", ()=>(0, _receiptRefundIconJsDefault.default));
+parcelHelpers.export(exports, "RectangleGroupIcon", ()=>(0, _rectangleGroupIconJsDefault.default));
+parcelHelpers.export(exports, "RectangleStackIcon", ()=>(0, _rectangleStackIconJsDefault.default));
+parcelHelpers.export(exports, "RocketLaunchIcon", ()=>(0, _rocketLaunchIconJsDefault.default));
+parcelHelpers.export(exports, "RssIcon", ()=>(0, _rssIconJsDefault.default));
+parcelHelpers.export(exports, "ScaleIcon", ()=>(0, _scaleIconJsDefault.default));
+parcelHelpers.export(exports, "ScissorsIcon", ()=>(0, _scissorsIconJsDefault.default));
+parcelHelpers.export(exports, "ServerStackIcon", ()=>(0, _serverStackIconJsDefault.default));
+parcelHelpers.export(exports, "ServerIcon", ()=>(0, _serverIconJsDefault.default));
+parcelHelpers.export(exports, "ShareIcon", ()=>(0, _shareIconJsDefault.default));
+parcelHelpers.export(exports, "ShieldCheckIcon", ()=>(0, _shieldCheckIconJsDefault.default));
+parcelHelpers.export(exports, "ShieldExclamationIcon", ()=>(0, _shieldExclamationIconJsDefault.default));
+parcelHelpers.export(exports, "ShoppingBagIcon", ()=>(0, _shoppingBagIconJsDefault.default));
+parcelHelpers.export(exports, "ShoppingCartIcon", ()=>(0, _shoppingCartIconJsDefault.default));
+parcelHelpers.export(exports, "SignalSlashIcon", ()=>(0, _signalSlashIconJsDefault.default));
+parcelHelpers.export(exports, "SignalIcon", ()=>(0, _signalIconJsDefault.default));
+parcelHelpers.export(exports, "SparklesIcon", ()=>(0, _sparklesIconJsDefault.default));
+parcelHelpers.export(exports, "SpeakerWaveIcon", ()=>(0, _speakerWaveIconJsDefault.default));
+parcelHelpers.export(exports, "SpeakerXMarkIcon", ()=>(0, _speakerXMarkIconJsDefault.default));
+parcelHelpers.export(exports, "Square2StackIcon", ()=>(0, _square2StackIconJsDefault.default));
+parcelHelpers.export(exports, "Square3Stack3DIcon", ()=>(0, _square3Stack3DIconJsDefault.default));
+parcelHelpers.export(exports, "Squares2X2Icon", ()=>(0, _squares2X2IconJsDefault.default));
+parcelHelpers.export(exports, "SquaresPlusIcon", ()=>(0, _squaresPlusIconJsDefault.default));
+parcelHelpers.export(exports, "StarIcon", ()=>(0, _starIconJsDefault.default));
+parcelHelpers.export(exports, "StopCircleIcon", ()=>(0, _stopCircleIconJsDefault.default));
+parcelHelpers.export(exports, "StopIcon", ()=>(0, _stopIconJsDefault.default));
+parcelHelpers.export(exports, "SunIcon", ()=>(0, _sunIconJsDefault.default));
+parcelHelpers.export(exports, "SwatchIcon", ()=>(0, _swatchIconJsDefault.default));
+parcelHelpers.export(exports, "TableCellsIcon", ()=>(0, _tableCellsIconJsDefault.default));
+parcelHelpers.export(exports, "TagIcon", ()=>(0, _tagIconJsDefault.default));
+parcelHelpers.export(exports, "TicketIcon", ()=>(0, _ticketIconJsDefault.default));
+parcelHelpers.export(exports, "TrashIcon", ()=>(0, _trashIconJsDefault.default));
+parcelHelpers.export(exports, "TrophyIcon", ()=>(0, _trophyIconJsDefault.default));
+parcelHelpers.export(exports, "TruckIcon", ()=>(0, _truckIconJsDefault.default));
+parcelHelpers.export(exports, "TvIcon", ()=>(0, _tvIconJsDefault.default));
+parcelHelpers.export(exports, "UserCircleIcon", ()=>(0, _userCircleIconJsDefault.default));
+parcelHelpers.export(exports, "UserGroupIcon", ()=>(0, _userGroupIconJsDefault.default));
+parcelHelpers.export(exports, "UserMinusIcon", ()=>(0, _userMinusIconJsDefault.default));
+parcelHelpers.export(exports, "UserPlusIcon", ()=>(0, _userPlusIconJsDefault.default));
+parcelHelpers.export(exports, "UserIcon", ()=>(0, _userIconJsDefault.default));
+parcelHelpers.export(exports, "UsersIcon", ()=>(0, _usersIconJsDefault.default));
+parcelHelpers.export(exports, "VariableIcon", ()=>(0, _variableIconJsDefault.default));
+parcelHelpers.export(exports, "VideoCameraSlashIcon", ()=>(0, _videoCameraSlashIconJsDefault.default));
+parcelHelpers.export(exports, "VideoCameraIcon", ()=>(0, _videoCameraIconJsDefault.default));
+parcelHelpers.export(exports, "ViewColumnsIcon", ()=>(0, _viewColumnsIconJsDefault.default));
+parcelHelpers.export(exports, "ViewfinderCircleIcon", ()=>(0, _viewfinderCircleIconJsDefault.default));
+parcelHelpers.export(exports, "WalletIcon", ()=>(0, _walletIconJsDefault.default));
+parcelHelpers.export(exports, "WifiIcon", ()=>(0, _wifiIconJsDefault.default));
+parcelHelpers.export(exports, "WindowIcon", ()=>(0, _windowIconJsDefault.default));
+parcelHelpers.export(exports, "WrenchScrewdriverIcon", ()=>(0, _wrenchScrewdriverIconJsDefault.default));
+parcelHelpers.export(exports, "WrenchIcon", ()=>(0, _wrenchIconJsDefault.default));
+parcelHelpers.export(exports, "XCircleIcon", ()=>(0, _xcircleIconJsDefault.default));
+parcelHelpers.export(exports, "XMarkIcon", ()=>(0, _xmarkIconJsDefault.default));
+var _academicCapIconJs = require("./AcademicCapIcon.js");
+var _academicCapIconJsDefault = parcelHelpers.interopDefault(_academicCapIconJs);
+var _adjustmentsHorizontalIconJs = require("./AdjustmentsHorizontalIcon.js");
+var _adjustmentsHorizontalIconJsDefault = parcelHelpers.interopDefault(_adjustmentsHorizontalIconJs);
+var _adjustmentsVerticalIconJs = require("./AdjustmentsVerticalIcon.js");
+var _adjustmentsVerticalIconJsDefault = parcelHelpers.interopDefault(_adjustmentsVerticalIconJs);
+var _archiveBoxArrowDownIconJs = require("./ArchiveBoxArrowDownIcon.js");
+var _archiveBoxArrowDownIconJsDefault = parcelHelpers.interopDefault(_archiveBoxArrowDownIconJs);
+var _archiveBoxXMarkIconJs = require("./ArchiveBoxXMarkIcon.js");
+var _archiveBoxXMarkIconJsDefault = parcelHelpers.interopDefault(_archiveBoxXMarkIconJs);
+var _archiveBoxIconJs = require("./ArchiveBoxIcon.js");
+var _archiveBoxIconJsDefault = parcelHelpers.interopDefault(_archiveBoxIconJs);
+var _arrowDownCircleIconJs = require("./ArrowDownCircleIcon.js");
+var _arrowDownCircleIconJsDefault = parcelHelpers.interopDefault(_arrowDownCircleIconJs);
+var _arrowDownLeftIconJs = require("./ArrowDownLeftIcon.js");
+var _arrowDownLeftIconJsDefault = parcelHelpers.interopDefault(_arrowDownLeftIconJs);
+var _arrowDownOnSquareStackIconJs = require("./ArrowDownOnSquareStackIcon.js");
+var _arrowDownOnSquareStackIconJsDefault = parcelHelpers.interopDefault(_arrowDownOnSquareStackIconJs);
+var _arrowDownOnSquareIconJs = require("./ArrowDownOnSquareIcon.js");
+var _arrowDownOnSquareIconJsDefault = parcelHelpers.interopDefault(_arrowDownOnSquareIconJs);
+var _arrowDownRightIconJs = require("./ArrowDownRightIcon.js");
+var _arrowDownRightIconJsDefault = parcelHelpers.interopDefault(_arrowDownRightIconJs);
+var _arrowDownTrayIconJs = require("./ArrowDownTrayIcon.js");
+var _arrowDownTrayIconJsDefault = parcelHelpers.interopDefault(_arrowDownTrayIconJs);
+var _arrowDownIconJs = require("./ArrowDownIcon.js");
+var _arrowDownIconJsDefault = parcelHelpers.interopDefault(_arrowDownIconJs);
+var _arrowLeftCircleIconJs = require("./ArrowLeftCircleIcon.js");
+var _arrowLeftCircleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftCircleIconJs);
+var _arrowLeftEndOnRectangleIconJs = require("./ArrowLeftEndOnRectangleIcon.js");
+var _arrowLeftEndOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftEndOnRectangleIconJs);
+var _arrowLeftOnRectangleIconJs = require("./ArrowLeftOnRectangleIcon.js");
+var _arrowLeftOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftOnRectangleIconJs);
+var _arrowLeftStartOnRectangleIconJs = require("./ArrowLeftStartOnRectangleIcon.js");
+var _arrowLeftStartOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftStartOnRectangleIconJs);
+var _arrowLeftIconJs = require("./ArrowLeftIcon.js");
+var _arrowLeftIconJsDefault = parcelHelpers.interopDefault(_arrowLeftIconJs);
+var _arrowLongDownIconJs = require("./ArrowLongDownIcon.js");
+var _arrowLongDownIconJsDefault = parcelHelpers.interopDefault(_arrowLongDownIconJs);
+var _arrowLongLeftIconJs = require("./ArrowLongLeftIcon.js");
+var _arrowLongLeftIconJsDefault = parcelHelpers.interopDefault(_arrowLongLeftIconJs);
+var _arrowLongRightIconJs = require("./ArrowLongRightIcon.js");
+var _arrowLongRightIconJsDefault = parcelHelpers.interopDefault(_arrowLongRightIconJs);
+var _arrowLongUpIconJs = require("./ArrowLongUpIcon.js");
+var _arrowLongUpIconJsDefault = parcelHelpers.interopDefault(_arrowLongUpIconJs);
+var _arrowPathRoundedSquareIconJs = require("./ArrowPathRoundedSquareIcon.js");
+var _arrowPathRoundedSquareIconJsDefault = parcelHelpers.interopDefault(_arrowPathRoundedSquareIconJs);
+var _arrowPathIconJs = require("./ArrowPathIcon.js");
+var _arrowPathIconJsDefault = parcelHelpers.interopDefault(_arrowPathIconJs);
+var _arrowRightCircleIconJs = require("./ArrowRightCircleIcon.js");
+var _arrowRightCircleIconJsDefault = parcelHelpers.interopDefault(_arrowRightCircleIconJs);
+var _arrowRightEndOnRectangleIconJs = require("./ArrowRightEndOnRectangleIcon.js");
+var _arrowRightEndOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowRightEndOnRectangleIconJs);
+var _arrowRightOnRectangleIconJs = require("./ArrowRightOnRectangleIcon.js");
+var _arrowRightOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowRightOnRectangleIconJs);
+var _arrowRightStartOnRectangleIconJs = require("./ArrowRightStartOnRectangleIcon.js");
+var _arrowRightStartOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowRightStartOnRectangleIconJs);
+var _arrowRightIconJs = require("./ArrowRightIcon.js");
+var _arrowRightIconJsDefault = parcelHelpers.interopDefault(_arrowRightIconJs);
+var _arrowSmallDownIconJs = require("./ArrowSmallDownIcon.js");
+var _arrowSmallDownIconJsDefault = parcelHelpers.interopDefault(_arrowSmallDownIconJs);
+var _arrowSmallLeftIconJs = require("./ArrowSmallLeftIcon.js");
+var _arrowSmallLeftIconJsDefault = parcelHelpers.interopDefault(_arrowSmallLeftIconJs);
+var _arrowSmallRightIconJs = require("./ArrowSmallRightIcon.js");
+var _arrowSmallRightIconJsDefault = parcelHelpers.interopDefault(_arrowSmallRightIconJs);
+var _arrowSmallUpIconJs = require("./ArrowSmallUpIcon.js");
+var _arrowSmallUpIconJsDefault = parcelHelpers.interopDefault(_arrowSmallUpIconJs);
+var _arrowTopRightOnSquareIconJs = require("./ArrowTopRightOnSquareIcon.js");
+var _arrowTopRightOnSquareIconJsDefault = parcelHelpers.interopDefault(_arrowTopRightOnSquareIconJs);
+var _arrowTrendingDownIconJs = require("./ArrowTrendingDownIcon.js");
+var _arrowTrendingDownIconJsDefault = parcelHelpers.interopDefault(_arrowTrendingDownIconJs);
+var _arrowTrendingUpIconJs = require("./ArrowTrendingUpIcon.js");
+var _arrowTrendingUpIconJsDefault = parcelHelpers.interopDefault(_arrowTrendingUpIconJs);
+var _arrowUpCircleIconJs = require("./ArrowUpCircleIcon.js");
+var _arrowUpCircleIconJsDefault = parcelHelpers.interopDefault(_arrowUpCircleIconJs);
+var _arrowUpLeftIconJs = require("./ArrowUpLeftIcon.js");
+var _arrowUpLeftIconJsDefault = parcelHelpers.interopDefault(_arrowUpLeftIconJs);
+var _arrowUpOnSquareStackIconJs = require("./ArrowUpOnSquareStackIcon.js");
+var _arrowUpOnSquareStackIconJsDefault = parcelHelpers.interopDefault(_arrowUpOnSquareStackIconJs);
+var _arrowUpOnSquareIconJs = require("./ArrowUpOnSquareIcon.js");
+var _arrowUpOnSquareIconJsDefault = parcelHelpers.interopDefault(_arrowUpOnSquareIconJs);
+var _arrowUpRightIconJs = require("./ArrowUpRightIcon.js");
+var _arrowUpRightIconJsDefault = parcelHelpers.interopDefault(_arrowUpRightIconJs);
+var _arrowUpTrayIconJs = require("./ArrowUpTrayIcon.js");
+var _arrowUpTrayIconJsDefault = parcelHelpers.interopDefault(_arrowUpTrayIconJs);
+var _arrowUpIconJs = require("./ArrowUpIcon.js");
+var _arrowUpIconJsDefault = parcelHelpers.interopDefault(_arrowUpIconJs);
+var _arrowUturnDownIconJs = require("./ArrowUturnDownIcon.js");
+var _arrowUturnDownIconJsDefault = parcelHelpers.interopDefault(_arrowUturnDownIconJs);
+var _arrowUturnLeftIconJs = require("./ArrowUturnLeftIcon.js");
+var _arrowUturnLeftIconJsDefault = parcelHelpers.interopDefault(_arrowUturnLeftIconJs);
+var _arrowUturnRightIconJs = require("./ArrowUturnRightIcon.js");
+var _arrowUturnRightIconJsDefault = parcelHelpers.interopDefault(_arrowUturnRightIconJs);
+var _arrowUturnUpIconJs = require("./ArrowUturnUpIcon.js");
+var _arrowUturnUpIconJsDefault = parcelHelpers.interopDefault(_arrowUturnUpIconJs);
+var _arrowsPointingInIconJs = require("./ArrowsPointingInIcon.js");
+var _arrowsPointingInIconJsDefault = parcelHelpers.interopDefault(_arrowsPointingInIconJs);
+var _arrowsPointingOutIconJs = require("./ArrowsPointingOutIcon.js");
+var _arrowsPointingOutIconJsDefault = parcelHelpers.interopDefault(_arrowsPointingOutIconJs);
+var _arrowsRightLeftIconJs = require("./ArrowsRightLeftIcon.js");
+var _arrowsRightLeftIconJsDefault = parcelHelpers.interopDefault(_arrowsRightLeftIconJs);
+var _arrowsUpDownIconJs = require("./ArrowsUpDownIcon.js");
+var _arrowsUpDownIconJsDefault = parcelHelpers.interopDefault(_arrowsUpDownIconJs);
+var _atSymbolIconJs = require("./AtSymbolIcon.js");
+var _atSymbolIconJsDefault = parcelHelpers.interopDefault(_atSymbolIconJs);
+var _backspaceIconJs = require("./BackspaceIcon.js");
+var _backspaceIconJsDefault = parcelHelpers.interopDefault(_backspaceIconJs);
+var _backwardIconJs = require("./BackwardIcon.js");
+var _backwardIconJsDefault = parcelHelpers.interopDefault(_backwardIconJs);
+var _banknotesIconJs = require("./BanknotesIcon.js");
+var _banknotesIconJsDefault = parcelHelpers.interopDefault(_banknotesIconJs);
+var _bars2IconJs = require("./Bars2Icon.js");
+var _bars2IconJsDefault = parcelHelpers.interopDefault(_bars2IconJs);
+var _bars3BottomLeftIconJs = require("./Bars3BottomLeftIcon.js");
+var _bars3BottomLeftIconJsDefault = parcelHelpers.interopDefault(_bars3BottomLeftIconJs);
+var _bars3BottomRightIconJs = require("./Bars3BottomRightIcon.js");
+var _bars3BottomRightIconJsDefault = parcelHelpers.interopDefault(_bars3BottomRightIconJs);
+var _bars3CenterLeftIconJs = require("./Bars3CenterLeftIcon.js");
+var _bars3CenterLeftIconJsDefault = parcelHelpers.interopDefault(_bars3CenterLeftIconJs);
+var _bars3IconJs = require("./Bars3Icon.js");
+var _bars3IconJsDefault = parcelHelpers.interopDefault(_bars3IconJs);
+var _bars4IconJs = require("./Bars4Icon.js");
+var _bars4IconJsDefault = parcelHelpers.interopDefault(_bars4IconJs);
+var _barsArrowDownIconJs = require("./BarsArrowDownIcon.js");
+var _barsArrowDownIconJsDefault = parcelHelpers.interopDefault(_barsArrowDownIconJs);
+var _barsArrowUpIconJs = require("./BarsArrowUpIcon.js");
+var _barsArrowUpIconJsDefault = parcelHelpers.interopDefault(_barsArrowUpIconJs);
+var _battery0IconJs = require("./Battery0Icon.js");
+var _battery0IconJsDefault = parcelHelpers.interopDefault(_battery0IconJs);
+var _battery100IconJs = require("./Battery100Icon.js");
+var _battery100IconJsDefault = parcelHelpers.interopDefault(_battery100IconJs);
+var _battery50IconJs = require("./Battery50Icon.js");
+var _battery50IconJsDefault = parcelHelpers.interopDefault(_battery50IconJs);
+var _beakerIconJs = require("./BeakerIcon.js");
+var _beakerIconJsDefault = parcelHelpers.interopDefault(_beakerIconJs);
+var _bellAlertIconJs = require("./BellAlertIcon.js");
+var _bellAlertIconJsDefault = parcelHelpers.interopDefault(_bellAlertIconJs);
+var _bellSlashIconJs = require("./BellSlashIcon.js");
+var _bellSlashIconJsDefault = parcelHelpers.interopDefault(_bellSlashIconJs);
+var _bellSnoozeIconJs = require("./BellSnoozeIcon.js");
+var _bellSnoozeIconJsDefault = parcelHelpers.interopDefault(_bellSnoozeIconJs);
+var _bellIconJs = require("./BellIcon.js");
+var _bellIconJsDefault = parcelHelpers.interopDefault(_bellIconJs);
+var _boltSlashIconJs = require("./BoltSlashIcon.js");
+var _boltSlashIconJsDefault = parcelHelpers.interopDefault(_boltSlashIconJs);
+var _boltIconJs = require("./BoltIcon.js");
+var _boltIconJsDefault = parcelHelpers.interopDefault(_boltIconJs);
+var _bookOpenIconJs = require("./BookOpenIcon.js");
+var _bookOpenIconJsDefault = parcelHelpers.interopDefault(_bookOpenIconJs);
+var _bookmarkSlashIconJs = require("./BookmarkSlashIcon.js");
+var _bookmarkSlashIconJsDefault = parcelHelpers.interopDefault(_bookmarkSlashIconJs);
+var _bookmarkSquareIconJs = require("./BookmarkSquareIcon.js");
+var _bookmarkSquareIconJsDefault = parcelHelpers.interopDefault(_bookmarkSquareIconJs);
+var _bookmarkIconJs = require("./BookmarkIcon.js");
+var _bookmarkIconJsDefault = parcelHelpers.interopDefault(_bookmarkIconJs);
+var _briefcaseIconJs = require("./BriefcaseIcon.js");
+var _briefcaseIconJsDefault = parcelHelpers.interopDefault(_briefcaseIconJs);
+var _bugAntIconJs = require("./BugAntIcon.js");
+var _bugAntIconJsDefault = parcelHelpers.interopDefault(_bugAntIconJs);
+var _buildingLibraryIconJs = require("./BuildingLibraryIcon.js");
+var _buildingLibraryIconJsDefault = parcelHelpers.interopDefault(_buildingLibraryIconJs);
+var _buildingOffice2IconJs = require("./BuildingOffice2Icon.js");
+var _buildingOffice2IconJsDefault = parcelHelpers.interopDefault(_buildingOffice2IconJs);
+var _buildingOfficeIconJs = require("./BuildingOfficeIcon.js");
+var _buildingOfficeIconJsDefault = parcelHelpers.interopDefault(_buildingOfficeIconJs);
+var _buildingStorefrontIconJs = require("./BuildingStorefrontIcon.js");
+var _buildingStorefrontIconJsDefault = parcelHelpers.interopDefault(_buildingStorefrontIconJs);
+var _cakeIconJs = require("./CakeIcon.js");
+var _cakeIconJsDefault = parcelHelpers.interopDefault(_cakeIconJs);
+var _calculatorIconJs = require("./CalculatorIcon.js");
+var _calculatorIconJsDefault = parcelHelpers.interopDefault(_calculatorIconJs);
+var _calendarDaysIconJs = require("./CalendarDaysIcon.js");
+var _calendarDaysIconJsDefault = parcelHelpers.interopDefault(_calendarDaysIconJs);
+var _calendarIconJs = require("./CalendarIcon.js");
+var _calendarIconJsDefault = parcelHelpers.interopDefault(_calendarIconJs);
+var _cameraIconJs = require("./CameraIcon.js");
+var _cameraIconJsDefault = parcelHelpers.interopDefault(_cameraIconJs);
+var _chartBarSquareIconJs = require("./ChartBarSquareIcon.js");
+var _chartBarSquareIconJsDefault = parcelHelpers.interopDefault(_chartBarSquareIconJs);
+var _chartBarIconJs = require("./ChartBarIcon.js");
+var _chartBarIconJsDefault = parcelHelpers.interopDefault(_chartBarIconJs);
+var _chartPieIconJs = require("./ChartPieIcon.js");
+var _chartPieIconJsDefault = parcelHelpers.interopDefault(_chartPieIconJs);
+var _chatBubbleBottomCenterTextIconJs = require("./ChatBubbleBottomCenterTextIcon.js");
+var _chatBubbleBottomCenterTextIconJsDefault = parcelHelpers.interopDefault(_chatBubbleBottomCenterTextIconJs);
+var _chatBubbleBottomCenterIconJs = require("./ChatBubbleBottomCenterIcon.js");
+var _chatBubbleBottomCenterIconJsDefault = parcelHelpers.interopDefault(_chatBubbleBottomCenterIconJs);
+var _chatBubbleLeftEllipsisIconJs = require("./ChatBubbleLeftEllipsisIcon.js");
+var _chatBubbleLeftEllipsisIconJsDefault = parcelHelpers.interopDefault(_chatBubbleLeftEllipsisIconJs);
+var _chatBubbleLeftRightIconJs = require("./ChatBubbleLeftRightIcon.js");
+var _chatBubbleLeftRightIconJsDefault = parcelHelpers.interopDefault(_chatBubbleLeftRightIconJs);
+var _chatBubbleLeftIconJs = require("./ChatBubbleLeftIcon.js");
+var _chatBubbleLeftIconJsDefault = parcelHelpers.interopDefault(_chatBubbleLeftIconJs);
+var _chatBubbleOvalLeftEllipsisIconJs = require("./ChatBubbleOvalLeftEllipsisIcon.js");
+var _chatBubbleOvalLeftEllipsisIconJsDefault = parcelHelpers.interopDefault(_chatBubbleOvalLeftEllipsisIconJs);
+var _chatBubbleOvalLeftIconJs = require("./ChatBubbleOvalLeftIcon.js");
+var _chatBubbleOvalLeftIconJsDefault = parcelHelpers.interopDefault(_chatBubbleOvalLeftIconJs);
+var _checkBadgeIconJs = require("./CheckBadgeIcon.js");
+var _checkBadgeIconJsDefault = parcelHelpers.interopDefault(_checkBadgeIconJs);
+var _checkCircleIconJs = require("./CheckCircleIcon.js");
+var _checkCircleIconJsDefault = parcelHelpers.interopDefault(_checkCircleIconJs);
+var _checkIconJs = require("./CheckIcon.js");
+var _checkIconJsDefault = parcelHelpers.interopDefault(_checkIconJs);
+var _chevronDoubleDownIconJs = require("./ChevronDoubleDownIcon.js");
+var _chevronDoubleDownIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleDownIconJs);
+var _chevronDoubleLeftIconJs = require("./ChevronDoubleLeftIcon.js");
+var _chevronDoubleLeftIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleLeftIconJs);
+var _chevronDoubleRightIconJs = require("./ChevronDoubleRightIcon.js");
+var _chevronDoubleRightIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleRightIconJs);
+var _chevronDoubleUpIconJs = require("./ChevronDoubleUpIcon.js");
+var _chevronDoubleUpIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleUpIconJs);
+var _chevronDownIconJs = require("./ChevronDownIcon.js");
+var _chevronDownIconJsDefault = parcelHelpers.interopDefault(_chevronDownIconJs);
+var _chevronLeftIconJs = require("./ChevronLeftIcon.js");
+var _chevronLeftIconJsDefault = parcelHelpers.interopDefault(_chevronLeftIconJs);
+var _chevronRightIconJs = require("./ChevronRightIcon.js");
+var _chevronRightIconJsDefault = parcelHelpers.interopDefault(_chevronRightIconJs);
+var _chevronUpDownIconJs = require("./ChevronUpDownIcon.js");
+var _chevronUpDownIconJsDefault = parcelHelpers.interopDefault(_chevronUpDownIconJs);
+var _chevronUpIconJs = require("./ChevronUpIcon.js");
+var _chevronUpIconJsDefault = parcelHelpers.interopDefault(_chevronUpIconJs);
+var _circleStackIconJs = require("./CircleStackIcon.js");
+var _circleStackIconJsDefault = parcelHelpers.interopDefault(_circleStackIconJs);
+var _clipboardDocumentCheckIconJs = require("./ClipboardDocumentCheckIcon.js");
+var _clipboardDocumentCheckIconJsDefault = parcelHelpers.interopDefault(_clipboardDocumentCheckIconJs);
+var _clipboardDocumentListIconJs = require("./ClipboardDocumentListIcon.js");
+var _clipboardDocumentListIconJsDefault = parcelHelpers.interopDefault(_clipboardDocumentListIconJs);
+var _clipboardDocumentIconJs = require("./ClipboardDocumentIcon.js");
+var _clipboardDocumentIconJsDefault = parcelHelpers.interopDefault(_clipboardDocumentIconJs);
+var _clipboardIconJs = require("./ClipboardIcon.js");
+var _clipboardIconJsDefault = parcelHelpers.interopDefault(_clipboardIconJs);
+var _clockIconJs = require("./ClockIcon.js");
+var _clockIconJsDefault = parcelHelpers.interopDefault(_clockIconJs);
+var _cloudArrowDownIconJs = require("./CloudArrowDownIcon.js");
+var _cloudArrowDownIconJsDefault = parcelHelpers.interopDefault(_cloudArrowDownIconJs);
+var _cloudArrowUpIconJs = require("./CloudArrowUpIcon.js");
+var _cloudArrowUpIconJsDefault = parcelHelpers.interopDefault(_cloudArrowUpIconJs);
+var _cloudIconJs = require("./CloudIcon.js");
+var _cloudIconJsDefault = parcelHelpers.interopDefault(_cloudIconJs);
+var _codeBracketSquareIconJs = require("./CodeBracketSquareIcon.js");
+var _codeBracketSquareIconJsDefault = parcelHelpers.interopDefault(_codeBracketSquareIconJs);
+var _codeBracketIconJs = require("./CodeBracketIcon.js");
+var _codeBracketIconJsDefault = parcelHelpers.interopDefault(_codeBracketIconJs);
+var _cog6ToothIconJs = require("./Cog6ToothIcon.js");
+var _cog6ToothIconJsDefault = parcelHelpers.interopDefault(_cog6ToothIconJs);
+var _cog8ToothIconJs = require("./Cog8ToothIcon.js");
+var _cog8ToothIconJsDefault = parcelHelpers.interopDefault(_cog8ToothIconJs);
+var _cogIconJs = require("./CogIcon.js");
+var _cogIconJsDefault = parcelHelpers.interopDefault(_cogIconJs);
+var _commandLineIconJs = require("./CommandLineIcon.js");
+var _commandLineIconJsDefault = parcelHelpers.interopDefault(_commandLineIconJs);
+var _computerDesktopIconJs = require("./ComputerDesktopIcon.js");
+var _computerDesktopIconJsDefault = parcelHelpers.interopDefault(_computerDesktopIconJs);
+var _cpuChipIconJs = require("./CpuChipIcon.js");
+var _cpuChipIconJsDefault = parcelHelpers.interopDefault(_cpuChipIconJs);
+var _creditCardIconJs = require("./CreditCardIcon.js");
+var _creditCardIconJsDefault = parcelHelpers.interopDefault(_creditCardIconJs);
+var _cubeTransparentIconJs = require("./CubeTransparentIcon.js");
+var _cubeTransparentIconJsDefault = parcelHelpers.interopDefault(_cubeTransparentIconJs);
+var _cubeIconJs = require("./CubeIcon.js");
+var _cubeIconJsDefault = parcelHelpers.interopDefault(_cubeIconJs);
+var _currencyBangladeshiIconJs = require("./CurrencyBangladeshiIcon.js");
+var _currencyBangladeshiIconJsDefault = parcelHelpers.interopDefault(_currencyBangladeshiIconJs);
+var _currencyDollarIconJs = require("./CurrencyDollarIcon.js");
+var _currencyDollarIconJsDefault = parcelHelpers.interopDefault(_currencyDollarIconJs);
+var _currencyEuroIconJs = require("./CurrencyEuroIcon.js");
+var _currencyEuroIconJsDefault = parcelHelpers.interopDefault(_currencyEuroIconJs);
+var _currencyPoundIconJs = require("./CurrencyPoundIcon.js");
+var _currencyPoundIconJsDefault = parcelHelpers.interopDefault(_currencyPoundIconJs);
+var _currencyRupeeIconJs = require("./CurrencyRupeeIcon.js");
+var _currencyRupeeIconJsDefault = parcelHelpers.interopDefault(_currencyRupeeIconJs);
+var _currencyYenIconJs = require("./CurrencyYenIcon.js");
+var _currencyYenIconJsDefault = parcelHelpers.interopDefault(_currencyYenIconJs);
+var _cursorArrowRaysIconJs = require("./CursorArrowRaysIcon.js");
+var _cursorArrowRaysIconJsDefault = parcelHelpers.interopDefault(_cursorArrowRaysIconJs);
+var _cursorArrowRippleIconJs = require("./CursorArrowRippleIcon.js");
+var _cursorArrowRippleIconJsDefault = parcelHelpers.interopDefault(_cursorArrowRippleIconJs);
+var _devicePhoneMobileIconJs = require("./DevicePhoneMobileIcon.js");
+var _devicePhoneMobileIconJsDefault = parcelHelpers.interopDefault(_devicePhoneMobileIconJs);
+var _deviceTabletIconJs = require("./DeviceTabletIcon.js");
+var _deviceTabletIconJsDefault = parcelHelpers.interopDefault(_deviceTabletIconJs);
+var _documentArrowDownIconJs = require("./DocumentArrowDownIcon.js");
+var _documentArrowDownIconJsDefault = parcelHelpers.interopDefault(_documentArrowDownIconJs);
+var _documentArrowUpIconJs = require("./DocumentArrowUpIcon.js");
+var _documentArrowUpIconJsDefault = parcelHelpers.interopDefault(_documentArrowUpIconJs);
+var _documentChartBarIconJs = require("./DocumentChartBarIcon.js");
+var _documentChartBarIconJsDefault = parcelHelpers.interopDefault(_documentChartBarIconJs);
+var _documentCheckIconJs = require("./DocumentCheckIcon.js");
+var _documentCheckIconJsDefault = parcelHelpers.interopDefault(_documentCheckIconJs);
+var _documentDuplicateIconJs = require("./DocumentDuplicateIcon.js");
+var _documentDuplicateIconJsDefault = parcelHelpers.interopDefault(_documentDuplicateIconJs);
+var _documentMagnifyingGlassIconJs = require("./DocumentMagnifyingGlassIcon.js");
+var _documentMagnifyingGlassIconJsDefault = parcelHelpers.interopDefault(_documentMagnifyingGlassIconJs);
+var _documentMinusIconJs = require("./DocumentMinusIcon.js");
+var _documentMinusIconJsDefault = parcelHelpers.interopDefault(_documentMinusIconJs);
+var _documentPlusIconJs = require("./DocumentPlusIcon.js");
+var _documentPlusIconJsDefault = parcelHelpers.interopDefault(_documentPlusIconJs);
+var _documentTextIconJs = require("./DocumentTextIcon.js");
+var _documentTextIconJsDefault = parcelHelpers.interopDefault(_documentTextIconJs);
+var _documentIconJs = require("./DocumentIcon.js");
+var _documentIconJsDefault = parcelHelpers.interopDefault(_documentIconJs);
+var _ellipsisHorizontalCircleIconJs = require("./EllipsisHorizontalCircleIcon.js");
+var _ellipsisHorizontalCircleIconJsDefault = parcelHelpers.interopDefault(_ellipsisHorizontalCircleIconJs);
+var _ellipsisHorizontalIconJs = require("./EllipsisHorizontalIcon.js");
+var _ellipsisHorizontalIconJsDefault = parcelHelpers.interopDefault(_ellipsisHorizontalIconJs);
+var _ellipsisVerticalIconJs = require("./EllipsisVerticalIcon.js");
+var _ellipsisVerticalIconJsDefault = parcelHelpers.interopDefault(_ellipsisVerticalIconJs);
+var _envelopeOpenIconJs = require("./EnvelopeOpenIcon.js");
+var _envelopeOpenIconJsDefault = parcelHelpers.interopDefault(_envelopeOpenIconJs);
+var _envelopeIconJs = require("./EnvelopeIcon.js");
+var _envelopeIconJsDefault = parcelHelpers.interopDefault(_envelopeIconJs);
+var _exclamationCircleIconJs = require("./ExclamationCircleIcon.js");
+var _exclamationCircleIconJsDefault = parcelHelpers.interopDefault(_exclamationCircleIconJs);
+var _exclamationTriangleIconJs = require("./ExclamationTriangleIcon.js");
+var _exclamationTriangleIconJsDefault = parcelHelpers.interopDefault(_exclamationTriangleIconJs);
+var _eyeDropperIconJs = require("./EyeDropperIcon.js");
+var _eyeDropperIconJsDefault = parcelHelpers.interopDefault(_eyeDropperIconJs);
+var _eyeSlashIconJs = require("./EyeSlashIcon.js");
+var _eyeSlashIconJsDefault = parcelHelpers.interopDefault(_eyeSlashIconJs);
+var _eyeIconJs = require("./EyeIcon.js");
+var _eyeIconJsDefault = parcelHelpers.interopDefault(_eyeIconJs);
+var _faceFrownIconJs = require("./FaceFrownIcon.js");
+var _faceFrownIconJsDefault = parcelHelpers.interopDefault(_faceFrownIconJs);
+var _faceSmileIconJs = require("./FaceSmileIcon.js");
+var _faceSmileIconJsDefault = parcelHelpers.interopDefault(_faceSmileIconJs);
+var _filmIconJs = require("./FilmIcon.js");
+var _filmIconJsDefault = parcelHelpers.interopDefault(_filmIconJs);
+var _fingerPrintIconJs = require("./FingerPrintIcon.js");
+var _fingerPrintIconJsDefault = parcelHelpers.interopDefault(_fingerPrintIconJs);
+var _fireIconJs = require("./FireIcon.js");
+var _fireIconJsDefault = parcelHelpers.interopDefault(_fireIconJs);
+var _flagIconJs = require("./FlagIcon.js");
+var _flagIconJsDefault = parcelHelpers.interopDefault(_flagIconJs);
+var _folderArrowDownIconJs = require("./FolderArrowDownIcon.js");
+var _folderArrowDownIconJsDefault = parcelHelpers.interopDefault(_folderArrowDownIconJs);
+var _folderMinusIconJs = require("./FolderMinusIcon.js");
+var _folderMinusIconJsDefault = parcelHelpers.interopDefault(_folderMinusIconJs);
+var _folderOpenIconJs = require("./FolderOpenIcon.js");
+var _folderOpenIconJsDefault = parcelHelpers.interopDefault(_folderOpenIconJs);
+var _folderPlusIconJs = require("./FolderPlusIcon.js");
+var _folderPlusIconJsDefault = parcelHelpers.interopDefault(_folderPlusIconJs);
+var _folderIconJs = require("./FolderIcon.js");
+var _folderIconJsDefault = parcelHelpers.interopDefault(_folderIconJs);
+var _forwardIconJs = require("./ForwardIcon.js");
+var _forwardIconJsDefault = parcelHelpers.interopDefault(_forwardIconJs);
+var _funnelIconJs = require("./FunnelIcon.js");
+var _funnelIconJsDefault = parcelHelpers.interopDefault(_funnelIconJs);
+var _gifIconJs = require("./GifIcon.js");
+var _gifIconJsDefault = parcelHelpers.interopDefault(_gifIconJs);
+var _giftTopIconJs = require("./GiftTopIcon.js");
+var _giftTopIconJsDefault = parcelHelpers.interopDefault(_giftTopIconJs);
+var _giftIconJs = require("./GiftIcon.js");
+var _giftIconJsDefault = parcelHelpers.interopDefault(_giftIconJs);
+var _globeAltIconJs = require("./GlobeAltIcon.js");
+var _globeAltIconJsDefault = parcelHelpers.interopDefault(_globeAltIconJs);
+var _globeAmericasIconJs = require("./GlobeAmericasIcon.js");
+var _globeAmericasIconJsDefault = parcelHelpers.interopDefault(_globeAmericasIconJs);
+var _globeAsiaAustraliaIconJs = require("./GlobeAsiaAustraliaIcon.js");
+var _globeAsiaAustraliaIconJsDefault = parcelHelpers.interopDefault(_globeAsiaAustraliaIconJs);
+var _globeEuropeAfricaIconJs = require("./GlobeEuropeAfricaIcon.js");
+var _globeEuropeAfricaIconJsDefault = parcelHelpers.interopDefault(_globeEuropeAfricaIconJs);
+var _handRaisedIconJs = require("./HandRaisedIcon.js");
+var _handRaisedIconJsDefault = parcelHelpers.interopDefault(_handRaisedIconJs);
+var _handThumbDownIconJs = require("./HandThumbDownIcon.js");
+var _handThumbDownIconJsDefault = parcelHelpers.interopDefault(_handThumbDownIconJs);
+var _handThumbUpIconJs = require("./HandThumbUpIcon.js");
+var _handThumbUpIconJsDefault = parcelHelpers.interopDefault(_handThumbUpIconJs);
+var _hashtagIconJs = require("./HashtagIcon.js");
+var _hashtagIconJsDefault = parcelHelpers.interopDefault(_hashtagIconJs);
+var _heartIconJs = require("./HeartIcon.js");
+var _heartIconJsDefault = parcelHelpers.interopDefault(_heartIconJs);
+var _homeModernIconJs = require("./HomeModernIcon.js");
+var _homeModernIconJsDefault = parcelHelpers.interopDefault(_homeModernIconJs);
+var _homeIconJs = require("./HomeIcon.js");
+var _homeIconJsDefault = parcelHelpers.interopDefault(_homeIconJs);
+var _identificationIconJs = require("./IdentificationIcon.js");
+var _identificationIconJsDefault = parcelHelpers.interopDefault(_identificationIconJs);
+var _inboxArrowDownIconJs = require("./InboxArrowDownIcon.js");
+var _inboxArrowDownIconJsDefault = parcelHelpers.interopDefault(_inboxArrowDownIconJs);
+var _inboxStackIconJs = require("./InboxStackIcon.js");
+var _inboxStackIconJsDefault = parcelHelpers.interopDefault(_inboxStackIconJs);
+var _inboxIconJs = require("./InboxIcon.js");
+var _inboxIconJsDefault = parcelHelpers.interopDefault(_inboxIconJs);
+var _informationCircleIconJs = require("./InformationCircleIcon.js");
+var _informationCircleIconJsDefault = parcelHelpers.interopDefault(_informationCircleIconJs);
+var _keyIconJs = require("./KeyIcon.js");
+var _keyIconJsDefault = parcelHelpers.interopDefault(_keyIconJs);
+var _languageIconJs = require("./LanguageIcon.js");
+var _languageIconJsDefault = parcelHelpers.interopDefault(_languageIconJs);
+var _lifebuoyIconJs = require("./LifebuoyIcon.js");
+var _lifebuoyIconJsDefault = parcelHelpers.interopDefault(_lifebuoyIconJs);
+var _lightBulbIconJs = require("./LightBulbIcon.js");
+var _lightBulbIconJsDefault = parcelHelpers.interopDefault(_lightBulbIconJs);
+var _linkIconJs = require("./LinkIcon.js");
+var _linkIconJsDefault = parcelHelpers.interopDefault(_linkIconJs);
+var _listBulletIconJs = require("./ListBulletIcon.js");
+var _listBulletIconJsDefault = parcelHelpers.interopDefault(_listBulletIconJs);
+var _lockClosedIconJs = require("./LockClosedIcon.js");
+var _lockClosedIconJsDefault = parcelHelpers.interopDefault(_lockClosedIconJs);
+var _lockOpenIconJs = require("./LockOpenIcon.js");
+var _lockOpenIconJsDefault = parcelHelpers.interopDefault(_lockOpenIconJs);
+var _magnifyingGlassCircleIconJs = require("./MagnifyingGlassCircleIcon.js");
+var _magnifyingGlassCircleIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassCircleIconJs);
+var _magnifyingGlassMinusIconJs = require("./MagnifyingGlassMinusIcon.js");
+var _magnifyingGlassMinusIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassMinusIconJs);
+var _magnifyingGlassPlusIconJs = require("./MagnifyingGlassPlusIcon.js");
+var _magnifyingGlassPlusIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassPlusIconJs);
+var _magnifyingGlassIconJs = require("./MagnifyingGlassIcon.js");
+var _magnifyingGlassIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassIconJs);
+var _mapPinIconJs = require("./MapPinIcon.js");
+var _mapPinIconJsDefault = parcelHelpers.interopDefault(_mapPinIconJs);
+var _mapIconJs = require("./MapIcon.js");
+var _mapIconJsDefault = parcelHelpers.interopDefault(_mapIconJs);
+var _megaphoneIconJs = require("./MegaphoneIcon.js");
+var _megaphoneIconJsDefault = parcelHelpers.interopDefault(_megaphoneIconJs);
+var _microphoneIconJs = require("./MicrophoneIcon.js");
+var _microphoneIconJsDefault = parcelHelpers.interopDefault(_microphoneIconJs);
+var _minusCircleIconJs = require("./MinusCircleIcon.js");
+var _minusCircleIconJsDefault = parcelHelpers.interopDefault(_minusCircleIconJs);
+var _minusSmallIconJs = require("./MinusSmallIcon.js");
+var _minusSmallIconJsDefault = parcelHelpers.interopDefault(_minusSmallIconJs);
+var _minusIconJs = require("./MinusIcon.js");
+var _minusIconJsDefault = parcelHelpers.interopDefault(_minusIconJs);
+var _moonIconJs = require("./MoonIcon.js");
+var _moonIconJsDefault = parcelHelpers.interopDefault(_moonIconJs);
+var _musicalNoteIconJs = require("./MusicalNoteIcon.js");
+var _musicalNoteIconJsDefault = parcelHelpers.interopDefault(_musicalNoteIconJs);
+var _newspaperIconJs = require("./NewspaperIcon.js");
+var _newspaperIconJsDefault = parcelHelpers.interopDefault(_newspaperIconJs);
+var _noSymbolIconJs = require("./NoSymbolIcon.js");
+var _noSymbolIconJsDefault = parcelHelpers.interopDefault(_noSymbolIconJs);
+var _paintBrushIconJs = require("./PaintBrushIcon.js");
+var _paintBrushIconJsDefault = parcelHelpers.interopDefault(_paintBrushIconJs);
+var _paperAirplaneIconJs = require("./PaperAirplaneIcon.js");
+var _paperAirplaneIconJsDefault = parcelHelpers.interopDefault(_paperAirplaneIconJs);
+var _paperClipIconJs = require("./PaperClipIcon.js");
+var _paperClipIconJsDefault = parcelHelpers.interopDefault(_paperClipIconJs);
+var _pauseCircleIconJs = require("./PauseCircleIcon.js");
+var _pauseCircleIconJsDefault = parcelHelpers.interopDefault(_pauseCircleIconJs);
+var _pauseIconJs = require("./PauseIcon.js");
+var _pauseIconJsDefault = parcelHelpers.interopDefault(_pauseIconJs);
+var _pencilSquareIconJs = require("./PencilSquareIcon.js");
+var _pencilSquareIconJsDefault = parcelHelpers.interopDefault(_pencilSquareIconJs);
+var _pencilIconJs = require("./PencilIcon.js");
+var _pencilIconJsDefault = parcelHelpers.interopDefault(_pencilIconJs);
+var _phoneArrowDownLeftIconJs = require("./PhoneArrowDownLeftIcon.js");
+var _phoneArrowDownLeftIconJsDefault = parcelHelpers.interopDefault(_phoneArrowDownLeftIconJs);
+var _phoneArrowUpRightIconJs = require("./PhoneArrowUpRightIcon.js");
+var _phoneArrowUpRightIconJsDefault = parcelHelpers.interopDefault(_phoneArrowUpRightIconJs);
+var _phoneXMarkIconJs = require("./PhoneXMarkIcon.js");
+var _phoneXMarkIconJsDefault = parcelHelpers.interopDefault(_phoneXMarkIconJs);
+var _phoneIconJs = require("./PhoneIcon.js");
+var _phoneIconJsDefault = parcelHelpers.interopDefault(_phoneIconJs);
+var _photoIconJs = require("./PhotoIcon.js");
+var _photoIconJsDefault = parcelHelpers.interopDefault(_photoIconJs);
+var _playCircleIconJs = require("./PlayCircleIcon.js");
+var _playCircleIconJsDefault = parcelHelpers.interopDefault(_playCircleIconJs);
+var _playPauseIconJs = require("./PlayPauseIcon.js");
+var _playPauseIconJsDefault = parcelHelpers.interopDefault(_playPauseIconJs);
+var _playIconJs = require("./PlayIcon.js");
+var _playIconJsDefault = parcelHelpers.interopDefault(_playIconJs);
+var _plusCircleIconJs = require("./PlusCircleIcon.js");
+var _plusCircleIconJsDefault = parcelHelpers.interopDefault(_plusCircleIconJs);
+var _plusSmallIconJs = require("./PlusSmallIcon.js");
+var _plusSmallIconJsDefault = parcelHelpers.interopDefault(_plusSmallIconJs);
+var _plusIconJs = require("./PlusIcon.js");
+var _plusIconJsDefault = parcelHelpers.interopDefault(_plusIconJs);
+var _powerIconJs = require("./PowerIcon.js");
+var _powerIconJsDefault = parcelHelpers.interopDefault(_powerIconJs);
+var _presentationChartBarIconJs = require("./PresentationChartBarIcon.js");
+var _presentationChartBarIconJsDefault = parcelHelpers.interopDefault(_presentationChartBarIconJs);
+var _presentationChartLineIconJs = require("./PresentationChartLineIcon.js");
+var _presentationChartLineIconJsDefault = parcelHelpers.interopDefault(_presentationChartLineIconJs);
+var _printerIconJs = require("./PrinterIcon.js");
+var _printerIconJsDefault = parcelHelpers.interopDefault(_printerIconJs);
+var _puzzlePieceIconJs = require("./PuzzlePieceIcon.js");
+var _puzzlePieceIconJsDefault = parcelHelpers.interopDefault(_puzzlePieceIconJs);
+var _qrCodeIconJs = require("./QrCodeIcon.js");
+var _qrCodeIconJsDefault = parcelHelpers.interopDefault(_qrCodeIconJs);
+var _questionMarkCircleIconJs = require("./QuestionMarkCircleIcon.js");
+var _questionMarkCircleIconJsDefault = parcelHelpers.interopDefault(_questionMarkCircleIconJs);
+var _queueListIconJs = require("./QueueListIcon.js");
+var _queueListIconJsDefault = parcelHelpers.interopDefault(_queueListIconJs);
+var _radioIconJs = require("./RadioIcon.js");
+var _radioIconJsDefault = parcelHelpers.interopDefault(_radioIconJs);
+var _receiptPercentIconJs = require("./ReceiptPercentIcon.js");
+var _receiptPercentIconJsDefault = parcelHelpers.interopDefault(_receiptPercentIconJs);
+var _receiptRefundIconJs = require("./ReceiptRefundIcon.js");
+var _receiptRefundIconJsDefault = parcelHelpers.interopDefault(_receiptRefundIconJs);
+var _rectangleGroupIconJs = require("./RectangleGroupIcon.js");
+var _rectangleGroupIconJsDefault = parcelHelpers.interopDefault(_rectangleGroupIconJs);
+var _rectangleStackIconJs = require("./RectangleStackIcon.js");
+var _rectangleStackIconJsDefault = parcelHelpers.interopDefault(_rectangleStackIconJs);
+var _rocketLaunchIconJs = require("./RocketLaunchIcon.js");
+var _rocketLaunchIconJsDefault = parcelHelpers.interopDefault(_rocketLaunchIconJs);
+var _rssIconJs = require("./RssIcon.js");
+var _rssIconJsDefault = parcelHelpers.interopDefault(_rssIconJs);
+var _scaleIconJs = require("./ScaleIcon.js");
+var _scaleIconJsDefault = parcelHelpers.interopDefault(_scaleIconJs);
+var _scissorsIconJs = require("./ScissorsIcon.js");
+var _scissorsIconJsDefault = parcelHelpers.interopDefault(_scissorsIconJs);
+var _serverStackIconJs = require("./ServerStackIcon.js");
+var _serverStackIconJsDefault = parcelHelpers.interopDefault(_serverStackIconJs);
+var _serverIconJs = require("./ServerIcon.js");
+var _serverIconJsDefault = parcelHelpers.interopDefault(_serverIconJs);
+var _shareIconJs = require("./ShareIcon.js");
+var _shareIconJsDefault = parcelHelpers.interopDefault(_shareIconJs);
+var _shieldCheckIconJs = require("./ShieldCheckIcon.js");
+var _shieldCheckIconJsDefault = parcelHelpers.interopDefault(_shieldCheckIconJs);
+var _shieldExclamationIconJs = require("./ShieldExclamationIcon.js");
+var _shieldExclamationIconJsDefault = parcelHelpers.interopDefault(_shieldExclamationIconJs);
+var _shoppingBagIconJs = require("./ShoppingBagIcon.js");
+var _shoppingBagIconJsDefault = parcelHelpers.interopDefault(_shoppingBagIconJs);
+var _shoppingCartIconJs = require("./ShoppingCartIcon.js");
+var _shoppingCartIconJsDefault = parcelHelpers.interopDefault(_shoppingCartIconJs);
+var _signalSlashIconJs = require("./SignalSlashIcon.js");
+var _signalSlashIconJsDefault = parcelHelpers.interopDefault(_signalSlashIconJs);
+var _signalIconJs = require("./SignalIcon.js");
+var _signalIconJsDefault = parcelHelpers.interopDefault(_signalIconJs);
+var _sparklesIconJs = require("./SparklesIcon.js");
+var _sparklesIconJsDefault = parcelHelpers.interopDefault(_sparklesIconJs);
+var _speakerWaveIconJs = require("./SpeakerWaveIcon.js");
+var _speakerWaveIconJsDefault = parcelHelpers.interopDefault(_speakerWaveIconJs);
+var _speakerXMarkIconJs = require("./SpeakerXMarkIcon.js");
+var _speakerXMarkIconJsDefault = parcelHelpers.interopDefault(_speakerXMarkIconJs);
+var _square2StackIconJs = require("./Square2StackIcon.js");
+var _square2StackIconJsDefault = parcelHelpers.interopDefault(_square2StackIconJs);
+var _square3Stack3DIconJs = require("./Square3Stack3DIcon.js");
+var _square3Stack3DIconJsDefault = parcelHelpers.interopDefault(_square3Stack3DIconJs);
+var _squares2X2IconJs = require("./Squares2X2Icon.js");
+var _squares2X2IconJsDefault = parcelHelpers.interopDefault(_squares2X2IconJs);
+var _squaresPlusIconJs = require("./SquaresPlusIcon.js");
+var _squaresPlusIconJsDefault = parcelHelpers.interopDefault(_squaresPlusIconJs);
+var _starIconJs = require("./StarIcon.js");
+var _starIconJsDefault = parcelHelpers.interopDefault(_starIconJs);
+var _stopCircleIconJs = require("./StopCircleIcon.js");
+var _stopCircleIconJsDefault = parcelHelpers.interopDefault(_stopCircleIconJs);
+var _stopIconJs = require("./StopIcon.js");
+var _stopIconJsDefault = parcelHelpers.interopDefault(_stopIconJs);
+var _sunIconJs = require("./SunIcon.js");
+var _sunIconJsDefault = parcelHelpers.interopDefault(_sunIconJs);
+var _swatchIconJs = require("./SwatchIcon.js");
+var _swatchIconJsDefault = parcelHelpers.interopDefault(_swatchIconJs);
+var _tableCellsIconJs = require("./TableCellsIcon.js");
+var _tableCellsIconJsDefault = parcelHelpers.interopDefault(_tableCellsIconJs);
+var _tagIconJs = require("./TagIcon.js");
+var _tagIconJsDefault = parcelHelpers.interopDefault(_tagIconJs);
+var _ticketIconJs = require("./TicketIcon.js");
+var _ticketIconJsDefault = parcelHelpers.interopDefault(_ticketIconJs);
+var _trashIconJs = require("./TrashIcon.js");
+var _trashIconJsDefault = parcelHelpers.interopDefault(_trashIconJs);
+var _trophyIconJs = require("./TrophyIcon.js");
+var _trophyIconJsDefault = parcelHelpers.interopDefault(_trophyIconJs);
+var _truckIconJs = require("./TruckIcon.js");
+var _truckIconJsDefault = parcelHelpers.interopDefault(_truckIconJs);
+var _tvIconJs = require("./TvIcon.js");
+var _tvIconJsDefault = parcelHelpers.interopDefault(_tvIconJs);
+var _userCircleIconJs = require("./UserCircleIcon.js");
+var _userCircleIconJsDefault = parcelHelpers.interopDefault(_userCircleIconJs);
+var _userGroupIconJs = require("./UserGroupIcon.js");
+var _userGroupIconJsDefault = parcelHelpers.interopDefault(_userGroupIconJs);
+var _userMinusIconJs = require("./UserMinusIcon.js");
+var _userMinusIconJsDefault = parcelHelpers.interopDefault(_userMinusIconJs);
+var _userPlusIconJs = require("./UserPlusIcon.js");
+var _userPlusIconJsDefault = parcelHelpers.interopDefault(_userPlusIconJs);
+var _userIconJs = require("./UserIcon.js");
+var _userIconJsDefault = parcelHelpers.interopDefault(_userIconJs);
+var _usersIconJs = require("./UsersIcon.js");
+var _usersIconJsDefault = parcelHelpers.interopDefault(_usersIconJs);
+var _variableIconJs = require("./VariableIcon.js");
+var _variableIconJsDefault = parcelHelpers.interopDefault(_variableIconJs);
+var _videoCameraSlashIconJs = require("./VideoCameraSlashIcon.js");
+var _videoCameraSlashIconJsDefault = parcelHelpers.interopDefault(_videoCameraSlashIconJs);
+var _videoCameraIconJs = require("./VideoCameraIcon.js");
+var _videoCameraIconJsDefault = parcelHelpers.interopDefault(_videoCameraIconJs);
+var _viewColumnsIconJs = require("./ViewColumnsIcon.js");
+var _viewColumnsIconJsDefault = parcelHelpers.interopDefault(_viewColumnsIconJs);
+var _viewfinderCircleIconJs = require("./ViewfinderCircleIcon.js");
+var _viewfinderCircleIconJsDefault = parcelHelpers.interopDefault(_viewfinderCircleIconJs);
+var _walletIconJs = require("./WalletIcon.js");
+var _walletIconJsDefault = parcelHelpers.interopDefault(_walletIconJs);
+var _wifiIconJs = require("./WifiIcon.js");
+var _wifiIconJsDefault = parcelHelpers.interopDefault(_wifiIconJs);
+var _windowIconJs = require("./WindowIcon.js");
+var _windowIconJsDefault = parcelHelpers.interopDefault(_windowIconJs);
+var _wrenchScrewdriverIconJs = require("./WrenchScrewdriverIcon.js");
+var _wrenchScrewdriverIconJsDefault = parcelHelpers.interopDefault(_wrenchScrewdriverIconJs);
+var _wrenchIconJs = require("./WrenchIcon.js");
+var _wrenchIconJsDefault = parcelHelpers.interopDefault(_wrenchIconJs);
+var _xcircleIconJs = require("./XCircleIcon.js");
+var _xcircleIconJsDefault = parcelHelpers.interopDefault(_xcircleIconJs);
+var _xmarkIconJs = require("./XMarkIcon.js");
+var _xmarkIconJsDefault = parcelHelpers.interopDefault(_xmarkIconJs);
+
+},{"./AcademicCapIcon.js":false,"./AdjustmentsHorizontalIcon.js":false,"./AdjustmentsVerticalIcon.js":false,"./ArchiveBoxArrowDownIcon.js":false,"./ArchiveBoxXMarkIcon.js":false,"./ArchiveBoxIcon.js":false,"./ArrowDownCircleIcon.js":false,"./ArrowDownLeftIcon.js":false,"./ArrowDownOnSquareStackIcon.js":false,"./ArrowDownOnSquareIcon.js":false,"./ArrowDownRightIcon.js":false,"./ArrowDownTrayIcon.js":false,"./ArrowDownIcon.js":false,"./ArrowLeftCircleIcon.js":false,"./ArrowLeftEndOnRectangleIcon.js":false,"./ArrowLeftOnRectangleIcon.js":false,"./ArrowLeftStartOnRectangleIcon.js":false,"./ArrowLeftIcon.js":false,"./ArrowLongDownIcon.js":false,"./ArrowLongLeftIcon.js":false,"./ArrowLongRightIcon.js":false,"./ArrowLongUpIcon.js":false,"./ArrowPathRoundedSquareIcon.js":false,"./ArrowPathIcon.js":false,"./ArrowRightCircleIcon.js":false,"./ArrowRightEndOnRectangleIcon.js":false,"./ArrowRightOnRectangleIcon.js":false,"./ArrowRightStartOnRectangleIcon.js":false,"./ArrowRightIcon.js":false,"./ArrowSmallDownIcon.js":false,"./ArrowSmallLeftIcon.js":false,"./ArrowSmallRightIcon.js":false,"./ArrowSmallUpIcon.js":false,"./ArrowTopRightOnSquareIcon.js":false,"./ArrowTrendingDownIcon.js":false,"./ArrowTrendingUpIcon.js":false,"./ArrowUpCircleIcon.js":false,"./ArrowUpLeftIcon.js":false,"./ArrowUpOnSquareStackIcon.js":false,"./ArrowUpOnSquareIcon.js":false,"./ArrowUpRightIcon.js":false,"./ArrowUpTrayIcon.js":false,"./ArrowUpIcon.js":false,"./ArrowUturnDownIcon.js":false,"./ArrowUturnLeftIcon.js":false,"./ArrowUturnRightIcon.js":false,"./ArrowUturnUpIcon.js":false,"./ArrowsPointingInIcon.js":false,"./ArrowsPointingOutIcon.js":false,"./ArrowsRightLeftIcon.js":false,"./ArrowsUpDownIcon.js":false,"./AtSymbolIcon.js":false,"./BackspaceIcon.js":false,"./BackwardIcon.js":false,"./BanknotesIcon.js":false,"./Bars2Icon.js":false,"./Bars3BottomLeftIcon.js":false,"./Bars3BottomRightIcon.js":false,"./Bars3CenterLeftIcon.js":false,"./Bars3Icon.js":"6eu7m","./Bars4Icon.js":false,"./BarsArrowDownIcon.js":false,"./BarsArrowUpIcon.js":false,"./Battery0Icon.js":false,"./Battery100Icon.js":false,"./Battery50Icon.js":false,"./BeakerIcon.js":false,"./BellAlertIcon.js":false,"./BellSlashIcon.js":false,"./BellSnoozeIcon.js":false,"./BellIcon.js":false,"./BoltSlashIcon.js":false,"./BoltIcon.js":false,"./BookOpenIcon.js":false,"./BookmarkSlashIcon.js":false,"./BookmarkSquareIcon.js":false,"./BookmarkIcon.js":false,"./BriefcaseIcon.js":false,"./BugAntIcon.js":false,"./BuildingLibraryIcon.js":false,"./BuildingOffice2Icon.js":false,"./BuildingOfficeIcon.js":"bP57p","./BuildingStorefrontIcon.js":false,"./CakeIcon.js":false,"./CalculatorIcon.js":false,"./CalendarDaysIcon.js":false,"./CalendarIcon.js":false,"./CameraIcon.js":false,"./ChartBarSquareIcon.js":false,"./ChartBarIcon.js":false,"./ChartPieIcon.js":false,"./ChatBubbleBottomCenterTextIcon.js":false,"./ChatBubbleBottomCenterIcon.js":false,"./ChatBubbleLeftEllipsisIcon.js":false,"./ChatBubbleLeftRightIcon.js":false,"./ChatBubbleLeftIcon.js":false,"./ChatBubbleOvalLeftEllipsisIcon.js":false,"./ChatBubbleOvalLeftIcon.js":false,"./CheckBadgeIcon.js":false,"./CheckCircleIcon.js":false,"./CheckIcon.js":false,"./ChevronDoubleDownIcon.js":false,"./ChevronDoubleLeftIcon.js":false,"./ChevronDoubleRightIcon.js":false,"./ChevronDoubleUpIcon.js":false,"./ChevronDownIcon.js":false,"./ChevronLeftIcon.js":false,"./ChevronRightIcon.js":false,"./ChevronUpDownIcon.js":false,"./ChevronUpIcon.js":false,"./CircleStackIcon.js":false,"./ClipboardDocumentCheckIcon.js":false,"./ClipboardDocumentListIcon.js":false,"./ClipboardDocumentIcon.js":false,"./ClipboardIcon.js":false,"./ClockIcon.js":false,"./CloudArrowDownIcon.js":false,"./CloudArrowUpIcon.js":false,"./CloudIcon.js":false,"./CodeBracketSquareIcon.js":false,"./CodeBracketIcon.js":false,"./Cog6ToothIcon.js":false,"./Cog8ToothIcon.js":false,"./CogIcon.js":false,"./CommandLineIcon.js":false,"./ComputerDesktopIcon.js":false,"./CpuChipIcon.js":false,"./CreditCardIcon.js":false,"./CubeTransparentIcon.js":false,"./CubeIcon.js":false,"./CurrencyBangladeshiIcon.js":false,"./CurrencyDollarIcon.js":false,"./CurrencyEuroIcon.js":false,"./CurrencyPoundIcon.js":false,"./CurrencyRupeeIcon.js":false,"./CurrencyYenIcon.js":false,"./CursorArrowRaysIcon.js":false,"./CursorArrowRippleIcon.js":false,"./DevicePhoneMobileIcon.js":false,"./DeviceTabletIcon.js":false,"./DocumentArrowDownIcon.js":false,"./DocumentArrowUpIcon.js":false,"./DocumentChartBarIcon.js":false,"./DocumentCheckIcon.js":false,"./DocumentDuplicateIcon.js":false,"./DocumentMagnifyingGlassIcon.js":false,"./DocumentMinusIcon.js":false,"./DocumentPlusIcon.js":false,"./DocumentTextIcon.js":false,"./DocumentIcon.js":false,"./EllipsisHorizontalCircleIcon.js":false,"./EllipsisHorizontalIcon.js":false,"./EllipsisVerticalIcon.js":false,"./EnvelopeOpenIcon.js":false,"./EnvelopeIcon.js":false,"./ExclamationCircleIcon.js":false,"./ExclamationTriangleIcon.js":false,"./EyeDropperIcon.js":false,"./EyeSlashIcon.js":false,"./EyeIcon.js":false,"./FaceFrownIcon.js":false,"./FaceSmileIcon.js":false,"./FilmIcon.js":false,"./FingerPrintIcon.js":false,"./FireIcon.js":false,"./FlagIcon.js":false,"./FolderArrowDownIcon.js":false,"./FolderMinusIcon.js":false,"./FolderOpenIcon.js":false,"./FolderPlusIcon.js":false,"./FolderIcon.js":false,"./ForwardIcon.js":false,"./FunnelIcon.js":false,"./GifIcon.js":false,"./GiftTopIcon.js":false,"./GiftIcon.js":false,"./GlobeAltIcon.js":false,"./GlobeAmericasIcon.js":false,"./GlobeAsiaAustraliaIcon.js":false,"./GlobeEuropeAfricaIcon.js":false,"./HandRaisedIcon.js":false,"./HandThumbDownIcon.js":false,"./HandThumbUpIcon.js":false,"./HashtagIcon.js":false,"./HeartIcon.js":false,"./HomeModernIcon.js":false,"./HomeIcon.js":"krfut","./IdentificationIcon.js":false,"./InboxArrowDownIcon.js":false,"./InboxStackIcon.js":false,"./InboxIcon.js":false,"./InformationCircleIcon.js":false,"./KeyIcon.js":false,"./LanguageIcon.js":false,"./LifebuoyIcon.js":false,"./LightBulbIcon.js":false,"./LinkIcon.js":false,"./ListBulletIcon.js":false,"./LockClosedIcon.js":false,"./LockOpenIcon.js":false,"./MagnifyingGlassCircleIcon.js":false,"./MagnifyingGlassMinusIcon.js":false,"./MagnifyingGlassPlusIcon.js":false,"./MagnifyingGlassIcon.js":false,"./MapPinIcon.js":false,"./MapIcon.js":false,"./MegaphoneIcon.js":false,"./MicrophoneIcon.js":false,"./MinusCircleIcon.js":false,"./MinusSmallIcon.js":false,"./MinusIcon.js":false,"./MoonIcon.js":false,"./MusicalNoteIcon.js":false,"./NewspaperIcon.js":false,"./NoSymbolIcon.js":false,"./PaintBrushIcon.js":false,"./PaperAirplaneIcon.js":false,"./PaperClipIcon.js":false,"./PauseCircleIcon.js":false,"./PauseIcon.js":false,"./PencilSquareIcon.js":false,"./PencilIcon.js":false,"./PhoneArrowDownLeftIcon.js":false,"./PhoneArrowUpRightIcon.js":false,"./PhoneXMarkIcon.js":false,"./PhoneIcon.js":"ZkpLY","./PhotoIcon.js":false,"./PlayCircleIcon.js":false,"./PlayPauseIcon.js":false,"./PlayIcon.js":false,"./PlusCircleIcon.js":false,"./PlusSmallIcon.js":false,"./PlusIcon.js":false,"./PowerIcon.js":false,"./PresentationChartBarIcon.js":false,"./PresentationChartLineIcon.js":false,"./PrinterIcon.js":false,"./PuzzlePieceIcon.js":false,"./QrCodeIcon.js":false,"./QuestionMarkCircleIcon.js":false,"./QueueListIcon.js":false,"./RadioIcon.js":false,"./ReceiptPercentIcon.js":false,"./ReceiptRefundIcon.js":false,"./RectangleGroupIcon.js":false,"./RectangleStackIcon.js":false,"./RocketLaunchIcon.js":false,"./RssIcon.js":false,"./ScaleIcon.js":false,"./ScissorsIcon.js":false,"./ServerStackIcon.js":false,"./ServerIcon.js":false,"./ShareIcon.js":false,"./ShieldCheckIcon.js":false,"./ShieldExclamationIcon.js":false,"./ShoppingBagIcon.js":false,"./ShoppingCartIcon.js":"2MfAx","./SignalSlashIcon.js":false,"./SignalIcon.js":false,"./SparklesIcon.js":false,"./SpeakerWaveIcon.js":false,"./SpeakerXMarkIcon.js":false,"./Square2StackIcon.js":false,"./Square3Stack3DIcon.js":false,"./Squares2X2Icon.js":false,"./SquaresPlusIcon.js":false,"./StarIcon.js":"6Ca8E","./StopCircleIcon.js":false,"./StopIcon.js":false,"./SunIcon.js":false,"./SwatchIcon.js":false,"./TableCellsIcon.js":false,"./TagIcon.js":false,"./TicketIcon.js":false,"./TrashIcon.js":false,"./TrophyIcon.js":false,"./TruckIcon.js":false,"./TvIcon.js":false,"./UserCircleIcon.js":"5D3BV","./UserGroupIcon.js":false,"./UserMinusIcon.js":false,"./UserPlusIcon.js":false,"./UserIcon.js":false,"./UsersIcon.js":false,"./VariableIcon.js":false,"./VideoCameraSlashIcon.js":false,"./VideoCameraIcon.js":false,"./ViewColumnsIcon.js":false,"./ViewfinderCircleIcon.js":false,"./WalletIcon.js":false,"./WifiIcon.js":false,"./WindowIcon.js":false,"./WrenchScrewdriverIcon.js":false,"./WrenchIcon.js":false,"./XCircleIcon.js":false,"./XMarkIcon.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6eu7m":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function Bars3Icon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(Bars3Icon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bP57p":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function BuildingOfficeIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M4.5 2.25a.75.75 0 0 0 0 1.5v16.5h-.75a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5h-.75V3.75a.75.75 0 0 0 0-1.5h-15ZM9 6a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm-.75 3.75A.75.75 0 0 1 9 9h1.5a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75ZM9 12a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H9Zm3.75-5.25A.75.75 0 0 1 13.5 6H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM13.5 9a.75.75 0 0 0 0 1.5H15A.75.75 0 0 0 15 9h-1.5Zm-.75 3.75a.75.75 0 0 1 .75-.75H15a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75ZM9 19.5v-2.25a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-.75.75h-4.5A.75.75 0 0 1 9 19.5Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(BuildingOfficeIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"krfut":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function HomeIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        d: "M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
+    }), /*#__PURE__*/ _react.createElement("path", {
+        d: "m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
+    }));
+}
+const ForwardRef = _react.forwardRef(HomeIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ZkpLY":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function PhoneIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(PhoneIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2MfAx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function ShoppingCartIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        d: "M2.25 2.25a.75.75 0 0 0 0 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 0 0-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 0 0 0-1.5H5.378A2.25 2.25 0 0 1 7.5 15h11.218a.75.75 0 0 0 .674-.421 60.358 60.358 0 0 0 2.96-7.228.75.75 0 0 0-.525-.965A60.864 60.864 0 0 0 5.68 4.509l-.232-.867A1.875 1.875 0 0 0 3.636 2.25H2.25ZM3.75 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM16.5 20.25a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
+    }));
+}
+const ForwardRef = _react.forwardRef(ShoppingCartIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6Ca8E":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function StarIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(StarIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5D3BV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function UserCircleIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 24 24",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(UserCircleIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.21.3
  *
@@ -34047,175 +35383,7 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"av4Pf":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$992b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$992b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _s = $RefreshSig$();
-const useOnlinestatus = ()=>{
-    _s();
-    const [onlinestatus, setonlinestatus] = (0, _react.useState)(true);
-    window.addEventListener("online", ()=>{
-        setonlinestatus(true);
-    });
-    window.addEventListener("offline", ()=>{
-        setonlinestatus(false);
-    });
-    return onlinestatus;
-};
-_s(useOnlinestatus, "HqED/3tBaG5zaaBZlZeKgwU1UIk=");
-exports.default = useOnlinestatus;
-
-  $parcel$ReactRefreshHelpers$992b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require("7422ead32dcc1e6b");
-function debounce(func, delay) {
-    {
-        let timeout = undefined;
-        let lastTime = 0;
-        return function(args) {
-            // Call immediately if last call was more than the delay ago.
-            // Otherwise, set a timeout. This means the first call is fast
-            // (for the common case of a single update), and subsequent updates
-            // are batched.
-            let now = Date.now();
-            if (now - lastTime > delay) {
-                lastTime = now;
-                func.call(null, args);
-            } else {
-                clearTimeout(timeout);
-                timeout = setTimeout(function() {
-                    timeout = undefined;
-                    lastTime = Date.now();
-                    func.call(null, args);
-                }, delay);
-            }
-        };
-    }
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30);
-// Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module1) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module1.id + " " + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module1) {
-    if (isReactRefreshBoundary(module1.exports)) {
-        registerExportsForReactRefresh(module1);
-        if (module1.hot) {
-            module1.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module1.exports;
-            });
-            module1.hot.accept(function(getParents) {
-                var prevExports = module1.hot.data.prevExports;
-                var nextExports = module1.exports;
-                // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
-                // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-}
-// When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        if (key === "__esModule") continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module1) {
-    var exports = module1.exports, id = module1.id;
-    Refresh.register(exports, id + " %exports%");
-    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = "__esModule" in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        var typeID = id + " %exports% " + key;
-        Refresh.register(exportValue, typeID);
-    }
-}
-
-},{"7422ead32dcc1e6b":"786KC"}],"62sf7":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"62sf7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Provider", ()=>Provider_default);
@@ -35290,1929 +36458,42 @@ module.exports = require("374a059340689e89");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{"8b38fc6c74f16e20":"21dqq"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
+},{"8b38fc6c74f16e20":"21dqq"}],"48GNY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _rescard = require("./Rescard");
-var _rescardDefault = parcelHelpers.interopDefault(_rescard);
-var _react = require("react");
-var _shimmer = require("./Shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _reactRouterDom = require("react-router-dom");
-var _useOnliestatus = require("../utils/useOnliestatus");
-var _useOnliestatusDefault = parcelHelpers.interopDefault(_useOnliestatus);
-var _mind = require("../utils/Mind");
-var _mindDefault = parcelHelpers.interopDefault(_mind);
-var _s = $RefreshSig$();
-const Body = ()=>{
-    _s();
-    const [listofRestaurant, setlistofRestaurant] = (0, _react.useState)([]);
-    const [filleterdrestraunt, setfilleterdrestraunt] = (0, _react.useState)([]); //listofRestaurant.filter((Data) => Data.info.avgRating > 4.5)
-    const [serchtext, setserchtext] = (0, _react.useState)("");
-    const onlinestatus = (0, _useOnliestatusDefault.default)();
-    const [minddata, setminddata] = (0, _react.useState)([]);
-    const PromotedRescard = (0, _rescard.withpromoted)((0, _rescardDefault.default));
-    (0, _react.useEffect)(()=>{
-        fetchData();
-    }, []);
-    const fetchData = async ()=>{
-        const data1 = await fetch("https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
-        const json1 = await data1.json();
-        const data2 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const json2 = await data2.json();
-        let listofRestaurants = json1.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-        const merge = [
-            ...listofRestaurants,
-            ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
-        ];
-        setminddata(json2.data.cards[0]);
-        setlistofRestaurant(merge);
-        setfilleterdrestraunt(merge);
-    };
-    if (!onlinestatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "it seems like your in offline!!!"
-    }, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 40,
-        columnNumber: 29
-    }, undefined);
-    if (listofRestaurant.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "px-12 m-12",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-            fileName: "src/components/Body.js",
-            lineNumber: 44,
-            columnNumber: 9
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 43,
-        columnNumber: 7
-    }, undefined);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "sm:px-10 my-2 ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mindDefault.default), {
-                data: minddata
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 50,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "w-4/12 m-auto py-10",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                            for: "default-search",
-                            class: "mb-2 text-sm font-medium text-gray-900 sr-only",
-                            children: "Search"
-                        }, void 0, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 53,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            class: "relative",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    class: "absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        class: "w-4 h-4 text-gray-500 dark:text-gray-400",
-                                        "aria-hidden": "true",
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        fill: "none",
-                                        viewBox: "0 0 20 20",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            stroke: "currentColor",
-                                            "stroke-linecap": "round",
-                                            "stroke-linejoin": "round",
-                                            "stroke-width": "2",
-                                            d: "m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                                        }, void 0, false, {
-                                            fileName: "src/components/Body.js",
-                                            lineNumber: 57,
-                                            columnNumber: 23
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/Body.js",
-                                        lineNumber: 56,
-                                        columnNumber: 19
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/Body.js",
-                                    lineNumber: 55,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                    type: "search",
-                                    value: serchtext,
-                                    onChange: (e)=>{
-                                        setserchtext(e.target.value);
-                                        let newlist = listofRestaurant.filter((Data)=>Data.info.name.toLowerCase().includes(serchtext.toLowerCase()));
-                                        setfilleterdrestraunt(newlist);
-                                    },
-                                    id: "default-search",
-                                    class: "block w-full p-3 ps-10 text-sm text-black border border-gray-300 rounded-lg bg-gray-50",
-                                    placeholder: "Search Mockups, Logos...",
-                                    required: true
-                                }, void 0, false, {
-                                    fileName: "src/components/Body.js",
-                                    lineNumber: 60,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    type: "submit",
-                                    class: "text-white absolute end-[1PX] bottom-[1PX] bg-orange-500 hover:bg-green-700 font-medium rounded-sm text-sm px-6 py-3",
-                                    children: "Search"
-                                }, void 0, false, {
-                                    fileName: "src/components/Body.js",
-                                    lineNumber: 68,
-                                    columnNumber: 15
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 52,
-                    columnNumber: 7
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 51,
-                columnNumber: 6
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "  ",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "  sm:w-11/12 sm:m-auto  grid grid-cols-1 mx-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4",
-                    children: filleterdrestraunt.map((Data)=>{
-                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            className: "",
-                            to: "/restaurent/" + Data.info.id,
-                            children: Data.info.promoted ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PromotedRescard, {
-                                resData: Data
-                            }, void 0, false, {
-                                fileName: "src/components/Body.js",
-                                lineNumber: 113,
-                                columnNumber: 17
-                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rescardDefault.default), {
-                                resData: Data
-                            }, void 0, false, {
-                                fileName: "src/components/Body.js",
-                                lineNumber: 115,
-                                columnNumber: 17
-                            }, undefined)
-                        }, Data.info.id, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 111,
-                            columnNumber: 13
-                        }, undefined);
-                    })
-                }, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 107,
-                    columnNumber: 7
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 106,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Body.js",
-        lineNumber: 49,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Body, "V2z6R/+YgQ6HyXPZLpLRCqICQcM=", false, function() {
-    return [
-        (0, _useOnliestatusDefault.default)
-    ];
-});
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./Rescard":"dIeqo","react":"21dqq","./Shimmer":"g6ZGj","react-router-dom":"9xmpe","../utils/useOnliestatus":"av4Pf","../utils/Mind":"cim1W","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dIeqo":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ab79 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ab79.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "withpromoted", ()=>withpromoted);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _starIcon = require("../utils/StarIcon");
-var _starIconDefault = parcelHelpers.interopDefault(_starIcon);
-var _constant = require("../utils/constant");
-const Rescard = (props)=>{
-    const { resData } = props;
-    const { name, cuisines, avgRating, cloudinaryImageId, costForTwo, areaName } = resData?.info;
-    const s = "  ";
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "p-2 m-4 shadow-2xl rounded-lg ease-in-out transition hover:scale-90 bg-white",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: " object-cover h-[185px] sm:h-[221px]  rounded-xl shadow-inner  w-full",
-                src: (0, _constant.CDN_LINK) + cloudinaryImageId
-            }, void 0, false, {
-                fileName: "src/components/Rescard.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                className: " font-bold  text-lg",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/Rescard.js",
-                lineNumber: 15,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                className: " text-sm text-[#484848]",
-                children: cuisines.join(", ")
-            }, void 0, false, {
-                fileName: "src/components/Rescard.js",
-                lineNumber: 16,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex items-center",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "h-3 w-2",
-                        src: "https://www.clipartmax.com/png/small/207-2072371_or-combined-to-be-gigantic-location-icon-in-orange-color.png",
-                        alt: ""
-                    }, void 0, false, {
-                        fileName: "src/components/Rescard.js",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                        className: "ml-1 text-sm text-[#484848]",
-                        children: areaName
-                    }, void 0, false, {
-                        fileName: "src/components/Rescard.js",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Rescard.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex  items-center",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: avgRating >= "4" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "flex rounded-lg justify-center font-bold items-center   text-gray-50",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "bg-green-600 p-1 rounded-full",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        fill: "white",
-                                        viewBox: "0 0 24 24",
-                                        "stroke-width": "1.5",
-                                        stroke: "currentColor",
-                                        class: "w-4 h-4",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            "stroke-linecap": "round",
-                                            "stroke-linejoin": "round",
-                                            d: "M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                                        }, void 0, false, {
-                                            fileName: "src/components/Rescard.js",
-                                            lineNumber: 38,
-                                            columnNumber: 19
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/Rescard.js",
-                                        lineNumber: 30,
-                                        columnNumber: 17
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/Rescard.js",
-                                    lineNumber: 29,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "font-bold text-black text-lg px-1",
-                                    children: avgRating
-                                }, void 0, false, {
-                                    fileName: "src/components/Rescard.js",
-                                    lineNumber: 45,
-                                    columnNumber: 15
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Rescard.js",
-                            lineNumber: 28,
-                            columnNumber: 13
-                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "flex rounded-lg  font-bold items-center   text-gray-50",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: " bg-red-600 p-1 rounded-full",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        fill: "white",
-                                        viewBox: "0 0 24 24",
-                                        "stroke-width": "1.5",
-                                        stroke: "currentColor",
-                                        class: "w-4 h-4",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            "stroke-linecap": "round",
-                                            "stroke-linejoin": "round",
-                                            d: "M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
-                                        }, void 0, false, {
-                                            fileName: "src/components/Rescard.js",
-                                            lineNumber: 58,
-                                            columnNumber: 19
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/Rescard.js",
-                                        lineNumber: 50,
-                                        columnNumber: 17
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/Rescard.js",
-                                    lineNumber: 49,
-                                    columnNumber: 15
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "font-bold text-black text-lg px-1",
-                                    children: avgRating
-                                }, void 0, false, {
-                                    fileName: "src/components/Rescard.js",
-                                    lineNumber: 65,
-                                    columnNumber: 15
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Rescard.js",
-                            lineNumber: 48,
-                            columnNumber: 13
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/Rescard.js",
-                        lineNumber: 26,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "px-4",
-                        children: costForTwo
-                    }, void 0, false, {
-                        fileName: "src/components/Rescard.js",
-                        lineNumber: 69,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Rescard.js",
-                lineNumber: 25,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Rescard.js",
-        lineNumber: 10,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Rescard;
-const withpromoted = (Rescard)=>{
-    return (props)=>{
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "promoted"
-                }, void 0, false, {
-                    fileName: "src/components/Rescard.js",
-                    lineNumber: 79,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Rescard, {
-                    ...props
-                }, void 0, false, {
-                    fileName: "src/components/Rescard.js",
-                    lineNumber: 80,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/Rescard.js",
-            lineNumber: 78,
-            columnNumber: 7
-        }, undefined);
-    };
-};
-exports.default = Rescard;
-var _c;
-$RefreshReg$(_c, "Rescard");
-
-  $parcel$ReactRefreshHelpers$ab79.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../utils/StarIcon":"8nKxF","../utils/constant":"6mqGZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8nKxF":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$36a0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$36a0.prelude(module);
-
-try {
-// StarIcon.js
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const StarIcon = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-        xmlns: "http://www.w3.org/2000/svg",
-        viewBox: "0 0 24 24",
-        fill: "none",
-        stroke: "currentColor",
-        strokeWidth: "2",
-        strokeLinecap: "round",
-        strokeLinejoin: "round",
-        className: "star-icon",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("polygon", {
-            points: "12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2",
-            fill: "white"
-        }, void 0, false, {
-            fileName: "src/utils/StarIcon.js",
-            lineNumber: 7,
-            columnNumber: 5
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/utils/StarIcon.js",
-        lineNumber: 6,
-        columnNumber: 3
-    }, undefined);
-_c = StarIcon;
-exports.default = StarIcon;
-var _c;
-$RefreshReg$(_c, "StarIcon");
-
-  $parcel$ReactRefreshHelpers$36a0.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0b04.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex flex-wrap justify-center ",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 13,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 14,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 15,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 16,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 19,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 20,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 21,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 22,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 23,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 24,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 25,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 26,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "p-4 m-4 w-[250px] h-[250px] bg-gray-100 shadow-lg"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 27,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Shimmer.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$0b04.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cim1W":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b4ba = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b4ba.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _constant = require("./constant");
-var _react = require("react");
-var _s = $RefreshSig$();
-const Mind = ({ data })=>{
-    _s();
-    const list = data.card.card.gridElements.infoWithStyle.info;
-    const scrollContainerRef = (0, _react.useRef)(null);
-    const handleScrollLeft = ()=>{
-        if (scrollContainerRef.current) scrollContainerRef.current.scrollLeft -= 200; // Adjust the scroll distance as needed
-    };
-    const handleScrollRight = ()=>{
-        if (scrollContainerRef.current) scrollContainerRef.current.scrollLeft += 200; // Adjust the scroll distance as needed
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-11/12 m-auto mt-10",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "text-xl  font-bold ",
-                        children: "Prathap What's on your mind?"
-                    }, void 0, false, {
-                        fileName: "src/utils/Mind.js",
-                        lineNumber: 24,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "flex px-1",
-                        children: [
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "sm:right-10 flex px-2  cursor-pointer",
-                                onClick: handleScrollLeft,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "w-4 h-4 sm:w-8 sm:h-8 bg-gray-500 rounded-full flex items-center justify-center text-white",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        className: "w-3 h-3 sm:w-4 sm:h-4",
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        viewBox: "0 0 24 24",
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            strokeLinecap: "round",
-                                            strokeLinejoin: "round",
-                                            strokeWidth: "2",
-                                            d: "M15 19l-7-7 7-7"
-                                        }, void 0, false, {
-                                            fileName: "src/utils/Mind.js",
-                                            lineNumber: 40,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/utils/Mind.js",
-                                        lineNumber: 33,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/utils/Mind.js",
-                                    lineNumber: 32,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/utils/Mind.js",
-                                lineNumber: 28,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "flex  cursor-pointer",
-                                onClick: handleScrollRight,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "w-4 h-4 sm:w-8 sm:h-8 bg-gray-500 rounded-full flex items-center justify-center text-white",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                        className: "w-3 h-3  sm:w-4 sm:h-4",
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        viewBox: "0 0 24 24",
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                            strokeLinecap: "round",
-                                            strokeLinejoin: "round",
-                                            strokeWidth: "2",
-                                            d: "M9 5l7 7-7 7"
-                                        }, void 0, false, {
-                                            fileName: "src/utils/Mind.js",
-                                            lineNumber: 59,
-                                            columnNumber: 17
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/utils/Mind.js",
-                                        lineNumber: 52,
-                                        columnNumber: 15
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/utils/Mind.js",
-                                    lineNumber: 51,
-                                    columnNumber: 13
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/utils/Mind.js",
-                                lineNumber: 50,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/utils/Mind.js",
-                        lineNumber: 25,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/utils/Mind.js",
-                lineNumber: 23,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "relative  overflow-hidden  shadow-md bg-white  rounded-xl",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "flex-shrink-0 flex overflow-hidden h-50",
-                    ref: scrollContainerRef,
-                    style: {
-                        scrollBehavior: "smooth"
-                    },
-                    children: list.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "flex-shrink-0 px-2",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: `/collection/${collectionId(item.entityId)}`,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "w-16 h-17 sm:w-32 h-34  rounded-md hover:cursor-pointer hover:scale-105 transition-transform",
-                                    src: `${(0, _constant.CDN_LINK)}${item.imageId}`,
-                                    alt: item.id
-                                }, void 0, false, {
-                                    fileName: "src/utils/Mind.js",
-                                    lineNumber: 81,
-                                    columnNumber: 17
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/utils/Mind.js",
-                                lineNumber: 80,
-                                columnNumber: 15
-                            }, undefined)
-                        }, item.id, false, {
-                            fileName: "src/utils/Mind.js",
-                            lineNumber: 79,
-                            columnNumber: 13
-                        }, undefined))
-                }, void 0, false, {
-                    fileName: "src/utils/Mind.js",
-                    lineNumber: 73,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/utils/Mind.js",
-                lineNumber: 71,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/utils/Mind.js",
-        lineNumber: 22,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Mind, "Gfm/oEKPzfcG/oikjUDPHSjaGoQ=");
-_c = Mind;
-function collectionId(s) {
-    const inputString = s;
-    const numbersOnly = inputString.match(/\d+/g);
-    return numbersOnly.pop();
-}
-exports.default = Mind;
-var _c;
-$RefreshReg$(_c, "Mind");
-
-  $parcel$ReactRefreshHelpers$b4ba.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","./constant":"6mqGZ","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5b98.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _user = require("./User");
-var _userDefault = parcelHelpers.interopDefault(_user);
-var _react = require("react");
-var _s = $RefreshSig$();
-const About = ()=>{
-    _s();
-    const [show, setShow] = (0, _react.useState)(false);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "text-center mt-4",
-                children: show ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "text-center ",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: " bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded",
-                                onClick: ()=>setShow(false),
-                                children: "Hide My Profile"
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 13,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/About.js",
-                            lineNumber: 12,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {}, void 0, false, {
-                            fileName: "src/components/About.js",
-                            lineNumber: 20,
-                            columnNumber: 13
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/About.js",
-                    lineNumber: 11,
-                    columnNumber: 11
-                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: " bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded",
-                        onClick: ()=>setShow(true),
-                        children: "Show My Profile"
-                    }, void 0, false, {
-                        fileName: "src/components/About.js",
-                        lineNumber: 24,
-                        columnNumber: 13
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/About.js",
-                    lineNumber: 23,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 8,
-                columnNumber: 8
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "mt-8  grid grid-cols-1 sm:grid-cols-2 sm:mt-10",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "",
-                        children: [
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "font-bold ml-10 text-gray-600 text-4xl sm:text-7xl sm:sm:mt-20 sm:pt-20",
-                                children: "Welcome to Our "
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 37,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "font-bold ml-10  text-gray-600 text-4xl sm:text-7xl",
-                                children: "Delicious Universe!"
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 38,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "font-bold pl-10  text-gray-600 text-3xl sm:ztext-7xl",
-                                children: " "
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 41,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                                className: "rounded-lg flex  items-center text-center mt-8 font-bold text-2xl sm:text-3xl ",
-                                children: '"Food for the body is not enough.there must be food for the soul that Red Food provides."'
-                            }, void 0, false, {
-                                fileName: "src/components/About.js",
-                                lineNumber: 42,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/About.js",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "w-full mb-8 ",
-                            src: "https://foodfire-app.netlify.app/burger-image.ec55d069.png"
-                        }, void 0, false, {
-                            fileName: "src/components/About.js",
-                            lineNumber: 47,
-                            columnNumber: 9
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/About.js",
-                        lineNumber: 46,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/About.js",
-                lineNumber: 34,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/About.js",
-        lineNumber: 7,
-        columnNumber: 5
-    }, undefined);
-};
-_s(About, "NKb1ZOdhT+qUsWLXSgjSS2bk2C4=");
-_c = About;
-exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
-
-  $parcel$ReactRefreshHelpers$5b98.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","./User":"4iQHT","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4iQHT":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9c32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9c32.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _constant = require("../utils/constant");
-var _s = $RefreshSig$();
-const User = ()=>{
-    _s();
-    const [userdata, setuserdata] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        fetchdata();
-    }, []);
-    const fetchdata = async ()=>{
-        const data = await fetch("https://api.github.com/users/vprathap21");
-        const json = await data.json();
-        setuserdata(json);
-        console;
-    };
-    const { avatar_url, login } = userdata;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: " mx-8 mb-8 sm:w-4/12  sm:mx-auto mt-10  shadow-xl rounded-lg  bg-white",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "font-bold text-center text-2xl",
-                children: "About Me"
-            }, void 0, false, {
-                fileName: "src/components/User.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                href: (0, _constant.Github_Link),
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "rounded-full object-cover h-28 w-28   m-auto mt-4",
-                    src: avatar_url,
-                    alt: login
-                }, void 0, false, {
-                    fileName: "src/components/User.js",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/User.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-center",
-                children: "react.js | javascript | tailwind"
-            }, void 0, false, {
-                fileName: "src/components/User.js",
-                lineNumber: 26,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                className: "flex justify-center items-center py-2",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "px-1",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            href: (0, _constant.Github_Link),
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                class: "w-8 h-8 text-gray-800 ",
-                                "aria-hidden": "true",
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "currentColor",
-                                viewBox: "0 0 24 24",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    "fill-rule": "evenodd",
-                                    d: "M12 2c-2.4 0-4.7.9-6.5 2.4a10.5 10.5 0 0 0-2 13.1A10 10 0 0 0 8.7 22c.5 0 .7-.2.7-.5v-2c-2.8.7-3.4-1.1-3.4-1.1-.1-.6-.5-1.2-1-1.5-1-.7 0-.7 0-.7a2 2 0 0 1 1.5 1.1 2.2 2.2 0 0 0 1.3 1 2 2 0 0 0 1.6-.1c0-.6.3-1 .7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.8a4 4 0 0 1 .2-2.7s.8-.3 2.7 1c1.6-.5 3.4-.5 5 0 2-1.3 2.8-1 2.8-1 .3.8.4 1.8 0 2.7a4 4 0 0 1 1 2.7c0 4-2.3 4.8-4.5 5a2.5 2.5 0 0 1 .7 2v2.8c0 .3.2.6.7.5a10 10 0 0 0 5.4-4.4 10.5 10.5 0 0 0-2.1-13.2A9.8 9.8 0 0 0 12 2Z",
-                                    "clip-rule": "evenodd"
-                                }, void 0, false, {
-                                    fileName: "src/components/User.js",
-                                    lineNumber: 37,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/User.js",
-                                lineNumber: 30,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/User.js",
-                            lineNumber: 29,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/User.js",
-                        lineNumber: 28,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "px-1",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            href: (0, _constant.Linkedin_Link),
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                class: "w-7 h-7 bg-blue-400 rounded-full p-1 text-white",
-                                "aria-hidden": "true",
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "currentColor",
-                                viewBox: "0 0 24 24",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        "fill-rule": "evenodd",
-                                        d: "M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z",
-                                        "clip-rule": "evenodd"
-                                    }, void 0, false, {
-                                        fileName: "src/components/User.js",
-                                        lineNumber: 54,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        d: "M7.2 8.8H4v10.7h3.2V8.8Z"
-                                    }, void 0, false, {
-                                        fileName: "src/components/User.js",
-                                        lineNumber: 59,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/User.js",
-                                lineNumber: 47,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/User.js",
-                            lineNumber: 46,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/User.js",
-                        lineNumber: 45,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "px-1",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                            href: (0, _constant.Twitter_Link),
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                class: "w-6 h-6 text-black",
-                                "aria-hidden": "true",
-                                xmlns: "http://www.w3.org/2000/svg",
-                                fill: "none",
-                                viewBox: "0 0 24 24",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    fill: "currentColor",
-                                    d: "M13.8 10.5 20.7 2h-3l-5.3 6.5L7.7 2H1l7.8 11-7.3 9h3l5.7-7 5.1 7H22l-8.2-11.5Zm-2.4 3-1.4-2-5.6-7.9h2.3l4.5 6.3 1.4 2 6 8.5h-2.3l-4.9-7Z"
-                                }, void 0, false, {
-                                    fileName: "src/components/User.js",
-                                    lineNumber: 72,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/User.js",
-                                lineNumber: 65,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/User.js",
-                            lineNumber: 64,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/User.js",
-                        lineNumber: 63,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                            class: "w-6 h-6",
-                            stroke: "currentColor",
-                            fill: "currentColor",
-                            "stroke-width": "0",
-                            role: "img",
-                            viewBox: "0 0 24 24",
-                            height: "1em",
-                            width: "1em",
-                            xmlns: "http://www.w3.org/2000/svg",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {
-                                    children: "Any Query! Mail me"
-                                }, void 0, false, {
-                                    fileName: "src/components/User.js",
-                                    lineNumber: 91,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {}, void 0, false, {
-                                    fileName: "src/components/User.js",
-                                    lineNumber: 92,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                    d: "M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
-                                }, void 0, false, {
-                                    fileName: "src/components/User.js",
-                                    lineNumber: 93,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/User.js",
-                            lineNumber: 80,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/User.js",
-                        lineNumber: 79,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/User.js",
-                lineNumber: 27,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/User.js",
-        lineNumber: 16,
-        columnNumber: 5
-    }, undefined);
-};
-_s(User, "iJCh43f+eShd3gjfqN3C4/eiwM4=");
-_c = User;
-exports.default = User;
-var _c;
-$RefreshReg$(_c, "User");
-
-  $parcel$ReactRefreshHelpers$9c32.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/constant":"6mqGZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cgAOG":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ee46 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ee46.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Contact = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "grid grid-cols-1 sm:grid-cols-2 items-center my-4 mx-20",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: " w-[70%] ml-14 items-center ju",
-                    src: "https://foodfire-app.netlify.app/Contact-Us.13c5d28a.png"
-                }, void 0, false, {
-                    fileName: "src/components/Contact.js",
-                    lineNumber: 5,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Contact.js",
-                lineNumber: 4,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    class: "py-8 lg:py-16 px-4 mx-auto max-w-screen-md",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            class: "mb-4 text-4xl tracking-tight font-extrabold text-center",
-                            children: "Contact Us"
-                        }, void 0, false, {
-                            fileName: "src/components/Contact.js",
-                            lineNumber: 12,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            class: "mb-8 lg:mb-16 font-light text-center"
-                        }, void 0, false, {
-                            fileName: "src/components/Contact.js",
-                            lineNumber: 15,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                            action: "#",
-                            class: "space-y-8",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                            for: "email",
-                                            class: "block mb-2 text-sm font-medium",
-                                            children: "Your email"
-                                        }, void 0, false, {
-                                            fileName: "src/components/Contact.js",
-                                            lineNumber: 20,
-                                            columnNumber: 15
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                            type: "email",
-                                            id: "email",
-                                            class: "shadow-sm border border-gray-300  text-sm rounded-lg  w-full p-2.5 ",
-                                            placeholder: "name@gmail.com",
-                                            required: true
-                                        }, void 0, false, {
-                                            fileName: "src/components/Contact.js",
-                                            lineNumber: 26,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/Contact.js",
-                                    lineNumber: 19,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                            for: "subject",
-                                            class: "block mb-2 text-sm font-medium",
-                                            children: "Subject"
-                                        }, void 0, false, {
-                                            fileName: "src/components/Contact.js",
-                                            lineNumber: 35,
-                                            columnNumber: 15
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                            type: "text",
-                                            id: "subject",
-                                            class: "block p-3 w-full text-sm  rounded-lg border border-gray-300 shadow-sm ",
-                                            placeholder: "Let us know how we can help you",
-                                            required: true
-                                        }, void 0, false, {
-                                            fileName: "src/components/Contact.js",
-                                            lineNumber: 41,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/Contact.js",
-                                    lineNumber: 34,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    class: "sm:col-span-2",
-                                    children: [
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                            for: "message",
-                                            class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400",
-                                            children: "Your message"
-                                        }, void 0, false, {
-                                            fileName: "src/components/Contact.js",
-                                            lineNumber: 50,
-                                            columnNumber: 15
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
-                                            id: "message",
-                                            rows: "6",
-                                            class: "block p-2.5 w-full text-sm rounded-lg shadow-sm border border-gray-300 ",
-                                            placeholder: "Leave a comment..."
-                                        }, void 0, false, {
-                                            fileName: "src/components/Contact.js",
-                                            lineNumber: 56,
-                                            columnNumber: 15
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/Contact.js",
-                                    lineNumber: 49,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    type: "submit",
-                                    class: "py-3 px-5 text-sm font-medium text-center rounded-lg bg-blue-500 ",
-                                    children: "Send message"
-                                }, void 0, false, {
-                                    fileName: "src/components/Contact.js",
-                                    lineNumber: 63,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Contact.js",
-                            lineNumber: 18,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Contact.js",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Contact.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Contact.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, undefined);
-};
-_c = Contact;
-exports.default = Contact;
-var _c;
-$RefreshReg$(_c, "Contact");
-
-  $parcel$ReactRefreshHelpers$ee46.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0ba4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _s = $RefreshSig$();
-const Error = ()=>{
-    _s();
-    const error = (0, _reactRouterDom.useRouteError)();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "opps!!1"
-            }, void 0, false, {
-                fileName: "src/components/Error.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "something wrond!!!"
-            }, void 0, false, {
-                fileName: "src/components/Error.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: [
-                    error.status,
-                    " : ",
-                    error.statusText
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Error.js",
-                lineNumber: 9,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Error.js",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Error, "oAgjgbJzsRXlB89+MoVumxMQqKM=", false, function() {
-    return [
-        (0, _reactRouterDom.useRouteError)
-    ];
-});
-_c = Error;
-exports.default = Error;
-var _c;
-$RefreshReg$(_c, "Error");
-
-  $parcel$ReactRefreshHelpers$0ba4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cNtZy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8d58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8d58.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _shimmer = require("./Shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _reactRouterDom = require("react-router-dom");
-var _useRestaurent = require("../utils/useRestaurent");
-var _useRestaurentDefault = parcelHelpers.interopDefault(_useRestaurent);
-var _restaurentCatogory = require("./RestaurentCatogory");
-var _restaurentCatogoryDefault = parcelHelpers.interopDefault(_restaurentCatogory);
-var _react = require("react");
-var _constant = require("../utils/constant");
-var _s = $RefreshSig$();
-const RestaurentMenu = ()=>{
-    _s();
-    const { id } = (0, _reactRouterDom.useParams)();
-    const MenuData = (0, _useRestaurentDefault.default)(id);
-    console.log(MenuData);
-    const [showindex, setshowindex] = (0, _react.useState)(null);
-    if (MenuData === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-        fileName: "src/components/RestaurentMenu.js",
-        lineNumber: 13,
-        columnNumber: 12
-    }, undefined);
-    const { name, cuisines, costForTwoMessage, areaName, cloudinaryImageId } = MenuData.cards[0]?.card?.card?.info;
-    const { itemCards } = MenuData.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
-    const catagories = MenuData.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "text-center",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    className: "w-30 h-20",
-                    src: (0, _constant.CDN_LINK) + cloudinaryImageId
-                }, void 0, false, {
-                    fileName: "src/components/RestaurentMenu.js",
-                    lineNumber: 29,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/RestaurentMenu.js",
-                lineNumber: 28,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "font-bold my-6 text-2xl",
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/RestaurentMenu.js",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "font-bold text-lg  ",
-                children: [
-                    cuisines.join(","),
-                    " - ",
-                    costForTwoMessage
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RestaurentMenu.js",
-                lineNumber: 32,
-                columnNumber: 7
-            }, undefined),
-            catagories.map((catogory, index)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurentCatogoryDefault.default), {
-                    data: catogory?.card?.card,
-                    showitem: index === showindex ? true : false,
-                    setshowindex: ()=>setshowindex(index === showindex ? null : index)
-                }, catogory?.card?.card?.title, false, {
-                    fileName: "src/components/RestaurentMenu.js",
-                    lineNumber: 37,
-                    columnNumber: 11
-                }, undefined);
-            })
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RestaurentMenu.js",
-        lineNumber: 27,
-        columnNumber: 5
-    }, undefined);
-};
-_s(RestaurentMenu, "vSyTX9OfCsHu+FhaBzqypfB1UgI=", false, function() {
-    return [
-        (0, _reactRouterDom.useParams),
-        (0, _useRestaurentDefault.default)
-    ];
-});
-_c = RestaurentMenu;
-exports.default = RestaurentMenu;
-var _c;
-$RefreshReg$(_c, "RestaurentMenu");
-
-  $parcel$ReactRefreshHelpers$8d58.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./Shimmer":"g6ZGj","react-router-dom":"9xmpe","../utils/useRestaurent":"Irxh3","./RestaurentCatogory":"is77o","react":"21dqq","../utils/constant":"6mqGZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"Irxh3":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7264 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7264.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _constant = require("./constant");
-var _s = $RefreshSig$();
-const useRestaurentMenu = (id)=>{
-    _s();
-    const [resdata, setresdata] = (0, _react.useState)(null);
-    (0, _react.useEffect)(()=>{
-        fetchdata();
-    }, []);
-    const fetchdata = async ()=>{
-        const data = await fetch((0, _constant.MENU_LINK) + id);
-        const json = await data.json();
-        setresdata(json.data);
-    };
-    return resdata;
-};
-_s(useRestaurentMenu, "gosYWDrwloTf/43/yDIsuAPj1Rw=");
-exports.default = useRestaurentMenu;
-
-  $parcel$ReactRefreshHelpers$7264.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","./constant":"6mqGZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"is77o":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4e48 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4e48.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _itemlist = require("./Itemlist");
-var _itemlistDefault = parcelHelpers.interopDefault(_itemlist);
-const RestaurentCatogory = ({ data, showitem, setshowindex })=>{
-    const onclickHandler = ()=>{
-        setshowindex();
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "sm:w-6/12 bg-gray-50 mx-auto my-4 shadow-lg p-4 rounded-lg",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    onClick: onclickHandler,
-                    className: "flex justify-between hover:cursor-pointer",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: "font-bold text-lg",
-                            children: [
-                                data.title,
-                                " (",
-                                data.itemCards.length,
-                                ")"
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/RestaurentCatogory.js",
-                            lineNumber: 15,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            className: " text-black hover:cursor-pointer",
-                            children: showitem ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    fill: "none",
-                                    viewBox: "0 0 24 24",
-                                    "stroke-width": "1.5",
-                                    stroke: "currentColor",
-                                    class: "w-6 h-6",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        "stroke-linecap": "round",
-                                        "stroke-linejoin": "round",
-                                        d: "m4.5 15.75 7.5-7.5 7.5 7.5"
-                                    }, void 0, false, {
-                                        fileName: "src/components/RestaurentCatogory.js",
-                                        lineNumber: 29,
-                                        columnNumber: 19
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurentCatogory.js",
-                                    lineNumber: 21,
-                                    columnNumber: 17
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/RestaurentCatogory.js",
-                                lineNumber: 20,
-                                columnNumber: 15
-                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    fill: "none",
-                                    viewBox: "0 0 24 24",
-                                    "stroke-width": "1.5",
-                                    stroke: "currentColor",
-                                    class: "w-6 h-6",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        "stroke-linecap": "round",
-                                        "stroke-linejoin": "round",
-                                        d: "m19.5 8.25-7.5 7.5-7.5-7.5"
-                                    }, void 0, false, {
-                                        fileName: "src/components/RestaurentCatogory.js",
-                                        lineNumber: 46,
-                                        columnNumber: 19
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurentCatogory.js",
-                                    lineNumber: 38,
-                                    columnNumber: 17
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/RestaurentCatogory.js",
-                                lineNumber: 37,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/RestaurentCatogory.js",
-                            lineNumber: 18,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RestaurentCatogory.js",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, undefined),
-                showitem && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemlistDefault.default), {
-                    data: data.itemCards
-                }, void 0, false, {
-                    fileName: "src/components/RestaurentCatogory.js",
-                    lineNumber: 56,
-                    columnNumber: 22
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RestaurentCatogory.js",
-            lineNumber: 10,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/RestaurentCatogory.js",
-        lineNumber: 9,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestaurentCatogory;
-exports.default = RestaurentCatogory;
-var _c;
-$RefreshReg$(_c, "RestaurentCatogory");
-
-  $parcel$ReactRefreshHelpers$4e48.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Itemlist":"6Wvye","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6Wvye":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$af7b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$af7b.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRedux = require("react-redux");
-var _constant = require("../utils/constant");
-var _cartSlice = require("../utils/cartSlice");
-var _s = $RefreshSig$();
-const ItemList = ({ data })=>{
-    _s();
-    const dispatch = (0, _reactRedux.useDispatch)();
-    const addHandler = (item)=>{
-        dispatch((0, _cartSlice.addItem)(item));
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: data.map((item)=>{
-            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "flex justify-between my-4 p-4 border border-solid-black rounded-lg hover:bg-gray-100",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-9/12",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                className: "text-left font-bold py-2",
-                                children: [
-                                    item.card.info.name,
-                                    " - \u20B9",
-                                    item.card.info.price / 100 || item.card.info.defaultPrice / 100
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/Itemlist.js",
-                                lineNumber: 19,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                className: "text-left py-2",
-                                children: item.card.info.description
-                            }, void 0, false, {
-                                fileName: "src/components/Itemlist.js",
-                                lineNumber: 24,
-                                columnNumber: 15
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/Itemlist.js",
-                        lineNumber: 18,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-3/12",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "rounded-lg ",
-                                src: (0, _constant.CDN_LINK) + item.card.info.imageId
-                            }, void 0, false, {
-                                fileName: "src/components/Itemlist.js",
-                                lineNumber: 28,
-                                columnNumber: 15
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    className: "p-2 bg-green-200 rounded-md",
-                                    onClick: ()=>addHandler(item),
-                                    children: "Add +"
-                                }, void 0, false, {
-                                    fileName: "src/components/Itemlist.js",
-                                    lineNumber: 33,
-                                    columnNumber: 17
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Itemlist.js",
-                                lineNumber: 32,
-                                columnNumber: 16
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/Itemlist.js",
-                        lineNumber: 26,
-                        columnNumber: 13
-                    }, undefined)
-                ]
-            }, item.card.info.id, true, {
-                fileName: "src/components/Itemlist.js",
-                lineNumber: 14,
-                columnNumber: 11
-            }, undefined);
-        })
-    }, void 0, false, {
-        fileName: "src/components/Itemlist.js",
-        lineNumber: 11,
-        columnNumber: 5
-    }, undefined);
-};
-_s(ItemList, "rgTLoBID190wEKCp9+G8W6F7A5M=", false, function() {
-    return [
-        (0, _reactRedux.useDispatch)
-    ];
-});
-_c = ItemList;
-exports.default = ItemList;
-var _c;
-$RefreshReg$(_c, "ItemList");
-
-  $parcel$ReactRefreshHelpers$af7b.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-redux":"62sf7","../utils/constant":"6mqGZ","../utils/cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "addItem", ()=>addItem);
-parcelHelpers.export(exports, "removeItem", ()=>removeItem);
-parcelHelpers.export(exports, "clearcart", ()=>clearcart);
+parcelHelpers.export(exports, "toggleMenu", ()=>toggleMenu);
+parcelHelpers.export(exports, "closeMenu", ()=>closeMenu);
+parcelHelpers.export(exports, "openMenu", ()=>openMenu);
+parcelHelpers.export(exports, "closeLocationModal", ()=>closeLocationModal);
+parcelHelpers.export(exports, "openLocationModal", ()=>openLocationModal);
 var _toolkit = require("@reduxjs/toolkit");
-const cartSlice = (0, _toolkit.createSlice)({
-    name: "cart",
-    initialState: {
-        items: []
-    },
+const initialState = {
+    isMenuOpen: false,
+    isLocationModalOpen: false
+};
+const appSlice = (0, _toolkit.createSlice)({
+    name: "app",
+    initialState,
     reducers: {
-        addItem: (state, action)=>{
-            state.items.push(action.payload);
+        toggleMenu (state) {
+            state.isMenuOpen = !state.isMenuOpen;
         },
-        removeItem: (state, action)=>{
-            state.items.pop();
+        closeMenu (state) {
+            state.isMenuOpen = false;
         },
-        clearcart: (state)=>{
-            state.items.length = 0;
+        openMenu (state) {
+            state.isMenuOpen = true;
+        },
+        closeLocationModal (state) {
+            state.isLocationModalOpen = false;
+        },
+        openLocationModal (state) {
+            state.isLocationModalOpen = true;
         }
     }
 });
-const { addItem, removeItem, clearcart } = cartSlice.actions;
-exports.default = cartSlice.reducer;
+const { toggleMenu, closeMenu, openMenu, closeLocationModal, openLocationModal } = appSlice.actions;
+exports.default = appSlice.reducer;
 
 },{"@reduxjs/toolkit":"fuua8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fuua8":[function(require,module,exports) {
 // src/index.ts
@@ -41142,55 +40423,3086 @@ function createThunkMiddleware(extraArgument) {
 var thunk = createThunkMiddleware();
 var withExtraArgument = createThunkMiddleware;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6A5Ux":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _toolkit = require("@reduxjs/toolkit");
-var _cartSlice = require("./cartSlice");
-var _cartSliceDefault = parcelHelpers.interopDefault(_cartSlice);
-const appStore = (0, _toolkit.configureStore)({
-    reducer: {
-        cart: (0, _cartSliceDefault.default)
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require("7422ead32dcc1e6b");
+function debounce(func, delay) {
+    {
+        let timeout = undefined;
+        let lastTime = 0;
+        return function(args) {
+            // Call immediately if last call was more than the delay ago.
+            // Otherwise, set a timeout. This means the first call is fast
+            // (for the common case of a single update), and subsequent updates
+            // are batched.
+            let now = Date.now();
+            if (now - lastTime > delay) {
+                lastTime = now;
+                func.call(null, args);
+            } else {
+                clearTimeout(timeout);
+                timeout = setTimeout(function() {
+                    timeout = undefined;
+                    lastTime = Date.now();
+                    func.call(null, args);
+                }, delay);
+            }
+        };
     }
-});
-exports.default = appStore;
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30);
+// Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module1) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module1.id + " " + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module1) {
+    if (isReactRefreshBoundary(module1.exports)) {
+        registerExportsForReactRefresh(module1);
+        if (module1.hot) {
+            module1.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module1.exports;
+            });
+            module1.hot.accept(function(getParents) {
+                var prevExports = module1.hot.data.prevExports;
+                var nextExports = module1.exports;
+                // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports);
+                // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+}
+// When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        if (key === "__esModule") continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module1) {
+    var exports = module1.exports, id = module1.id;
+    Refresh.register(exports, id + " %exports%");
+    if (exports == null || typeof exports !== "object") // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = "__esModule" in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        var typeID = id + " %exports% " + key;
+        Refresh.register(exportValue, typeID);
+    }
+}
 
-},{"@reduxjs/toolkit":"fuua8","./cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"h8J3U":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ad24 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"7422ead32dcc1e6b":"786KC"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ad24.prelude(module);
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _rescard = require("./Rescard");
+var _rescardDefault = parcelHelpers.interopDefault(_rescard);
+var _solid = require("@heroicons/react/20/solid");
+var _mindList = require("./MindList");
+var _mindListDefault = parcelHelpers.interopDefault(_mindList);
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _useOnliestatus = require("../utils/useOnliestatus");
+var _useOnliestatusDefault = parcelHelpers.interopDefault(_useOnliestatus);
+var _s = $RefreshSig$();
+const Body = ()=>{
+    _s();
+    const [listofRestaurant, setlistofRestaurant] = (0, _react.useState)([]);
+    const [filleterdrestraunt, setfilleterdrestraunt] = (0, _react.useState)([]); //listofRestaurant.filter((Data) => Data.info.avgRating > 4.5)
+    const [serchtext, setserchtext] = (0, _react.useState)("");
+    const onlinestatus = (0, _useOnliestatusDefault.default)();
+    const [minddata, setminddata] = (0, _react.useState)([]);
+    const PromotedRescard = (0, _rescard.withpromoted)((0, _rescardDefault.default));
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    const fetchData = async ()=>{
+        const data1 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json1 = await data1.json();
+        console.log(json1.data);
+        const data2 = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json2 = await data2.json();
+        let listofRestaurants = json1.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+        const merge = [
+            ...listofRestaurants,
+            ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+        ];
+        setminddata(json2.data.cards[0]);
+        setlistofRestaurant(merge);
+        setfilleterdrestraunt(merge);
+    };
+    if (!onlinestatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "it seems like your in offline!!!"
+    }, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 44,
+        columnNumber: 29
+    }, undefined);
+    if (listofRestaurant.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "  sm:w-11/12 sm:m-auto  grid grid-cols-2 mx-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4",
+        children: [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+        ].map((Data)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    " ",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 52,
+                        columnNumber: 15
+                    }, undefined)
+                ]
+            }, Data, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 50,
+                columnNumber: 13
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 47,
+        columnNumber: 7
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "sm:px-10 my-2 ",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mindListDefault.default), {
+                data: minddata
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 62,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-center mx-2 md:w-6/12 md:m-auto",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: " w-3/4  py-10 ",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                class: "relative",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.MagnifyingGlassIcon), {
+                                        className: "w-6 h-6 text-gray-400 absolute top-2 md:top-3 md:left-2 p-1 md:p-0 "
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 67,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "search",
+                                        value: serchtext,
+                                        onChange: (e)=>{
+                                            setserchtext(e.target.value);
+                                            let newlist = listofRestaurant.filter((Data)=>Data.info.name.toLowerCase().includes(serchtext.toLowerCase()));
+                                            setfilleterdrestraunt(newlist);
+                                        },
+                                        id: "default-search",
+                                        class: "block w-full p-2 md:p-3 md:pl-8 ps-10 text-sm text-black border border-gray-400 outline-none hover:border-orange-500 rounded-lg bg-gray-50",
+                                        placeholder: "Search your restaurent..."
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 68,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        type: "submit",
+                                        class: "text-white absolute end-[1PX] bottom-[1PX] bg-orange-500 hover:bg-green-700 font-medium rounded-md text-sm md:px-6 md:py-3 px-4 py-2",
+                                        children: "Search"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 84,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 66,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 65,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 64,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            className: "bg-gray-200 p-2 text-sm  rounded-lg m-4",
+                            onClick: ()=>{
+                                let newlist = listofRestaurant.filter((Data)=>Data.info.avgRating > 4.5);
+                                setfilleterdrestraunt(newlist);
+                            },
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.AdjustmentsHorizontalIcon), {
+                                className: "w-6 h-6 text-gray-500"
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 103,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 94,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 93,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 63,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "  ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: " ml-2 md:ml-20  text-2xl font-bold mb-4 text-gray-700",
+                        children: "Restaurants near you"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 109,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "  sm:w-11/12 sm:m-auto  grid grid-cols-2  sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4",
+                        children: filleterdrestraunt.map((Data)=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                className: "",
+                                to: "/restaurent/" + Data.info.id,
+                                children: Data?.info?.Promoted > 4.5 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(PromotedRescard, {
+                                    resData: Data
+                                }, void 0, false, {
+                                    fileName: "src/components/Body.js",
+                                    lineNumber: 120,
+                                    columnNumber: 19
+                                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _rescardDefault.default), {
+                                    resData: Data
+                                }, void 0, false, {
+                                    fileName: "src/components/Body.js",
+                                    lineNumber: 122,
+                                    columnNumber: 19
+                                }, undefined)
+                            }, Data.info.id, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 113,
+                                columnNumber: 15
+                            }, undefined);
+                        })
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 110,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 108,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 61,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Body, "6HkdCaub2na7I3Swq2lsF0butR8=", false, function() {
+    return [
+        (0, _useOnliestatusDefault.default)
+    ];
+});
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react":"21dqq","./Rescard":"dIeqo","@heroicons/react/20/solid":"biQa5","./MindList":"6erxC","./Shimmer":"g6ZGj","../utils/useOnliestatus":"av4Pf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dIeqo":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ab79 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ab79.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "withpromoted", ()=>withpromoted);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _solid = require("@heroicons/react/20/solid");
+var _constant = require("../utils/constant");
+const Rescard = (props)=>{
+    const { resData } = props;
+    const { name, cuisines, avgRating, cloudinaryImageId, costForTwo, areaName } = resData?.info;
+    const s = "  ";
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "p-2  m-1 rounded-lg shadow-2xl ease-in-out transition hover:scale-90 bg-white",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "overlay-container",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: " object-cover h-[185px] sm:h-[221px]  rounded-xl shadow-inner  w-full",
+                            src: (0, _constant.CDN_LINK) + cloudinaryImageId
+                        }, void 0, false, {
+                            fileName: "src/components/Rescard.js",
+                            lineNumber: 14,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "overlay w-full rounded-md p-2 px-3 ",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-xl font-bold flex gap-2 flex-wrap",
+                                children: [
+                                    resData?.info.aggregatedDiscountInfoV3 ? resData?.info.aggregatedDiscountInfoV3.header : "",
+                                    " ",
+                                    resData?.info.aggregatedDiscountInfoV3 ? resData?.info.aggregatedDiscountInfoV3.subHeader : ""
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Rescard.js",
+                                lineNumber: 19,
+                                columnNumber: 11
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Rescard.js",
+                            lineNumber: 18,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Rescard.js",
+                    lineNumber: 13,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    className: " font-bold  text-lg",
+                    children: name
+                }, void 0, false, {
+                    fileName: "src/components/Rescard.js",
+                    lineNumber: 29,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                    className: " text-sm text-[#484848]",
+                    children: cuisines.join(", ")
+                }, void 0, false, {
+                    fileName: "src/components/Rescard.js",
+                    lineNumber: 30,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex items-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "h-3 w-2",
+                            src: "https://www.clipartmax.com/png/small/207-2072371_or-combined-to-be-gigantic-location-icon-in-orange-color.png",
+                            alt: ""
+                        }, void 0, false, {
+                            fileName: "src/components/Rescard.js",
+                            lineNumber: 32,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                            className: "ml-1 text-sm text-[#484848]",
+                            children: areaName
+                        }, void 0, false, {
+                            fileName: "src/components/Rescard.js",
+                            lineNumber: 37,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Rescard.js",
+                    lineNumber: 31,
+                    columnNumber: 7
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex  items-center",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: avgRating >= "4" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex rounded-lg justify-center font-bold items-center   text-gray-50",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.StarIcon), {
+                                        className: "h-6 w-6 text-white bg-green-600 p-1 rounded-full"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Rescard.js",
+                                        lineNumber: 43,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "font-bold text-black text-lg px-1",
+                                        children: avgRating
+                                    }, void 0, false, {
+                                        fileName: "src/components/Rescard.js",
+                                        lineNumber: 44,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Rescard.js",
+                                lineNumber: 42,
+                                columnNumber: 13
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex rounded-lg  font-bold items-center   text-gray-50",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.StarIcon), {
+                                            className: "h-6 w-6 text-white bg-red-600 p-1 rounded-full"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Rescard.js",
+                                            lineNumber: 51,
+                                            columnNumber: 17
+                                        }, undefined)
+                                    }, void 0, false, {
+                                        fileName: "src/components/Rescard.js",
+                                        lineNumber: 50,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "font-bold text-black text-lg px-1",
+                                        children: avgRating
+                                    }, void 0, false, {
+                                        fileName: "src/components/Rescard.js",
+                                        lineNumber: 53,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Rescard.js",
+                                lineNumber: 49,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Rescard.js",
+                            lineNumber: 40,
+                            columnNumber: 9
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "px-2 text-sm",
+                            children: costForTwo
+                        }, void 0, false, {
+                            fileName: "src/components/Rescard.js",
+                            lineNumber: 59,
+                            columnNumber: 9
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Rescard.js",
+                    lineNumber: 39,
+                    columnNumber: 7
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Rescard.js",
+            lineNumber: 12,
+            columnNumber: 5
+        }, undefined)
+    }, void 0, false);
+};
+_c = Rescard;
+const withpromoted = (Rescard)=>{
+    return (props)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "relative",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    className: "absolute z-10 -top-2 -left-2 rounded-md p-2 px-4 bg-zinc-900 text-white text-xs",
+                    children: "Top Rated"
+                }, void 0, false, {
+                    fileName: "src/components/Rescard.js",
+                    lineNumber: 70,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Rescard, {
+                    ...props
+                }, void 0, false, {
+                    fileName: "src/components/Rescard.js",
+                    lineNumber: 73,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Rescard.js",
+            lineNumber: 69,
+            columnNumber: 7
+        }, undefined);
+    };
+};
+exports.default = Rescard;
+var _c;
+$RefreshReg$(_c, "Rescard");
+
+  $parcel$ReactRefreshHelpers$ab79.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@heroicons/react/20/solid":"biQa5","../utils/constant":"6mqGZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"biQa5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AcademicCapIcon", ()=>(0, _academicCapIconJsDefault.default));
+parcelHelpers.export(exports, "AdjustmentsHorizontalIcon", ()=>(0, _adjustmentsHorizontalIconJsDefault.default));
+parcelHelpers.export(exports, "AdjustmentsVerticalIcon", ()=>(0, _adjustmentsVerticalIconJsDefault.default));
+parcelHelpers.export(exports, "ArchiveBoxArrowDownIcon", ()=>(0, _archiveBoxArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArchiveBoxXMarkIcon", ()=>(0, _archiveBoxXMarkIconJsDefault.default));
+parcelHelpers.export(exports, "ArchiveBoxIcon", ()=>(0, _archiveBoxIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownCircleIcon", ()=>(0, _arrowDownCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownLeftIcon", ()=>(0, _arrowDownLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownOnSquareStackIcon", ()=>(0, _arrowDownOnSquareStackIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownOnSquareIcon", ()=>(0, _arrowDownOnSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownRightIcon", ()=>(0, _arrowDownRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownTrayIcon", ()=>(0, _arrowDownTrayIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowDownIcon", ()=>(0, _arrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftCircleIcon", ()=>(0, _arrowLeftCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftEndOnRectangleIcon", ()=>(0, _arrowLeftEndOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftOnRectangleIcon", ()=>(0, _arrowLeftOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftStartOnRectangleIcon", ()=>(0, _arrowLeftStartOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLeftIcon", ()=>(0, _arrowLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongDownIcon", ()=>(0, _arrowLongDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongLeftIcon", ()=>(0, _arrowLongLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongRightIcon", ()=>(0, _arrowLongRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowLongUpIcon", ()=>(0, _arrowLongUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowPathRoundedSquareIcon", ()=>(0, _arrowPathRoundedSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowPathIcon", ()=>(0, _arrowPathIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightCircleIcon", ()=>(0, _arrowRightCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightEndOnRectangleIcon", ()=>(0, _arrowRightEndOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightOnRectangleIcon", ()=>(0, _arrowRightOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightStartOnRectangleIcon", ()=>(0, _arrowRightStartOnRectangleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowRightIcon", ()=>(0, _arrowRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallDownIcon", ()=>(0, _arrowSmallDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallLeftIcon", ()=>(0, _arrowSmallLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallRightIcon", ()=>(0, _arrowSmallRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowSmallUpIcon", ()=>(0, _arrowSmallUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowTopRightOnSquareIcon", ()=>(0, _arrowTopRightOnSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowTrendingDownIcon", ()=>(0, _arrowTrendingDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowTrendingUpIcon", ()=>(0, _arrowTrendingUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpCircleIcon", ()=>(0, _arrowUpCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpLeftIcon", ()=>(0, _arrowUpLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpOnSquareStackIcon", ()=>(0, _arrowUpOnSquareStackIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpOnSquareIcon", ()=>(0, _arrowUpOnSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpRightIcon", ()=>(0, _arrowUpRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpTrayIcon", ()=>(0, _arrowUpTrayIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUpIcon", ()=>(0, _arrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnDownIcon", ()=>(0, _arrowUturnDownIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnLeftIcon", ()=>(0, _arrowUturnLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnRightIcon", ()=>(0, _arrowUturnRightIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowUturnUpIcon", ()=>(0, _arrowUturnUpIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsPointingInIcon", ()=>(0, _arrowsPointingInIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsPointingOutIcon", ()=>(0, _arrowsPointingOutIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsRightLeftIcon", ()=>(0, _arrowsRightLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ArrowsUpDownIcon", ()=>(0, _arrowsUpDownIconJsDefault.default));
+parcelHelpers.export(exports, "AtSymbolIcon", ()=>(0, _atSymbolIconJsDefault.default));
+parcelHelpers.export(exports, "BackspaceIcon", ()=>(0, _backspaceIconJsDefault.default));
+parcelHelpers.export(exports, "BackwardIcon", ()=>(0, _backwardIconJsDefault.default));
+parcelHelpers.export(exports, "BanknotesIcon", ()=>(0, _banknotesIconJsDefault.default));
+parcelHelpers.export(exports, "Bars2Icon", ()=>(0, _bars2IconJsDefault.default));
+parcelHelpers.export(exports, "Bars3BottomLeftIcon", ()=>(0, _bars3BottomLeftIconJsDefault.default));
+parcelHelpers.export(exports, "Bars3BottomRightIcon", ()=>(0, _bars3BottomRightIconJsDefault.default));
+parcelHelpers.export(exports, "Bars3CenterLeftIcon", ()=>(0, _bars3CenterLeftIconJsDefault.default));
+parcelHelpers.export(exports, "Bars3Icon", ()=>(0, _bars3IconJsDefault.default));
+parcelHelpers.export(exports, "Bars4Icon", ()=>(0, _bars4IconJsDefault.default));
+parcelHelpers.export(exports, "BarsArrowDownIcon", ()=>(0, _barsArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "BarsArrowUpIcon", ()=>(0, _barsArrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "Battery0Icon", ()=>(0, _battery0IconJsDefault.default));
+parcelHelpers.export(exports, "Battery100Icon", ()=>(0, _battery100IconJsDefault.default));
+parcelHelpers.export(exports, "Battery50Icon", ()=>(0, _battery50IconJsDefault.default));
+parcelHelpers.export(exports, "BeakerIcon", ()=>(0, _beakerIconJsDefault.default));
+parcelHelpers.export(exports, "BellAlertIcon", ()=>(0, _bellAlertIconJsDefault.default));
+parcelHelpers.export(exports, "BellSlashIcon", ()=>(0, _bellSlashIconJsDefault.default));
+parcelHelpers.export(exports, "BellSnoozeIcon", ()=>(0, _bellSnoozeIconJsDefault.default));
+parcelHelpers.export(exports, "BellIcon", ()=>(0, _bellIconJsDefault.default));
+parcelHelpers.export(exports, "BoltSlashIcon", ()=>(0, _boltSlashIconJsDefault.default));
+parcelHelpers.export(exports, "BoltIcon", ()=>(0, _boltIconJsDefault.default));
+parcelHelpers.export(exports, "BookOpenIcon", ()=>(0, _bookOpenIconJsDefault.default));
+parcelHelpers.export(exports, "BookmarkSlashIcon", ()=>(0, _bookmarkSlashIconJsDefault.default));
+parcelHelpers.export(exports, "BookmarkSquareIcon", ()=>(0, _bookmarkSquareIconJsDefault.default));
+parcelHelpers.export(exports, "BookmarkIcon", ()=>(0, _bookmarkIconJsDefault.default));
+parcelHelpers.export(exports, "BriefcaseIcon", ()=>(0, _briefcaseIconJsDefault.default));
+parcelHelpers.export(exports, "BugAntIcon", ()=>(0, _bugAntIconJsDefault.default));
+parcelHelpers.export(exports, "BuildingLibraryIcon", ()=>(0, _buildingLibraryIconJsDefault.default));
+parcelHelpers.export(exports, "BuildingOffice2Icon", ()=>(0, _buildingOffice2IconJsDefault.default));
+parcelHelpers.export(exports, "BuildingOfficeIcon", ()=>(0, _buildingOfficeIconJsDefault.default));
+parcelHelpers.export(exports, "BuildingStorefrontIcon", ()=>(0, _buildingStorefrontIconJsDefault.default));
+parcelHelpers.export(exports, "CakeIcon", ()=>(0, _cakeIconJsDefault.default));
+parcelHelpers.export(exports, "CalculatorIcon", ()=>(0, _calculatorIconJsDefault.default));
+parcelHelpers.export(exports, "CalendarDaysIcon", ()=>(0, _calendarDaysIconJsDefault.default));
+parcelHelpers.export(exports, "CalendarIcon", ()=>(0, _calendarIconJsDefault.default));
+parcelHelpers.export(exports, "CameraIcon", ()=>(0, _cameraIconJsDefault.default));
+parcelHelpers.export(exports, "ChartBarSquareIcon", ()=>(0, _chartBarSquareIconJsDefault.default));
+parcelHelpers.export(exports, "ChartBarIcon", ()=>(0, _chartBarIconJsDefault.default));
+parcelHelpers.export(exports, "ChartPieIcon", ()=>(0, _chartPieIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleBottomCenterTextIcon", ()=>(0, _chatBubbleBottomCenterTextIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleBottomCenterIcon", ()=>(0, _chatBubbleBottomCenterIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleLeftEllipsisIcon", ()=>(0, _chatBubbleLeftEllipsisIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleLeftRightIcon", ()=>(0, _chatBubbleLeftRightIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleLeftIcon", ()=>(0, _chatBubbleLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleOvalLeftEllipsisIcon", ()=>(0, _chatBubbleOvalLeftEllipsisIconJsDefault.default));
+parcelHelpers.export(exports, "ChatBubbleOvalLeftIcon", ()=>(0, _chatBubbleOvalLeftIconJsDefault.default));
+parcelHelpers.export(exports, "CheckBadgeIcon", ()=>(0, _checkBadgeIconJsDefault.default));
+parcelHelpers.export(exports, "CheckCircleIcon", ()=>(0, _checkCircleIconJsDefault.default));
+parcelHelpers.export(exports, "CheckIcon", ()=>(0, _checkIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleDownIcon", ()=>(0, _chevronDoubleDownIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleLeftIcon", ()=>(0, _chevronDoubleLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleRightIcon", ()=>(0, _chevronDoubleRightIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDoubleUpIcon", ()=>(0, _chevronDoubleUpIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronDownIcon", ()=>(0, _chevronDownIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronLeftIcon", ()=>(0, _chevronLeftIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronRightIcon", ()=>(0, _chevronRightIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronUpDownIcon", ()=>(0, _chevronUpDownIconJsDefault.default));
+parcelHelpers.export(exports, "ChevronUpIcon", ()=>(0, _chevronUpIconJsDefault.default));
+parcelHelpers.export(exports, "CircleStackIcon", ()=>(0, _circleStackIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardDocumentCheckIcon", ()=>(0, _clipboardDocumentCheckIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardDocumentListIcon", ()=>(0, _clipboardDocumentListIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardDocumentIcon", ()=>(0, _clipboardDocumentIconJsDefault.default));
+parcelHelpers.export(exports, "ClipboardIcon", ()=>(0, _clipboardIconJsDefault.default));
+parcelHelpers.export(exports, "ClockIcon", ()=>(0, _clockIconJsDefault.default));
+parcelHelpers.export(exports, "CloudArrowDownIcon", ()=>(0, _cloudArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "CloudArrowUpIcon", ()=>(0, _cloudArrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "CloudIcon", ()=>(0, _cloudIconJsDefault.default));
+parcelHelpers.export(exports, "CodeBracketSquareIcon", ()=>(0, _codeBracketSquareIconJsDefault.default));
+parcelHelpers.export(exports, "CodeBracketIcon", ()=>(0, _codeBracketIconJsDefault.default));
+parcelHelpers.export(exports, "Cog6ToothIcon", ()=>(0, _cog6ToothIconJsDefault.default));
+parcelHelpers.export(exports, "Cog8ToothIcon", ()=>(0, _cog8ToothIconJsDefault.default));
+parcelHelpers.export(exports, "CogIcon", ()=>(0, _cogIconJsDefault.default));
+parcelHelpers.export(exports, "CommandLineIcon", ()=>(0, _commandLineIconJsDefault.default));
+parcelHelpers.export(exports, "ComputerDesktopIcon", ()=>(0, _computerDesktopIconJsDefault.default));
+parcelHelpers.export(exports, "CpuChipIcon", ()=>(0, _cpuChipIconJsDefault.default));
+parcelHelpers.export(exports, "CreditCardIcon", ()=>(0, _creditCardIconJsDefault.default));
+parcelHelpers.export(exports, "CubeTransparentIcon", ()=>(0, _cubeTransparentIconJsDefault.default));
+parcelHelpers.export(exports, "CubeIcon", ()=>(0, _cubeIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyBangladeshiIcon", ()=>(0, _currencyBangladeshiIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyDollarIcon", ()=>(0, _currencyDollarIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyEuroIcon", ()=>(0, _currencyEuroIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyPoundIcon", ()=>(0, _currencyPoundIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyRupeeIcon", ()=>(0, _currencyRupeeIconJsDefault.default));
+parcelHelpers.export(exports, "CurrencyYenIcon", ()=>(0, _currencyYenIconJsDefault.default));
+parcelHelpers.export(exports, "CursorArrowRaysIcon", ()=>(0, _cursorArrowRaysIconJsDefault.default));
+parcelHelpers.export(exports, "CursorArrowRippleIcon", ()=>(0, _cursorArrowRippleIconJsDefault.default));
+parcelHelpers.export(exports, "DevicePhoneMobileIcon", ()=>(0, _devicePhoneMobileIconJsDefault.default));
+parcelHelpers.export(exports, "DeviceTabletIcon", ()=>(0, _deviceTabletIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentArrowDownIcon", ()=>(0, _documentArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentArrowUpIcon", ()=>(0, _documentArrowUpIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentChartBarIcon", ()=>(0, _documentChartBarIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentCheckIcon", ()=>(0, _documentCheckIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentDuplicateIcon", ()=>(0, _documentDuplicateIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentMagnifyingGlassIcon", ()=>(0, _documentMagnifyingGlassIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentMinusIcon", ()=>(0, _documentMinusIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentPlusIcon", ()=>(0, _documentPlusIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentTextIcon", ()=>(0, _documentTextIconJsDefault.default));
+parcelHelpers.export(exports, "DocumentIcon", ()=>(0, _documentIconJsDefault.default));
+parcelHelpers.export(exports, "EllipsisHorizontalCircleIcon", ()=>(0, _ellipsisHorizontalCircleIconJsDefault.default));
+parcelHelpers.export(exports, "EllipsisHorizontalIcon", ()=>(0, _ellipsisHorizontalIconJsDefault.default));
+parcelHelpers.export(exports, "EllipsisVerticalIcon", ()=>(0, _ellipsisVerticalIconJsDefault.default));
+parcelHelpers.export(exports, "EnvelopeOpenIcon", ()=>(0, _envelopeOpenIconJsDefault.default));
+parcelHelpers.export(exports, "EnvelopeIcon", ()=>(0, _envelopeIconJsDefault.default));
+parcelHelpers.export(exports, "ExclamationCircleIcon", ()=>(0, _exclamationCircleIconJsDefault.default));
+parcelHelpers.export(exports, "ExclamationTriangleIcon", ()=>(0, _exclamationTriangleIconJsDefault.default));
+parcelHelpers.export(exports, "EyeDropperIcon", ()=>(0, _eyeDropperIconJsDefault.default));
+parcelHelpers.export(exports, "EyeSlashIcon", ()=>(0, _eyeSlashIconJsDefault.default));
+parcelHelpers.export(exports, "EyeIcon", ()=>(0, _eyeIconJsDefault.default));
+parcelHelpers.export(exports, "FaceFrownIcon", ()=>(0, _faceFrownIconJsDefault.default));
+parcelHelpers.export(exports, "FaceSmileIcon", ()=>(0, _faceSmileIconJsDefault.default));
+parcelHelpers.export(exports, "FilmIcon", ()=>(0, _filmIconJsDefault.default));
+parcelHelpers.export(exports, "FingerPrintIcon", ()=>(0, _fingerPrintIconJsDefault.default));
+parcelHelpers.export(exports, "FireIcon", ()=>(0, _fireIconJsDefault.default));
+parcelHelpers.export(exports, "FlagIcon", ()=>(0, _flagIconJsDefault.default));
+parcelHelpers.export(exports, "FolderArrowDownIcon", ()=>(0, _folderArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "FolderMinusIcon", ()=>(0, _folderMinusIconJsDefault.default));
+parcelHelpers.export(exports, "FolderOpenIcon", ()=>(0, _folderOpenIconJsDefault.default));
+parcelHelpers.export(exports, "FolderPlusIcon", ()=>(0, _folderPlusIconJsDefault.default));
+parcelHelpers.export(exports, "FolderIcon", ()=>(0, _folderIconJsDefault.default));
+parcelHelpers.export(exports, "ForwardIcon", ()=>(0, _forwardIconJsDefault.default));
+parcelHelpers.export(exports, "FunnelIcon", ()=>(0, _funnelIconJsDefault.default));
+parcelHelpers.export(exports, "GifIcon", ()=>(0, _gifIconJsDefault.default));
+parcelHelpers.export(exports, "GiftTopIcon", ()=>(0, _giftTopIconJsDefault.default));
+parcelHelpers.export(exports, "GiftIcon", ()=>(0, _giftIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeAltIcon", ()=>(0, _globeAltIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeAmericasIcon", ()=>(0, _globeAmericasIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeAsiaAustraliaIcon", ()=>(0, _globeAsiaAustraliaIconJsDefault.default));
+parcelHelpers.export(exports, "GlobeEuropeAfricaIcon", ()=>(0, _globeEuropeAfricaIconJsDefault.default));
+parcelHelpers.export(exports, "HandRaisedIcon", ()=>(0, _handRaisedIconJsDefault.default));
+parcelHelpers.export(exports, "HandThumbDownIcon", ()=>(0, _handThumbDownIconJsDefault.default));
+parcelHelpers.export(exports, "HandThumbUpIcon", ()=>(0, _handThumbUpIconJsDefault.default));
+parcelHelpers.export(exports, "HashtagIcon", ()=>(0, _hashtagIconJsDefault.default));
+parcelHelpers.export(exports, "HeartIcon", ()=>(0, _heartIconJsDefault.default));
+parcelHelpers.export(exports, "HomeModernIcon", ()=>(0, _homeModernIconJsDefault.default));
+parcelHelpers.export(exports, "HomeIcon", ()=>(0, _homeIconJsDefault.default));
+parcelHelpers.export(exports, "IdentificationIcon", ()=>(0, _identificationIconJsDefault.default));
+parcelHelpers.export(exports, "InboxArrowDownIcon", ()=>(0, _inboxArrowDownIconJsDefault.default));
+parcelHelpers.export(exports, "InboxStackIcon", ()=>(0, _inboxStackIconJsDefault.default));
+parcelHelpers.export(exports, "InboxIcon", ()=>(0, _inboxIconJsDefault.default));
+parcelHelpers.export(exports, "InformationCircleIcon", ()=>(0, _informationCircleIconJsDefault.default));
+parcelHelpers.export(exports, "KeyIcon", ()=>(0, _keyIconJsDefault.default));
+parcelHelpers.export(exports, "LanguageIcon", ()=>(0, _languageIconJsDefault.default));
+parcelHelpers.export(exports, "LifebuoyIcon", ()=>(0, _lifebuoyIconJsDefault.default));
+parcelHelpers.export(exports, "LightBulbIcon", ()=>(0, _lightBulbIconJsDefault.default));
+parcelHelpers.export(exports, "LinkIcon", ()=>(0, _linkIconJsDefault.default));
+parcelHelpers.export(exports, "ListBulletIcon", ()=>(0, _listBulletIconJsDefault.default));
+parcelHelpers.export(exports, "LockClosedIcon", ()=>(0, _lockClosedIconJsDefault.default));
+parcelHelpers.export(exports, "LockOpenIcon", ()=>(0, _lockOpenIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassCircleIcon", ()=>(0, _magnifyingGlassCircleIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassMinusIcon", ()=>(0, _magnifyingGlassMinusIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassPlusIcon", ()=>(0, _magnifyingGlassPlusIconJsDefault.default));
+parcelHelpers.export(exports, "MagnifyingGlassIcon", ()=>(0, _magnifyingGlassIconJsDefault.default));
+parcelHelpers.export(exports, "MapPinIcon", ()=>(0, _mapPinIconJsDefault.default));
+parcelHelpers.export(exports, "MapIcon", ()=>(0, _mapIconJsDefault.default));
+parcelHelpers.export(exports, "MegaphoneIcon", ()=>(0, _megaphoneIconJsDefault.default));
+parcelHelpers.export(exports, "MicrophoneIcon", ()=>(0, _microphoneIconJsDefault.default));
+parcelHelpers.export(exports, "MinusCircleIcon", ()=>(0, _minusCircleIconJsDefault.default));
+parcelHelpers.export(exports, "MinusSmallIcon", ()=>(0, _minusSmallIconJsDefault.default));
+parcelHelpers.export(exports, "MinusIcon", ()=>(0, _minusIconJsDefault.default));
+parcelHelpers.export(exports, "MoonIcon", ()=>(0, _moonIconJsDefault.default));
+parcelHelpers.export(exports, "MusicalNoteIcon", ()=>(0, _musicalNoteIconJsDefault.default));
+parcelHelpers.export(exports, "NewspaperIcon", ()=>(0, _newspaperIconJsDefault.default));
+parcelHelpers.export(exports, "NoSymbolIcon", ()=>(0, _noSymbolIconJsDefault.default));
+parcelHelpers.export(exports, "PaintBrushIcon", ()=>(0, _paintBrushIconJsDefault.default));
+parcelHelpers.export(exports, "PaperAirplaneIcon", ()=>(0, _paperAirplaneIconJsDefault.default));
+parcelHelpers.export(exports, "PaperClipIcon", ()=>(0, _paperClipIconJsDefault.default));
+parcelHelpers.export(exports, "PauseCircleIcon", ()=>(0, _pauseCircleIconJsDefault.default));
+parcelHelpers.export(exports, "PauseIcon", ()=>(0, _pauseIconJsDefault.default));
+parcelHelpers.export(exports, "PencilSquareIcon", ()=>(0, _pencilSquareIconJsDefault.default));
+parcelHelpers.export(exports, "PencilIcon", ()=>(0, _pencilIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneArrowDownLeftIcon", ()=>(0, _phoneArrowDownLeftIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneArrowUpRightIcon", ()=>(0, _phoneArrowUpRightIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneXMarkIcon", ()=>(0, _phoneXMarkIconJsDefault.default));
+parcelHelpers.export(exports, "PhoneIcon", ()=>(0, _phoneIconJsDefault.default));
+parcelHelpers.export(exports, "PhotoIcon", ()=>(0, _photoIconJsDefault.default));
+parcelHelpers.export(exports, "PlayCircleIcon", ()=>(0, _playCircleIconJsDefault.default));
+parcelHelpers.export(exports, "PlayPauseIcon", ()=>(0, _playPauseIconJsDefault.default));
+parcelHelpers.export(exports, "PlayIcon", ()=>(0, _playIconJsDefault.default));
+parcelHelpers.export(exports, "PlusCircleIcon", ()=>(0, _plusCircleIconJsDefault.default));
+parcelHelpers.export(exports, "PlusSmallIcon", ()=>(0, _plusSmallIconJsDefault.default));
+parcelHelpers.export(exports, "PlusIcon", ()=>(0, _plusIconJsDefault.default));
+parcelHelpers.export(exports, "PowerIcon", ()=>(0, _powerIconJsDefault.default));
+parcelHelpers.export(exports, "PresentationChartBarIcon", ()=>(0, _presentationChartBarIconJsDefault.default));
+parcelHelpers.export(exports, "PresentationChartLineIcon", ()=>(0, _presentationChartLineIconJsDefault.default));
+parcelHelpers.export(exports, "PrinterIcon", ()=>(0, _printerIconJsDefault.default));
+parcelHelpers.export(exports, "PuzzlePieceIcon", ()=>(0, _puzzlePieceIconJsDefault.default));
+parcelHelpers.export(exports, "QrCodeIcon", ()=>(0, _qrCodeIconJsDefault.default));
+parcelHelpers.export(exports, "QuestionMarkCircleIcon", ()=>(0, _questionMarkCircleIconJsDefault.default));
+parcelHelpers.export(exports, "QueueListIcon", ()=>(0, _queueListIconJsDefault.default));
+parcelHelpers.export(exports, "RadioIcon", ()=>(0, _radioIconJsDefault.default));
+parcelHelpers.export(exports, "ReceiptPercentIcon", ()=>(0, _receiptPercentIconJsDefault.default));
+parcelHelpers.export(exports, "ReceiptRefundIcon", ()=>(0, _receiptRefundIconJsDefault.default));
+parcelHelpers.export(exports, "RectangleGroupIcon", ()=>(0, _rectangleGroupIconJsDefault.default));
+parcelHelpers.export(exports, "RectangleStackIcon", ()=>(0, _rectangleStackIconJsDefault.default));
+parcelHelpers.export(exports, "RocketLaunchIcon", ()=>(0, _rocketLaunchIconJsDefault.default));
+parcelHelpers.export(exports, "RssIcon", ()=>(0, _rssIconJsDefault.default));
+parcelHelpers.export(exports, "ScaleIcon", ()=>(0, _scaleIconJsDefault.default));
+parcelHelpers.export(exports, "ScissorsIcon", ()=>(0, _scissorsIconJsDefault.default));
+parcelHelpers.export(exports, "ServerStackIcon", ()=>(0, _serverStackIconJsDefault.default));
+parcelHelpers.export(exports, "ServerIcon", ()=>(0, _serverIconJsDefault.default));
+parcelHelpers.export(exports, "ShareIcon", ()=>(0, _shareIconJsDefault.default));
+parcelHelpers.export(exports, "ShieldCheckIcon", ()=>(0, _shieldCheckIconJsDefault.default));
+parcelHelpers.export(exports, "ShieldExclamationIcon", ()=>(0, _shieldExclamationIconJsDefault.default));
+parcelHelpers.export(exports, "ShoppingBagIcon", ()=>(0, _shoppingBagIconJsDefault.default));
+parcelHelpers.export(exports, "ShoppingCartIcon", ()=>(0, _shoppingCartIconJsDefault.default));
+parcelHelpers.export(exports, "SignalSlashIcon", ()=>(0, _signalSlashIconJsDefault.default));
+parcelHelpers.export(exports, "SignalIcon", ()=>(0, _signalIconJsDefault.default));
+parcelHelpers.export(exports, "SparklesIcon", ()=>(0, _sparklesIconJsDefault.default));
+parcelHelpers.export(exports, "SpeakerWaveIcon", ()=>(0, _speakerWaveIconJsDefault.default));
+parcelHelpers.export(exports, "SpeakerXMarkIcon", ()=>(0, _speakerXMarkIconJsDefault.default));
+parcelHelpers.export(exports, "Square2StackIcon", ()=>(0, _square2StackIconJsDefault.default));
+parcelHelpers.export(exports, "Square3Stack3DIcon", ()=>(0, _square3Stack3DIconJsDefault.default));
+parcelHelpers.export(exports, "Squares2X2Icon", ()=>(0, _squares2X2IconJsDefault.default));
+parcelHelpers.export(exports, "SquaresPlusIcon", ()=>(0, _squaresPlusIconJsDefault.default));
+parcelHelpers.export(exports, "StarIcon", ()=>(0, _starIconJsDefault.default));
+parcelHelpers.export(exports, "StopCircleIcon", ()=>(0, _stopCircleIconJsDefault.default));
+parcelHelpers.export(exports, "StopIcon", ()=>(0, _stopIconJsDefault.default));
+parcelHelpers.export(exports, "SunIcon", ()=>(0, _sunIconJsDefault.default));
+parcelHelpers.export(exports, "SwatchIcon", ()=>(0, _swatchIconJsDefault.default));
+parcelHelpers.export(exports, "TableCellsIcon", ()=>(0, _tableCellsIconJsDefault.default));
+parcelHelpers.export(exports, "TagIcon", ()=>(0, _tagIconJsDefault.default));
+parcelHelpers.export(exports, "TicketIcon", ()=>(0, _ticketIconJsDefault.default));
+parcelHelpers.export(exports, "TrashIcon", ()=>(0, _trashIconJsDefault.default));
+parcelHelpers.export(exports, "TrophyIcon", ()=>(0, _trophyIconJsDefault.default));
+parcelHelpers.export(exports, "TruckIcon", ()=>(0, _truckIconJsDefault.default));
+parcelHelpers.export(exports, "TvIcon", ()=>(0, _tvIconJsDefault.default));
+parcelHelpers.export(exports, "UserCircleIcon", ()=>(0, _userCircleIconJsDefault.default));
+parcelHelpers.export(exports, "UserGroupIcon", ()=>(0, _userGroupIconJsDefault.default));
+parcelHelpers.export(exports, "UserMinusIcon", ()=>(0, _userMinusIconJsDefault.default));
+parcelHelpers.export(exports, "UserPlusIcon", ()=>(0, _userPlusIconJsDefault.default));
+parcelHelpers.export(exports, "UserIcon", ()=>(0, _userIconJsDefault.default));
+parcelHelpers.export(exports, "UsersIcon", ()=>(0, _usersIconJsDefault.default));
+parcelHelpers.export(exports, "VariableIcon", ()=>(0, _variableIconJsDefault.default));
+parcelHelpers.export(exports, "VideoCameraSlashIcon", ()=>(0, _videoCameraSlashIconJsDefault.default));
+parcelHelpers.export(exports, "VideoCameraIcon", ()=>(0, _videoCameraIconJsDefault.default));
+parcelHelpers.export(exports, "ViewColumnsIcon", ()=>(0, _viewColumnsIconJsDefault.default));
+parcelHelpers.export(exports, "ViewfinderCircleIcon", ()=>(0, _viewfinderCircleIconJsDefault.default));
+parcelHelpers.export(exports, "WalletIcon", ()=>(0, _walletIconJsDefault.default));
+parcelHelpers.export(exports, "WifiIcon", ()=>(0, _wifiIconJsDefault.default));
+parcelHelpers.export(exports, "WindowIcon", ()=>(0, _windowIconJsDefault.default));
+parcelHelpers.export(exports, "WrenchScrewdriverIcon", ()=>(0, _wrenchScrewdriverIconJsDefault.default));
+parcelHelpers.export(exports, "WrenchIcon", ()=>(0, _wrenchIconJsDefault.default));
+parcelHelpers.export(exports, "XCircleIcon", ()=>(0, _xcircleIconJsDefault.default));
+parcelHelpers.export(exports, "XMarkIcon", ()=>(0, _xmarkIconJsDefault.default));
+var _academicCapIconJs = require("./AcademicCapIcon.js");
+var _academicCapIconJsDefault = parcelHelpers.interopDefault(_academicCapIconJs);
+var _adjustmentsHorizontalIconJs = require("./AdjustmentsHorizontalIcon.js");
+var _adjustmentsHorizontalIconJsDefault = parcelHelpers.interopDefault(_adjustmentsHorizontalIconJs);
+var _adjustmentsVerticalIconJs = require("./AdjustmentsVerticalIcon.js");
+var _adjustmentsVerticalIconJsDefault = parcelHelpers.interopDefault(_adjustmentsVerticalIconJs);
+var _archiveBoxArrowDownIconJs = require("./ArchiveBoxArrowDownIcon.js");
+var _archiveBoxArrowDownIconJsDefault = parcelHelpers.interopDefault(_archiveBoxArrowDownIconJs);
+var _archiveBoxXMarkIconJs = require("./ArchiveBoxXMarkIcon.js");
+var _archiveBoxXMarkIconJsDefault = parcelHelpers.interopDefault(_archiveBoxXMarkIconJs);
+var _archiveBoxIconJs = require("./ArchiveBoxIcon.js");
+var _archiveBoxIconJsDefault = parcelHelpers.interopDefault(_archiveBoxIconJs);
+var _arrowDownCircleIconJs = require("./ArrowDownCircleIcon.js");
+var _arrowDownCircleIconJsDefault = parcelHelpers.interopDefault(_arrowDownCircleIconJs);
+var _arrowDownLeftIconJs = require("./ArrowDownLeftIcon.js");
+var _arrowDownLeftIconJsDefault = parcelHelpers.interopDefault(_arrowDownLeftIconJs);
+var _arrowDownOnSquareStackIconJs = require("./ArrowDownOnSquareStackIcon.js");
+var _arrowDownOnSquareStackIconJsDefault = parcelHelpers.interopDefault(_arrowDownOnSquareStackIconJs);
+var _arrowDownOnSquareIconJs = require("./ArrowDownOnSquareIcon.js");
+var _arrowDownOnSquareIconJsDefault = parcelHelpers.interopDefault(_arrowDownOnSquareIconJs);
+var _arrowDownRightIconJs = require("./ArrowDownRightIcon.js");
+var _arrowDownRightIconJsDefault = parcelHelpers.interopDefault(_arrowDownRightIconJs);
+var _arrowDownTrayIconJs = require("./ArrowDownTrayIcon.js");
+var _arrowDownTrayIconJsDefault = parcelHelpers.interopDefault(_arrowDownTrayIconJs);
+var _arrowDownIconJs = require("./ArrowDownIcon.js");
+var _arrowDownIconJsDefault = parcelHelpers.interopDefault(_arrowDownIconJs);
+var _arrowLeftCircleIconJs = require("./ArrowLeftCircleIcon.js");
+var _arrowLeftCircleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftCircleIconJs);
+var _arrowLeftEndOnRectangleIconJs = require("./ArrowLeftEndOnRectangleIcon.js");
+var _arrowLeftEndOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftEndOnRectangleIconJs);
+var _arrowLeftOnRectangleIconJs = require("./ArrowLeftOnRectangleIcon.js");
+var _arrowLeftOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftOnRectangleIconJs);
+var _arrowLeftStartOnRectangleIconJs = require("./ArrowLeftStartOnRectangleIcon.js");
+var _arrowLeftStartOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowLeftStartOnRectangleIconJs);
+var _arrowLeftIconJs = require("./ArrowLeftIcon.js");
+var _arrowLeftIconJsDefault = parcelHelpers.interopDefault(_arrowLeftIconJs);
+var _arrowLongDownIconJs = require("./ArrowLongDownIcon.js");
+var _arrowLongDownIconJsDefault = parcelHelpers.interopDefault(_arrowLongDownIconJs);
+var _arrowLongLeftIconJs = require("./ArrowLongLeftIcon.js");
+var _arrowLongLeftIconJsDefault = parcelHelpers.interopDefault(_arrowLongLeftIconJs);
+var _arrowLongRightIconJs = require("./ArrowLongRightIcon.js");
+var _arrowLongRightIconJsDefault = parcelHelpers.interopDefault(_arrowLongRightIconJs);
+var _arrowLongUpIconJs = require("./ArrowLongUpIcon.js");
+var _arrowLongUpIconJsDefault = parcelHelpers.interopDefault(_arrowLongUpIconJs);
+var _arrowPathRoundedSquareIconJs = require("./ArrowPathRoundedSquareIcon.js");
+var _arrowPathRoundedSquareIconJsDefault = parcelHelpers.interopDefault(_arrowPathRoundedSquareIconJs);
+var _arrowPathIconJs = require("./ArrowPathIcon.js");
+var _arrowPathIconJsDefault = parcelHelpers.interopDefault(_arrowPathIconJs);
+var _arrowRightCircleIconJs = require("./ArrowRightCircleIcon.js");
+var _arrowRightCircleIconJsDefault = parcelHelpers.interopDefault(_arrowRightCircleIconJs);
+var _arrowRightEndOnRectangleIconJs = require("./ArrowRightEndOnRectangleIcon.js");
+var _arrowRightEndOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowRightEndOnRectangleIconJs);
+var _arrowRightOnRectangleIconJs = require("./ArrowRightOnRectangleIcon.js");
+var _arrowRightOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowRightOnRectangleIconJs);
+var _arrowRightStartOnRectangleIconJs = require("./ArrowRightStartOnRectangleIcon.js");
+var _arrowRightStartOnRectangleIconJsDefault = parcelHelpers.interopDefault(_arrowRightStartOnRectangleIconJs);
+var _arrowRightIconJs = require("./ArrowRightIcon.js");
+var _arrowRightIconJsDefault = parcelHelpers.interopDefault(_arrowRightIconJs);
+var _arrowSmallDownIconJs = require("./ArrowSmallDownIcon.js");
+var _arrowSmallDownIconJsDefault = parcelHelpers.interopDefault(_arrowSmallDownIconJs);
+var _arrowSmallLeftIconJs = require("./ArrowSmallLeftIcon.js");
+var _arrowSmallLeftIconJsDefault = parcelHelpers.interopDefault(_arrowSmallLeftIconJs);
+var _arrowSmallRightIconJs = require("./ArrowSmallRightIcon.js");
+var _arrowSmallRightIconJsDefault = parcelHelpers.interopDefault(_arrowSmallRightIconJs);
+var _arrowSmallUpIconJs = require("./ArrowSmallUpIcon.js");
+var _arrowSmallUpIconJsDefault = parcelHelpers.interopDefault(_arrowSmallUpIconJs);
+var _arrowTopRightOnSquareIconJs = require("./ArrowTopRightOnSquareIcon.js");
+var _arrowTopRightOnSquareIconJsDefault = parcelHelpers.interopDefault(_arrowTopRightOnSquareIconJs);
+var _arrowTrendingDownIconJs = require("./ArrowTrendingDownIcon.js");
+var _arrowTrendingDownIconJsDefault = parcelHelpers.interopDefault(_arrowTrendingDownIconJs);
+var _arrowTrendingUpIconJs = require("./ArrowTrendingUpIcon.js");
+var _arrowTrendingUpIconJsDefault = parcelHelpers.interopDefault(_arrowTrendingUpIconJs);
+var _arrowUpCircleIconJs = require("./ArrowUpCircleIcon.js");
+var _arrowUpCircleIconJsDefault = parcelHelpers.interopDefault(_arrowUpCircleIconJs);
+var _arrowUpLeftIconJs = require("./ArrowUpLeftIcon.js");
+var _arrowUpLeftIconJsDefault = parcelHelpers.interopDefault(_arrowUpLeftIconJs);
+var _arrowUpOnSquareStackIconJs = require("./ArrowUpOnSquareStackIcon.js");
+var _arrowUpOnSquareStackIconJsDefault = parcelHelpers.interopDefault(_arrowUpOnSquareStackIconJs);
+var _arrowUpOnSquareIconJs = require("./ArrowUpOnSquareIcon.js");
+var _arrowUpOnSquareIconJsDefault = parcelHelpers.interopDefault(_arrowUpOnSquareIconJs);
+var _arrowUpRightIconJs = require("./ArrowUpRightIcon.js");
+var _arrowUpRightIconJsDefault = parcelHelpers.interopDefault(_arrowUpRightIconJs);
+var _arrowUpTrayIconJs = require("./ArrowUpTrayIcon.js");
+var _arrowUpTrayIconJsDefault = parcelHelpers.interopDefault(_arrowUpTrayIconJs);
+var _arrowUpIconJs = require("./ArrowUpIcon.js");
+var _arrowUpIconJsDefault = parcelHelpers.interopDefault(_arrowUpIconJs);
+var _arrowUturnDownIconJs = require("./ArrowUturnDownIcon.js");
+var _arrowUturnDownIconJsDefault = parcelHelpers.interopDefault(_arrowUturnDownIconJs);
+var _arrowUturnLeftIconJs = require("./ArrowUturnLeftIcon.js");
+var _arrowUturnLeftIconJsDefault = parcelHelpers.interopDefault(_arrowUturnLeftIconJs);
+var _arrowUturnRightIconJs = require("./ArrowUturnRightIcon.js");
+var _arrowUturnRightIconJsDefault = parcelHelpers.interopDefault(_arrowUturnRightIconJs);
+var _arrowUturnUpIconJs = require("./ArrowUturnUpIcon.js");
+var _arrowUturnUpIconJsDefault = parcelHelpers.interopDefault(_arrowUturnUpIconJs);
+var _arrowsPointingInIconJs = require("./ArrowsPointingInIcon.js");
+var _arrowsPointingInIconJsDefault = parcelHelpers.interopDefault(_arrowsPointingInIconJs);
+var _arrowsPointingOutIconJs = require("./ArrowsPointingOutIcon.js");
+var _arrowsPointingOutIconJsDefault = parcelHelpers.interopDefault(_arrowsPointingOutIconJs);
+var _arrowsRightLeftIconJs = require("./ArrowsRightLeftIcon.js");
+var _arrowsRightLeftIconJsDefault = parcelHelpers.interopDefault(_arrowsRightLeftIconJs);
+var _arrowsUpDownIconJs = require("./ArrowsUpDownIcon.js");
+var _arrowsUpDownIconJsDefault = parcelHelpers.interopDefault(_arrowsUpDownIconJs);
+var _atSymbolIconJs = require("./AtSymbolIcon.js");
+var _atSymbolIconJsDefault = parcelHelpers.interopDefault(_atSymbolIconJs);
+var _backspaceIconJs = require("./BackspaceIcon.js");
+var _backspaceIconJsDefault = parcelHelpers.interopDefault(_backspaceIconJs);
+var _backwardIconJs = require("./BackwardIcon.js");
+var _backwardIconJsDefault = parcelHelpers.interopDefault(_backwardIconJs);
+var _banknotesIconJs = require("./BanknotesIcon.js");
+var _banknotesIconJsDefault = parcelHelpers.interopDefault(_banknotesIconJs);
+var _bars2IconJs = require("./Bars2Icon.js");
+var _bars2IconJsDefault = parcelHelpers.interopDefault(_bars2IconJs);
+var _bars3BottomLeftIconJs = require("./Bars3BottomLeftIcon.js");
+var _bars3BottomLeftIconJsDefault = parcelHelpers.interopDefault(_bars3BottomLeftIconJs);
+var _bars3BottomRightIconJs = require("./Bars3BottomRightIcon.js");
+var _bars3BottomRightIconJsDefault = parcelHelpers.interopDefault(_bars3BottomRightIconJs);
+var _bars3CenterLeftIconJs = require("./Bars3CenterLeftIcon.js");
+var _bars3CenterLeftIconJsDefault = parcelHelpers.interopDefault(_bars3CenterLeftIconJs);
+var _bars3IconJs = require("./Bars3Icon.js");
+var _bars3IconJsDefault = parcelHelpers.interopDefault(_bars3IconJs);
+var _bars4IconJs = require("./Bars4Icon.js");
+var _bars4IconJsDefault = parcelHelpers.interopDefault(_bars4IconJs);
+var _barsArrowDownIconJs = require("./BarsArrowDownIcon.js");
+var _barsArrowDownIconJsDefault = parcelHelpers.interopDefault(_barsArrowDownIconJs);
+var _barsArrowUpIconJs = require("./BarsArrowUpIcon.js");
+var _barsArrowUpIconJsDefault = parcelHelpers.interopDefault(_barsArrowUpIconJs);
+var _battery0IconJs = require("./Battery0Icon.js");
+var _battery0IconJsDefault = parcelHelpers.interopDefault(_battery0IconJs);
+var _battery100IconJs = require("./Battery100Icon.js");
+var _battery100IconJsDefault = parcelHelpers.interopDefault(_battery100IconJs);
+var _battery50IconJs = require("./Battery50Icon.js");
+var _battery50IconJsDefault = parcelHelpers.interopDefault(_battery50IconJs);
+var _beakerIconJs = require("./BeakerIcon.js");
+var _beakerIconJsDefault = parcelHelpers.interopDefault(_beakerIconJs);
+var _bellAlertIconJs = require("./BellAlertIcon.js");
+var _bellAlertIconJsDefault = parcelHelpers.interopDefault(_bellAlertIconJs);
+var _bellSlashIconJs = require("./BellSlashIcon.js");
+var _bellSlashIconJsDefault = parcelHelpers.interopDefault(_bellSlashIconJs);
+var _bellSnoozeIconJs = require("./BellSnoozeIcon.js");
+var _bellSnoozeIconJsDefault = parcelHelpers.interopDefault(_bellSnoozeIconJs);
+var _bellIconJs = require("./BellIcon.js");
+var _bellIconJsDefault = parcelHelpers.interopDefault(_bellIconJs);
+var _boltSlashIconJs = require("./BoltSlashIcon.js");
+var _boltSlashIconJsDefault = parcelHelpers.interopDefault(_boltSlashIconJs);
+var _boltIconJs = require("./BoltIcon.js");
+var _boltIconJsDefault = parcelHelpers.interopDefault(_boltIconJs);
+var _bookOpenIconJs = require("./BookOpenIcon.js");
+var _bookOpenIconJsDefault = parcelHelpers.interopDefault(_bookOpenIconJs);
+var _bookmarkSlashIconJs = require("./BookmarkSlashIcon.js");
+var _bookmarkSlashIconJsDefault = parcelHelpers.interopDefault(_bookmarkSlashIconJs);
+var _bookmarkSquareIconJs = require("./BookmarkSquareIcon.js");
+var _bookmarkSquareIconJsDefault = parcelHelpers.interopDefault(_bookmarkSquareIconJs);
+var _bookmarkIconJs = require("./BookmarkIcon.js");
+var _bookmarkIconJsDefault = parcelHelpers.interopDefault(_bookmarkIconJs);
+var _briefcaseIconJs = require("./BriefcaseIcon.js");
+var _briefcaseIconJsDefault = parcelHelpers.interopDefault(_briefcaseIconJs);
+var _bugAntIconJs = require("./BugAntIcon.js");
+var _bugAntIconJsDefault = parcelHelpers.interopDefault(_bugAntIconJs);
+var _buildingLibraryIconJs = require("./BuildingLibraryIcon.js");
+var _buildingLibraryIconJsDefault = parcelHelpers.interopDefault(_buildingLibraryIconJs);
+var _buildingOffice2IconJs = require("./BuildingOffice2Icon.js");
+var _buildingOffice2IconJsDefault = parcelHelpers.interopDefault(_buildingOffice2IconJs);
+var _buildingOfficeIconJs = require("./BuildingOfficeIcon.js");
+var _buildingOfficeIconJsDefault = parcelHelpers.interopDefault(_buildingOfficeIconJs);
+var _buildingStorefrontIconJs = require("./BuildingStorefrontIcon.js");
+var _buildingStorefrontIconJsDefault = parcelHelpers.interopDefault(_buildingStorefrontIconJs);
+var _cakeIconJs = require("./CakeIcon.js");
+var _cakeIconJsDefault = parcelHelpers.interopDefault(_cakeIconJs);
+var _calculatorIconJs = require("./CalculatorIcon.js");
+var _calculatorIconJsDefault = parcelHelpers.interopDefault(_calculatorIconJs);
+var _calendarDaysIconJs = require("./CalendarDaysIcon.js");
+var _calendarDaysIconJsDefault = parcelHelpers.interopDefault(_calendarDaysIconJs);
+var _calendarIconJs = require("./CalendarIcon.js");
+var _calendarIconJsDefault = parcelHelpers.interopDefault(_calendarIconJs);
+var _cameraIconJs = require("./CameraIcon.js");
+var _cameraIconJsDefault = parcelHelpers.interopDefault(_cameraIconJs);
+var _chartBarSquareIconJs = require("./ChartBarSquareIcon.js");
+var _chartBarSquareIconJsDefault = parcelHelpers.interopDefault(_chartBarSquareIconJs);
+var _chartBarIconJs = require("./ChartBarIcon.js");
+var _chartBarIconJsDefault = parcelHelpers.interopDefault(_chartBarIconJs);
+var _chartPieIconJs = require("./ChartPieIcon.js");
+var _chartPieIconJsDefault = parcelHelpers.interopDefault(_chartPieIconJs);
+var _chatBubbleBottomCenterTextIconJs = require("./ChatBubbleBottomCenterTextIcon.js");
+var _chatBubbleBottomCenterTextIconJsDefault = parcelHelpers.interopDefault(_chatBubbleBottomCenterTextIconJs);
+var _chatBubbleBottomCenterIconJs = require("./ChatBubbleBottomCenterIcon.js");
+var _chatBubbleBottomCenterIconJsDefault = parcelHelpers.interopDefault(_chatBubbleBottomCenterIconJs);
+var _chatBubbleLeftEllipsisIconJs = require("./ChatBubbleLeftEllipsisIcon.js");
+var _chatBubbleLeftEllipsisIconJsDefault = parcelHelpers.interopDefault(_chatBubbleLeftEllipsisIconJs);
+var _chatBubbleLeftRightIconJs = require("./ChatBubbleLeftRightIcon.js");
+var _chatBubbleLeftRightIconJsDefault = parcelHelpers.interopDefault(_chatBubbleLeftRightIconJs);
+var _chatBubbleLeftIconJs = require("./ChatBubbleLeftIcon.js");
+var _chatBubbleLeftIconJsDefault = parcelHelpers.interopDefault(_chatBubbleLeftIconJs);
+var _chatBubbleOvalLeftEllipsisIconJs = require("./ChatBubbleOvalLeftEllipsisIcon.js");
+var _chatBubbleOvalLeftEllipsisIconJsDefault = parcelHelpers.interopDefault(_chatBubbleOvalLeftEllipsisIconJs);
+var _chatBubbleOvalLeftIconJs = require("./ChatBubbleOvalLeftIcon.js");
+var _chatBubbleOvalLeftIconJsDefault = parcelHelpers.interopDefault(_chatBubbleOvalLeftIconJs);
+var _checkBadgeIconJs = require("./CheckBadgeIcon.js");
+var _checkBadgeIconJsDefault = parcelHelpers.interopDefault(_checkBadgeIconJs);
+var _checkCircleIconJs = require("./CheckCircleIcon.js");
+var _checkCircleIconJsDefault = parcelHelpers.interopDefault(_checkCircleIconJs);
+var _checkIconJs = require("./CheckIcon.js");
+var _checkIconJsDefault = parcelHelpers.interopDefault(_checkIconJs);
+var _chevronDoubleDownIconJs = require("./ChevronDoubleDownIcon.js");
+var _chevronDoubleDownIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleDownIconJs);
+var _chevronDoubleLeftIconJs = require("./ChevronDoubleLeftIcon.js");
+var _chevronDoubleLeftIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleLeftIconJs);
+var _chevronDoubleRightIconJs = require("./ChevronDoubleRightIcon.js");
+var _chevronDoubleRightIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleRightIconJs);
+var _chevronDoubleUpIconJs = require("./ChevronDoubleUpIcon.js");
+var _chevronDoubleUpIconJsDefault = parcelHelpers.interopDefault(_chevronDoubleUpIconJs);
+var _chevronDownIconJs = require("./ChevronDownIcon.js");
+var _chevronDownIconJsDefault = parcelHelpers.interopDefault(_chevronDownIconJs);
+var _chevronLeftIconJs = require("./ChevronLeftIcon.js");
+var _chevronLeftIconJsDefault = parcelHelpers.interopDefault(_chevronLeftIconJs);
+var _chevronRightIconJs = require("./ChevronRightIcon.js");
+var _chevronRightIconJsDefault = parcelHelpers.interopDefault(_chevronRightIconJs);
+var _chevronUpDownIconJs = require("./ChevronUpDownIcon.js");
+var _chevronUpDownIconJsDefault = parcelHelpers.interopDefault(_chevronUpDownIconJs);
+var _chevronUpIconJs = require("./ChevronUpIcon.js");
+var _chevronUpIconJsDefault = parcelHelpers.interopDefault(_chevronUpIconJs);
+var _circleStackIconJs = require("./CircleStackIcon.js");
+var _circleStackIconJsDefault = parcelHelpers.interopDefault(_circleStackIconJs);
+var _clipboardDocumentCheckIconJs = require("./ClipboardDocumentCheckIcon.js");
+var _clipboardDocumentCheckIconJsDefault = parcelHelpers.interopDefault(_clipboardDocumentCheckIconJs);
+var _clipboardDocumentListIconJs = require("./ClipboardDocumentListIcon.js");
+var _clipboardDocumentListIconJsDefault = parcelHelpers.interopDefault(_clipboardDocumentListIconJs);
+var _clipboardDocumentIconJs = require("./ClipboardDocumentIcon.js");
+var _clipboardDocumentIconJsDefault = parcelHelpers.interopDefault(_clipboardDocumentIconJs);
+var _clipboardIconJs = require("./ClipboardIcon.js");
+var _clipboardIconJsDefault = parcelHelpers.interopDefault(_clipboardIconJs);
+var _clockIconJs = require("./ClockIcon.js");
+var _clockIconJsDefault = parcelHelpers.interopDefault(_clockIconJs);
+var _cloudArrowDownIconJs = require("./CloudArrowDownIcon.js");
+var _cloudArrowDownIconJsDefault = parcelHelpers.interopDefault(_cloudArrowDownIconJs);
+var _cloudArrowUpIconJs = require("./CloudArrowUpIcon.js");
+var _cloudArrowUpIconJsDefault = parcelHelpers.interopDefault(_cloudArrowUpIconJs);
+var _cloudIconJs = require("./CloudIcon.js");
+var _cloudIconJsDefault = parcelHelpers.interopDefault(_cloudIconJs);
+var _codeBracketSquareIconJs = require("./CodeBracketSquareIcon.js");
+var _codeBracketSquareIconJsDefault = parcelHelpers.interopDefault(_codeBracketSquareIconJs);
+var _codeBracketIconJs = require("./CodeBracketIcon.js");
+var _codeBracketIconJsDefault = parcelHelpers.interopDefault(_codeBracketIconJs);
+var _cog6ToothIconJs = require("./Cog6ToothIcon.js");
+var _cog6ToothIconJsDefault = parcelHelpers.interopDefault(_cog6ToothIconJs);
+var _cog8ToothIconJs = require("./Cog8ToothIcon.js");
+var _cog8ToothIconJsDefault = parcelHelpers.interopDefault(_cog8ToothIconJs);
+var _cogIconJs = require("./CogIcon.js");
+var _cogIconJsDefault = parcelHelpers.interopDefault(_cogIconJs);
+var _commandLineIconJs = require("./CommandLineIcon.js");
+var _commandLineIconJsDefault = parcelHelpers.interopDefault(_commandLineIconJs);
+var _computerDesktopIconJs = require("./ComputerDesktopIcon.js");
+var _computerDesktopIconJsDefault = parcelHelpers.interopDefault(_computerDesktopIconJs);
+var _cpuChipIconJs = require("./CpuChipIcon.js");
+var _cpuChipIconJsDefault = parcelHelpers.interopDefault(_cpuChipIconJs);
+var _creditCardIconJs = require("./CreditCardIcon.js");
+var _creditCardIconJsDefault = parcelHelpers.interopDefault(_creditCardIconJs);
+var _cubeTransparentIconJs = require("./CubeTransparentIcon.js");
+var _cubeTransparentIconJsDefault = parcelHelpers.interopDefault(_cubeTransparentIconJs);
+var _cubeIconJs = require("./CubeIcon.js");
+var _cubeIconJsDefault = parcelHelpers.interopDefault(_cubeIconJs);
+var _currencyBangladeshiIconJs = require("./CurrencyBangladeshiIcon.js");
+var _currencyBangladeshiIconJsDefault = parcelHelpers.interopDefault(_currencyBangladeshiIconJs);
+var _currencyDollarIconJs = require("./CurrencyDollarIcon.js");
+var _currencyDollarIconJsDefault = parcelHelpers.interopDefault(_currencyDollarIconJs);
+var _currencyEuroIconJs = require("./CurrencyEuroIcon.js");
+var _currencyEuroIconJsDefault = parcelHelpers.interopDefault(_currencyEuroIconJs);
+var _currencyPoundIconJs = require("./CurrencyPoundIcon.js");
+var _currencyPoundIconJsDefault = parcelHelpers.interopDefault(_currencyPoundIconJs);
+var _currencyRupeeIconJs = require("./CurrencyRupeeIcon.js");
+var _currencyRupeeIconJsDefault = parcelHelpers.interopDefault(_currencyRupeeIconJs);
+var _currencyYenIconJs = require("./CurrencyYenIcon.js");
+var _currencyYenIconJsDefault = parcelHelpers.interopDefault(_currencyYenIconJs);
+var _cursorArrowRaysIconJs = require("./CursorArrowRaysIcon.js");
+var _cursorArrowRaysIconJsDefault = parcelHelpers.interopDefault(_cursorArrowRaysIconJs);
+var _cursorArrowRippleIconJs = require("./CursorArrowRippleIcon.js");
+var _cursorArrowRippleIconJsDefault = parcelHelpers.interopDefault(_cursorArrowRippleIconJs);
+var _devicePhoneMobileIconJs = require("./DevicePhoneMobileIcon.js");
+var _devicePhoneMobileIconJsDefault = parcelHelpers.interopDefault(_devicePhoneMobileIconJs);
+var _deviceTabletIconJs = require("./DeviceTabletIcon.js");
+var _deviceTabletIconJsDefault = parcelHelpers.interopDefault(_deviceTabletIconJs);
+var _documentArrowDownIconJs = require("./DocumentArrowDownIcon.js");
+var _documentArrowDownIconJsDefault = parcelHelpers.interopDefault(_documentArrowDownIconJs);
+var _documentArrowUpIconJs = require("./DocumentArrowUpIcon.js");
+var _documentArrowUpIconJsDefault = parcelHelpers.interopDefault(_documentArrowUpIconJs);
+var _documentChartBarIconJs = require("./DocumentChartBarIcon.js");
+var _documentChartBarIconJsDefault = parcelHelpers.interopDefault(_documentChartBarIconJs);
+var _documentCheckIconJs = require("./DocumentCheckIcon.js");
+var _documentCheckIconJsDefault = parcelHelpers.interopDefault(_documentCheckIconJs);
+var _documentDuplicateIconJs = require("./DocumentDuplicateIcon.js");
+var _documentDuplicateIconJsDefault = parcelHelpers.interopDefault(_documentDuplicateIconJs);
+var _documentMagnifyingGlassIconJs = require("./DocumentMagnifyingGlassIcon.js");
+var _documentMagnifyingGlassIconJsDefault = parcelHelpers.interopDefault(_documentMagnifyingGlassIconJs);
+var _documentMinusIconJs = require("./DocumentMinusIcon.js");
+var _documentMinusIconJsDefault = parcelHelpers.interopDefault(_documentMinusIconJs);
+var _documentPlusIconJs = require("./DocumentPlusIcon.js");
+var _documentPlusIconJsDefault = parcelHelpers.interopDefault(_documentPlusIconJs);
+var _documentTextIconJs = require("./DocumentTextIcon.js");
+var _documentTextIconJsDefault = parcelHelpers.interopDefault(_documentTextIconJs);
+var _documentIconJs = require("./DocumentIcon.js");
+var _documentIconJsDefault = parcelHelpers.interopDefault(_documentIconJs);
+var _ellipsisHorizontalCircleIconJs = require("./EllipsisHorizontalCircleIcon.js");
+var _ellipsisHorizontalCircleIconJsDefault = parcelHelpers.interopDefault(_ellipsisHorizontalCircleIconJs);
+var _ellipsisHorizontalIconJs = require("./EllipsisHorizontalIcon.js");
+var _ellipsisHorizontalIconJsDefault = parcelHelpers.interopDefault(_ellipsisHorizontalIconJs);
+var _ellipsisVerticalIconJs = require("./EllipsisVerticalIcon.js");
+var _ellipsisVerticalIconJsDefault = parcelHelpers.interopDefault(_ellipsisVerticalIconJs);
+var _envelopeOpenIconJs = require("./EnvelopeOpenIcon.js");
+var _envelopeOpenIconJsDefault = parcelHelpers.interopDefault(_envelopeOpenIconJs);
+var _envelopeIconJs = require("./EnvelopeIcon.js");
+var _envelopeIconJsDefault = parcelHelpers.interopDefault(_envelopeIconJs);
+var _exclamationCircleIconJs = require("./ExclamationCircleIcon.js");
+var _exclamationCircleIconJsDefault = parcelHelpers.interopDefault(_exclamationCircleIconJs);
+var _exclamationTriangleIconJs = require("./ExclamationTriangleIcon.js");
+var _exclamationTriangleIconJsDefault = parcelHelpers.interopDefault(_exclamationTriangleIconJs);
+var _eyeDropperIconJs = require("./EyeDropperIcon.js");
+var _eyeDropperIconJsDefault = parcelHelpers.interopDefault(_eyeDropperIconJs);
+var _eyeSlashIconJs = require("./EyeSlashIcon.js");
+var _eyeSlashIconJsDefault = parcelHelpers.interopDefault(_eyeSlashIconJs);
+var _eyeIconJs = require("./EyeIcon.js");
+var _eyeIconJsDefault = parcelHelpers.interopDefault(_eyeIconJs);
+var _faceFrownIconJs = require("./FaceFrownIcon.js");
+var _faceFrownIconJsDefault = parcelHelpers.interopDefault(_faceFrownIconJs);
+var _faceSmileIconJs = require("./FaceSmileIcon.js");
+var _faceSmileIconJsDefault = parcelHelpers.interopDefault(_faceSmileIconJs);
+var _filmIconJs = require("./FilmIcon.js");
+var _filmIconJsDefault = parcelHelpers.interopDefault(_filmIconJs);
+var _fingerPrintIconJs = require("./FingerPrintIcon.js");
+var _fingerPrintIconJsDefault = parcelHelpers.interopDefault(_fingerPrintIconJs);
+var _fireIconJs = require("./FireIcon.js");
+var _fireIconJsDefault = parcelHelpers.interopDefault(_fireIconJs);
+var _flagIconJs = require("./FlagIcon.js");
+var _flagIconJsDefault = parcelHelpers.interopDefault(_flagIconJs);
+var _folderArrowDownIconJs = require("./FolderArrowDownIcon.js");
+var _folderArrowDownIconJsDefault = parcelHelpers.interopDefault(_folderArrowDownIconJs);
+var _folderMinusIconJs = require("./FolderMinusIcon.js");
+var _folderMinusIconJsDefault = parcelHelpers.interopDefault(_folderMinusIconJs);
+var _folderOpenIconJs = require("./FolderOpenIcon.js");
+var _folderOpenIconJsDefault = parcelHelpers.interopDefault(_folderOpenIconJs);
+var _folderPlusIconJs = require("./FolderPlusIcon.js");
+var _folderPlusIconJsDefault = parcelHelpers.interopDefault(_folderPlusIconJs);
+var _folderIconJs = require("./FolderIcon.js");
+var _folderIconJsDefault = parcelHelpers.interopDefault(_folderIconJs);
+var _forwardIconJs = require("./ForwardIcon.js");
+var _forwardIconJsDefault = parcelHelpers.interopDefault(_forwardIconJs);
+var _funnelIconJs = require("./FunnelIcon.js");
+var _funnelIconJsDefault = parcelHelpers.interopDefault(_funnelIconJs);
+var _gifIconJs = require("./GifIcon.js");
+var _gifIconJsDefault = parcelHelpers.interopDefault(_gifIconJs);
+var _giftTopIconJs = require("./GiftTopIcon.js");
+var _giftTopIconJsDefault = parcelHelpers.interopDefault(_giftTopIconJs);
+var _giftIconJs = require("./GiftIcon.js");
+var _giftIconJsDefault = parcelHelpers.interopDefault(_giftIconJs);
+var _globeAltIconJs = require("./GlobeAltIcon.js");
+var _globeAltIconJsDefault = parcelHelpers.interopDefault(_globeAltIconJs);
+var _globeAmericasIconJs = require("./GlobeAmericasIcon.js");
+var _globeAmericasIconJsDefault = parcelHelpers.interopDefault(_globeAmericasIconJs);
+var _globeAsiaAustraliaIconJs = require("./GlobeAsiaAustraliaIcon.js");
+var _globeAsiaAustraliaIconJsDefault = parcelHelpers.interopDefault(_globeAsiaAustraliaIconJs);
+var _globeEuropeAfricaIconJs = require("./GlobeEuropeAfricaIcon.js");
+var _globeEuropeAfricaIconJsDefault = parcelHelpers.interopDefault(_globeEuropeAfricaIconJs);
+var _handRaisedIconJs = require("./HandRaisedIcon.js");
+var _handRaisedIconJsDefault = parcelHelpers.interopDefault(_handRaisedIconJs);
+var _handThumbDownIconJs = require("./HandThumbDownIcon.js");
+var _handThumbDownIconJsDefault = parcelHelpers.interopDefault(_handThumbDownIconJs);
+var _handThumbUpIconJs = require("./HandThumbUpIcon.js");
+var _handThumbUpIconJsDefault = parcelHelpers.interopDefault(_handThumbUpIconJs);
+var _hashtagIconJs = require("./HashtagIcon.js");
+var _hashtagIconJsDefault = parcelHelpers.interopDefault(_hashtagIconJs);
+var _heartIconJs = require("./HeartIcon.js");
+var _heartIconJsDefault = parcelHelpers.interopDefault(_heartIconJs);
+var _homeModernIconJs = require("./HomeModernIcon.js");
+var _homeModernIconJsDefault = parcelHelpers.interopDefault(_homeModernIconJs);
+var _homeIconJs = require("./HomeIcon.js");
+var _homeIconJsDefault = parcelHelpers.interopDefault(_homeIconJs);
+var _identificationIconJs = require("./IdentificationIcon.js");
+var _identificationIconJsDefault = parcelHelpers.interopDefault(_identificationIconJs);
+var _inboxArrowDownIconJs = require("./InboxArrowDownIcon.js");
+var _inboxArrowDownIconJsDefault = parcelHelpers.interopDefault(_inboxArrowDownIconJs);
+var _inboxStackIconJs = require("./InboxStackIcon.js");
+var _inboxStackIconJsDefault = parcelHelpers.interopDefault(_inboxStackIconJs);
+var _inboxIconJs = require("./InboxIcon.js");
+var _inboxIconJsDefault = parcelHelpers.interopDefault(_inboxIconJs);
+var _informationCircleIconJs = require("./InformationCircleIcon.js");
+var _informationCircleIconJsDefault = parcelHelpers.interopDefault(_informationCircleIconJs);
+var _keyIconJs = require("./KeyIcon.js");
+var _keyIconJsDefault = parcelHelpers.interopDefault(_keyIconJs);
+var _languageIconJs = require("./LanguageIcon.js");
+var _languageIconJsDefault = parcelHelpers.interopDefault(_languageIconJs);
+var _lifebuoyIconJs = require("./LifebuoyIcon.js");
+var _lifebuoyIconJsDefault = parcelHelpers.interopDefault(_lifebuoyIconJs);
+var _lightBulbIconJs = require("./LightBulbIcon.js");
+var _lightBulbIconJsDefault = parcelHelpers.interopDefault(_lightBulbIconJs);
+var _linkIconJs = require("./LinkIcon.js");
+var _linkIconJsDefault = parcelHelpers.interopDefault(_linkIconJs);
+var _listBulletIconJs = require("./ListBulletIcon.js");
+var _listBulletIconJsDefault = parcelHelpers.interopDefault(_listBulletIconJs);
+var _lockClosedIconJs = require("./LockClosedIcon.js");
+var _lockClosedIconJsDefault = parcelHelpers.interopDefault(_lockClosedIconJs);
+var _lockOpenIconJs = require("./LockOpenIcon.js");
+var _lockOpenIconJsDefault = parcelHelpers.interopDefault(_lockOpenIconJs);
+var _magnifyingGlassCircleIconJs = require("./MagnifyingGlassCircleIcon.js");
+var _magnifyingGlassCircleIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassCircleIconJs);
+var _magnifyingGlassMinusIconJs = require("./MagnifyingGlassMinusIcon.js");
+var _magnifyingGlassMinusIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassMinusIconJs);
+var _magnifyingGlassPlusIconJs = require("./MagnifyingGlassPlusIcon.js");
+var _magnifyingGlassPlusIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassPlusIconJs);
+var _magnifyingGlassIconJs = require("./MagnifyingGlassIcon.js");
+var _magnifyingGlassIconJsDefault = parcelHelpers.interopDefault(_magnifyingGlassIconJs);
+var _mapPinIconJs = require("./MapPinIcon.js");
+var _mapPinIconJsDefault = parcelHelpers.interopDefault(_mapPinIconJs);
+var _mapIconJs = require("./MapIcon.js");
+var _mapIconJsDefault = parcelHelpers.interopDefault(_mapIconJs);
+var _megaphoneIconJs = require("./MegaphoneIcon.js");
+var _megaphoneIconJsDefault = parcelHelpers.interopDefault(_megaphoneIconJs);
+var _microphoneIconJs = require("./MicrophoneIcon.js");
+var _microphoneIconJsDefault = parcelHelpers.interopDefault(_microphoneIconJs);
+var _minusCircleIconJs = require("./MinusCircleIcon.js");
+var _minusCircleIconJsDefault = parcelHelpers.interopDefault(_minusCircleIconJs);
+var _minusSmallIconJs = require("./MinusSmallIcon.js");
+var _minusSmallIconJsDefault = parcelHelpers.interopDefault(_minusSmallIconJs);
+var _minusIconJs = require("./MinusIcon.js");
+var _minusIconJsDefault = parcelHelpers.interopDefault(_minusIconJs);
+var _moonIconJs = require("./MoonIcon.js");
+var _moonIconJsDefault = parcelHelpers.interopDefault(_moonIconJs);
+var _musicalNoteIconJs = require("./MusicalNoteIcon.js");
+var _musicalNoteIconJsDefault = parcelHelpers.interopDefault(_musicalNoteIconJs);
+var _newspaperIconJs = require("./NewspaperIcon.js");
+var _newspaperIconJsDefault = parcelHelpers.interopDefault(_newspaperIconJs);
+var _noSymbolIconJs = require("./NoSymbolIcon.js");
+var _noSymbolIconJsDefault = parcelHelpers.interopDefault(_noSymbolIconJs);
+var _paintBrushIconJs = require("./PaintBrushIcon.js");
+var _paintBrushIconJsDefault = parcelHelpers.interopDefault(_paintBrushIconJs);
+var _paperAirplaneIconJs = require("./PaperAirplaneIcon.js");
+var _paperAirplaneIconJsDefault = parcelHelpers.interopDefault(_paperAirplaneIconJs);
+var _paperClipIconJs = require("./PaperClipIcon.js");
+var _paperClipIconJsDefault = parcelHelpers.interopDefault(_paperClipIconJs);
+var _pauseCircleIconJs = require("./PauseCircleIcon.js");
+var _pauseCircleIconJsDefault = parcelHelpers.interopDefault(_pauseCircleIconJs);
+var _pauseIconJs = require("./PauseIcon.js");
+var _pauseIconJsDefault = parcelHelpers.interopDefault(_pauseIconJs);
+var _pencilSquareIconJs = require("./PencilSquareIcon.js");
+var _pencilSquareIconJsDefault = parcelHelpers.interopDefault(_pencilSquareIconJs);
+var _pencilIconJs = require("./PencilIcon.js");
+var _pencilIconJsDefault = parcelHelpers.interopDefault(_pencilIconJs);
+var _phoneArrowDownLeftIconJs = require("./PhoneArrowDownLeftIcon.js");
+var _phoneArrowDownLeftIconJsDefault = parcelHelpers.interopDefault(_phoneArrowDownLeftIconJs);
+var _phoneArrowUpRightIconJs = require("./PhoneArrowUpRightIcon.js");
+var _phoneArrowUpRightIconJsDefault = parcelHelpers.interopDefault(_phoneArrowUpRightIconJs);
+var _phoneXMarkIconJs = require("./PhoneXMarkIcon.js");
+var _phoneXMarkIconJsDefault = parcelHelpers.interopDefault(_phoneXMarkIconJs);
+var _phoneIconJs = require("./PhoneIcon.js");
+var _phoneIconJsDefault = parcelHelpers.interopDefault(_phoneIconJs);
+var _photoIconJs = require("./PhotoIcon.js");
+var _photoIconJsDefault = parcelHelpers.interopDefault(_photoIconJs);
+var _playCircleIconJs = require("./PlayCircleIcon.js");
+var _playCircleIconJsDefault = parcelHelpers.interopDefault(_playCircleIconJs);
+var _playPauseIconJs = require("./PlayPauseIcon.js");
+var _playPauseIconJsDefault = parcelHelpers.interopDefault(_playPauseIconJs);
+var _playIconJs = require("./PlayIcon.js");
+var _playIconJsDefault = parcelHelpers.interopDefault(_playIconJs);
+var _plusCircleIconJs = require("./PlusCircleIcon.js");
+var _plusCircleIconJsDefault = parcelHelpers.interopDefault(_plusCircleIconJs);
+var _plusSmallIconJs = require("./PlusSmallIcon.js");
+var _plusSmallIconJsDefault = parcelHelpers.interopDefault(_plusSmallIconJs);
+var _plusIconJs = require("./PlusIcon.js");
+var _plusIconJsDefault = parcelHelpers.interopDefault(_plusIconJs);
+var _powerIconJs = require("./PowerIcon.js");
+var _powerIconJsDefault = parcelHelpers.interopDefault(_powerIconJs);
+var _presentationChartBarIconJs = require("./PresentationChartBarIcon.js");
+var _presentationChartBarIconJsDefault = parcelHelpers.interopDefault(_presentationChartBarIconJs);
+var _presentationChartLineIconJs = require("./PresentationChartLineIcon.js");
+var _presentationChartLineIconJsDefault = parcelHelpers.interopDefault(_presentationChartLineIconJs);
+var _printerIconJs = require("./PrinterIcon.js");
+var _printerIconJsDefault = parcelHelpers.interopDefault(_printerIconJs);
+var _puzzlePieceIconJs = require("./PuzzlePieceIcon.js");
+var _puzzlePieceIconJsDefault = parcelHelpers.interopDefault(_puzzlePieceIconJs);
+var _qrCodeIconJs = require("./QrCodeIcon.js");
+var _qrCodeIconJsDefault = parcelHelpers.interopDefault(_qrCodeIconJs);
+var _questionMarkCircleIconJs = require("./QuestionMarkCircleIcon.js");
+var _questionMarkCircleIconJsDefault = parcelHelpers.interopDefault(_questionMarkCircleIconJs);
+var _queueListIconJs = require("./QueueListIcon.js");
+var _queueListIconJsDefault = parcelHelpers.interopDefault(_queueListIconJs);
+var _radioIconJs = require("./RadioIcon.js");
+var _radioIconJsDefault = parcelHelpers.interopDefault(_radioIconJs);
+var _receiptPercentIconJs = require("./ReceiptPercentIcon.js");
+var _receiptPercentIconJsDefault = parcelHelpers.interopDefault(_receiptPercentIconJs);
+var _receiptRefundIconJs = require("./ReceiptRefundIcon.js");
+var _receiptRefundIconJsDefault = parcelHelpers.interopDefault(_receiptRefundIconJs);
+var _rectangleGroupIconJs = require("./RectangleGroupIcon.js");
+var _rectangleGroupIconJsDefault = parcelHelpers.interopDefault(_rectangleGroupIconJs);
+var _rectangleStackIconJs = require("./RectangleStackIcon.js");
+var _rectangleStackIconJsDefault = parcelHelpers.interopDefault(_rectangleStackIconJs);
+var _rocketLaunchIconJs = require("./RocketLaunchIcon.js");
+var _rocketLaunchIconJsDefault = parcelHelpers.interopDefault(_rocketLaunchIconJs);
+var _rssIconJs = require("./RssIcon.js");
+var _rssIconJsDefault = parcelHelpers.interopDefault(_rssIconJs);
+var _scaleIconJs = require("./ScaleIcon.js");
+var _scaleIconJsDefault = parcelHelpers.interopDefault(_scaleIconJs);
+var _scissorsIconJs = require("./ScissorsIcon.js");
+var _scissorsIconJsDefault = parcelHelpers.interopDefault(_scissorsIconJs);
+var _serverStackIconJs = require("./ServerStackIcon.js");
+var _serverStackIconJsDefault = parcelHelpers.interopDefault(_serverStackIconJs);
+var _serverIconJs = require("./ServerIcon.js");
+var _serverIconJsDefault = parcelHelpers.interopDefault(_serverIconJs);
+var _shareIconJs = require("./ShareIcon.js");
+var _shareIconJsDefault = parcelHelpers.interopDefault(_shareIconJs);
+var _shieldCheckIconJs = require("./ShieldCheckIcon.js");
+var _shieldCheckIconJsDefault = parcelHelpers.interopDefault(_shieldCheckIconJs);
+var _shieldExclamationIconJs = require("./ShieldExclamationIcon.js");
+var _shieldExclamationIconJsDefault = parcelHelpers.interopDefault(_shieldExclamationIconJs);
+var _shoppingBagIconJs = require("./ShoppingBagIcon.js");
+var _shoppingBagIconJsDefault = parcelHelpers.interopDefault(_shoppingBagIconJs);
+var _shoppingCartIconJs = require("./ShoppingCartIcon.js");
+var _shoppingCartIconJsDefault = parcelHelpers.interopDefault(_shoppingCartIconJs);
+var _signalSlashIconJs = require("./SignalSlashIcon.js");
+var _signalSlashIconJsDefault = parcelHelpers.interopDefault(_signalSlashIconJs);
+var _signalIconJs = require("./SignalIcon.js");
+var _signalIconJsDefault = parcelHelpers.interopDefault(_signalIconJs);
+var _sparklesIconJs = require("./SparklesIcon.js");
+var _sparklesIconJsDefault = parcelHelpers.interopDefault(_sparklesIconJs);
+var _speakerWaveIconJs = require("./SpeakerWaveIcon.js");
+var _speakerWaveIconJsDefault = parcelHelpers.interopDefault(_speakerWaveIconJs);
+var _speakerXMarkIconJs = require("./SpeakerXMarkIcon.js");
+var _speakerXMarkIconJsDefault = parcelHelpers.interopDefault(_speakerXMarkIconJs);
+var _square2StackIconJs = require("./Square2StackIcon.js");
+var _square2StackIconJsDefault = parcelHelpers.interopDefault(_square2StackIconJs);
+var _square3Stack3DIconJs = require("./Square3Stack3DIcon.js");
+var _square3Stack3DIconJsDefault = parcelHelpers.interopDefault(_square3Stack3DIconJs);
+var _squares2X2IconJs = require("./Squares2X2Icon.js");
+var _squares2X2IconJsDefault = parcelHelpers.interopDefault(_squares2X2IconJs);
+var _squaresPlusIconJs = require("./SquaresPlusIcon.js");
+var _squaresPlusIconJsDefault = parcelHelpers.interopDefault(_squaresPlusIconJs);
+var _starIconJs = require("./StarIcon.js");
+var _starIconJsDefault = parcelHelpers.interopDefault(_starIconJs);
+var _stopCircleIconJs = require("./StopCircleIcon.js");
+var _stopCircleIconJsDefault = parcelHelpers.interopDefault(_stopCircleIconJs);
+var _stopIconJs = require("./StopIcon.js");
+var _stopIconJsDefault = parcelHelpers.interopDefault(_stopIconJs);
+var _sunIconJs = require("./SunIcon.js");
+var _sunIconJsDefault = parcelHelpers.interopDefault(_sunIconJs);
+var _swatchIconJs = require("./SwatchIcon.js");
+var _swatchIconJsDefault = parcelHelpers.interopDefault(_swatchIconJs);
+var _tableCellsIconJs = require("./TableCellsIcon.js");
+var _tableCellsIconJsDefault = parcelHelpers.interopDefault(_tableCellsIconJs);
+var _tagIconJs = require("./TagIcon.js");
+var _tagIconJsDefault = parcelHelpers.interopDefault(_tagIconJs);
+var _ticketIconJs = require("./TicketIcon.js");
+var _ticketIconJsDefault = parcelHelpers.interopDefault(_ticketIconJs);
+var _trashIconJs = require("./TrashIcon.js");
+var _trashIconJsDefault = parcelHelpers.interopDefault(_trashIconJs);
+var _trophyIconJs = require("./TrophyIcon.js");
+var _trophyIconJsDefault = parcelHelpers.interopDefault(_trophyIconJs);
+var _truckIconJs = require("./TruckIcon.js");
+var _truckIconJsDefault = parcelHelpers.interopDefault(_truckIconJs);
+var _tvIconJs = require("./TvIcon.js");
+var _tvIconJsDefault = parcelHelpers.interopDefault(_tvIconJs);
+var _userCircleIconJs = require("./UserCircleIcon.js");
+var _userCircleIconJsDefault = parcelHelpers.interopDefault(_userCircleIconJs);
+var _userGroupIconJs = require("./UserGroupIcon.js");
+var _userGroupIconJsDefault = parcelHelpers.interopDefault(_userGroupIconJs);
+var _userMinusIconJs = require("./UserMinusIcon.js");
+var _userMinusIconJsDefault = parcelHelpers.interopDefault(_userMinusIconJs);
+var _userPlusIconJs = require("./UserPlusIcon.js");
+var _userPlusIconJsDefault = parcelHelpers.interopDefault(_userPlusIconJs);
+var _userIconJs = require("./UserIcon.js");
+var _userIconJsDefault = parcelHelpers.interopDefault(_userIconJs);
+var _usersIconJs = require("./UsersIcon.js");
+var _usersIconJsDefault = parcelHelpers.interopDefault(_usersIconJs);
+var _variableIconJs = require("./VariableIcon.js");
+var _variableIconJsDefault = parcelHelpers.interopDefault(_variableIconJs);
+var _videoCameraSlashIconJs = require("./VideoCameraSlashIcon.js");
+var _videoCameraSlashIconJsDefault = parcelHelpers.interopDefault(_videoCameraSlashIconJs);
+var _videoCameraIconJs = require("./VideoCameraIcon.js");
+var _videoCameraIconJsDefault = parcelHelpers.interopDefault(_videoCameraIconJs);
+var _viewColumnsIconJs = require("./ViewColumnsIcon.js");
+var _viewColumnsIconJsDefault = parcelHelpers.interopDefault(_viewColumnsIconJs);
+var _viewfinderCircleIconJs = require("./ViewfinderCircleIcon.js");
+var _viewfinderCircleIconJsDefault = parcelHelpers.interopDefault(_viewfinderCircleIconJs);
+var _walletIconJs = require("./WalletIcon.js");
+var _walletIconJsDefault = parcelHelpers.interopDefault(_walletIconJs);
+var _wifiIconJs = require("./WifiIcon.js");
+var _wifiIconJsDefault = parcelHelpers.interopDefault(_wifiIconJs);
+var _windowIconJs = require("./WindowIcon.js");
+var _windowIconJsDefault = parcelHelpers.interopDefault(_windowIconJs);
+var _wrenchScrewdriverIconJs = require("./WrenchScrewdriverIcon.js");
+var _wrenchScrewdriverIconJsDefault = parcelHelpers.interopDefault(_wrenchScrewdriverIconJs);
+var _wrenchIconJs = require("./WrenchIcon.js");
+var _wrenchIconJsDefault = parcelHelpers.interopDefault(_wrenchIconJs);
+var _xcircleIconJs = require("./XCircleIcon.js");
+var _xcircleIconJsDefault = parcelHelpers.interopDefault(_xcircleIconJs);
+var _xmarkIconJs = require("./XMarkIcon.js");
+var _xmarkIconJsDefault = parcelHelpers.interopDefault(_xmarkIconJs);
+
+},{"./AcademicCapIcon.js":false,"./AdjustmentsHorizontalIcon.js":"28ckR","./AdjustmentsVerticalIcon.js":false,"./ArchiveBoxArrowDownIcon.js":false,"./ArchiveBoxXMarkIcon.js":false,"./ArchiveBoxIcon.js":false,"./ArrowDownCircleIcon.js":false,"./ArrowDownLeftIcon.js":false,"./ArrowDownOnSquareStackIcon.js":false,"./ArrowDownOnSquareIcon.js":false,"./ArrowDownRightIcon.js":false,"./ArrowDownTrayIcon.js":false,"./ArrowDownIcon.js":false,"./ArrowLeftCircleIcon.js":false,"./ArrowLeftEndOnRectangleIcon.js":false,"./ArrowLeftOnRectangleIcon.js":false,"./ArrowLeftStartOnRectangleIcon.js":false,"./ArrowLeftIcon.js":false,"./ArrowLongDownIcon.js":false,"./ArrowLongLeftIcon.js":false,"./ArrowLongRightIcon.js":false,"./ArrowLongUpIcon.js":false,"./ArrowPathRoundedSquareIcon.js":false,"./ArrowPathIcon.js":false,"./ArrowRightCircleIcon.js":false,"./ArrowRightEndOnRectangleIcon.js":false,"./ArrowRightOnRectangleIcon.js":false,"./ArrowRightStartOnRectangleIcon.js":false,"./ArrowRightIcon.js":false,"./ArrowSmallDownIcon.js":false,"./ArrowSmallLeftIcon.js":false,"./ArrowSmallRightIcon.js":false,"./ArrowSmallUpIcon.js":false,"./ArrowTopRightOnSquareIcon.js":false,"./ArrowTrendingDownIcon.js":false,"./ArrowTrendingUpIcon.js":false,"./ArrowUpCircleIcon.js":false,"./ArrowUpLeftIcon.js":false,"./ArrowUpOnSquareStackIcon.js":false,"./ArrowUpOnSquareIcon.js":false,"./ArrowUpRightIcon.js":false,"./ArrowUpTrayIcon.js":false,"./ArrowUpIcon.js":false,"./ArrowUturnDownIcon.js":false,"./ArrowUturnLeftIcon.js":false,"./ArrowUturnRightIcon.js":false,"./ArrowUturnUpIcon.js":false,"./ArrowsPointingInIcon.js":false,"./ArrowsPointingOutIcon.js":false,"./ArrowsRightLeftIcon.js":false,"./ArrowsUpDownIcon.js":false,"./AtSymbolIcon.js":false,"./BackspaceIcon.js":false,"./BackwardIcon.js":false,"./BanknotesIcon.js":false,"./Bars2Icon.js":false,"./Bars3BottomLeftIcon.js":false,"./Bars3BottomRightIcon.js":false,"./Bars3CenterLeftIcon.js":false,"./Bars3Icon.js":false,"./Bars4Icon.js":false,"./BarsArrowDownIcon.js":false,"./BarsArrowUpIcon.js":false,"./Battery0Icon.js":false,"./Battery100Icon.js":false,"./Battery50Icon.js":false,"./BeakerIcon.js":false,"./BellAlertIcon.js":false,"./BellSlashIcon.js":false,"./BellSnoozeIcon.js":false,"./BellIcon.js":false,"./BoltSlashIcon.js":false,"./BoltIcon.js":false,"./BookOpenIcon.js":false,"./BookmarkSlashIcon.js":false,"./BookmarkSquareIcon.js":false,"./BookmarkIcon.js":false,"./BriefcaseIcon.js":false,"./BugAntIcon.js":false,"./BuildingLibraryIcon.js":false,"./BuildingOffice2Icon.js":false,"./BuildingOfficeIcon.js":false,"./BuildingStorefrontIcon.js":false,"./CakeIcon.js":false,"./CalculatorIcon.js":false,"./CalendarDaysIcon.js":false,"./CalendarIcon.js":false,"./CameraIcon.js":false,"./ChartBarSquareIcon.js":false,"./ChartBarIcon.js":false,"./ChartPieIcon.js":false,"./ChatBubbleBottomCenterTextIcon.js":false,"./ChatBubbleBottomCenterIcon.js":false,"./ChatBubbleLeftEllipsisIcon.js":false,"./ChatBubbleLeftRightIcon.js":false,"./ChatBubbleLeftIcon.js":false,"./ChatBubbleOvalLeftEllipsisIcon.js":false,"./ChatBubbleOvalLeftIcon.js":false,"./CheckBadgeIcon.js":false,"./CheckCircleIcon.js":false,"./CheckIcon.js":false,"./ChevronDoubleDownIcon.js":false,"./ChevronDoubleLeftIcon.js":false,"./ChevronDoubleRightIcon.js":false,"./ChevronDoubleUpIcon.js":false,"./ChevronDownIcon.js":false,"./ChevronLeftIcon.js":"58QhU","./ChevronRightIcon.js":"kpWqr","./ChevronUpDownIcon.js":false,"./ChevronUpIcon.js":false,"./CircleStackIcon.js":false,"./ClipboardDocumentCheckIcon.js":false,"./ClipboardDocumentListIcon.js":false,"./ClipboardDocumentIcon.js":false,"./ClipboardIcon.js":false,"./ClockIcon.js":false,"./CloudArrowDownIcon.js":false,"./CloudArrowUpIcon.js":false,"./CloudIcon.js":false,"./CodeBracketSquareIcon.js":false,"./CodeBracketIcon.js":false,"./Cog6ToothIcon.js":false,"./Cog8ToothIcon.js":false,"./CogIcon.js":false,"./CommandLineIcon.js":false,"./ComputerDesktopIcon.js":false,"./CpuChipIcon.js":false,"./CreditCardIcon.js":false,"./CubeTransparentIcon.js":false,"./CubeIcon.js":false,"./CurrencyBangladeshiIcon.js":false,"./CurrencyDollarIcon.js":false,"./CurrencyEuroIcon.js":false,"./CurrencyPoundIcon.js":false,"./CurrencyRupeeIcon.js":false,"./CurrencyYenIcon.js":false,"./CursorArrowRaysIcon.js":false,"./CursorArrowRippleIcon.js":false,"./DevicePhoneMobileIcon.js":false,"./DeviceTabletIcon.js":false,"./DocumentArrowDownIcon.js":false,"./DocumentArrowUpIcon.js":false,"./DocumentChartBarIcon.js":false,"./DocumentCheckIcon.js":false,"./DocumentDuplicateIcon.js":false,"./DocumentMagnifyingGlassIcon.js":false,"./DocumentMinusIcon.js":false,"./DocumentPlusIcon.js":false,"./DocumentTextIcon.js":false,"./DocumentIcon.js":false,"./EllipsisHorizontalCircleIcon.js":false,"./EllipsisHorizontalIcon.js":false,"./EllipsisVerticalIcon.js":false,"./EnvelopeOpenIcon.js":false,"./EnvelopeIcon.js":false,"./ExclamationCircleIcon.js":false,"./ExclamationTriangleIcon.js":false,"./EyeDropperIcon.js":false,"./EyeSlashIcon.js":false,"./EyeIcon.js":false,"./FaceFrownIcon.js":false,"./FaceSmileIcon.js":false,"./FilmIcon.js":false,"./FingerPrintIcon.js":false,"./FireIcon.js":false,"./FlagIcon.js":false,"./FolderArrowDownIcon.js":false,"./FolderMinusIcon.js":false,"./FolderOpenIcon.js":false,"./FolderPlusIcon.js":false,"./FolderIcon.js":false,"./ForwardIcon.js":false,"./FunnelIcon.js":false,"./GifIcon.js":false,"./GiftTopIcon.js":false,"./GiftIcon.js":false,"./GlobeAltIcon.js":false,"./GlobeAmericasIcon.js":false,"./GlobeAsiaAustraliaIcon.js":false,"./GlobeEuropeAfricaIcon.js":false,"./HandRaisedIcon.js":false,"./HandThumbDownIcon.js":false,"./HandThumbUpIcon.js":false,"./HashtagIcon.js":false,"./HeartIcon.js":false,"./HomeModernIcon.js":false,"./HomeIcon.js":false,"./IdentificationIcon.js":false,"./InboxArrowDownIcon.js":false,"./InboxStackIcon.js":false,"./InboxIcon.js":false,"./InformationCircleIcon.js":false,"./KeyIcon.js":false,"./LanguageIcon.js":false,"./LifebuoyIcon.js":false,"./LightBulbIcon.js":false,"./LinkIcon.js":false,"./ListBulletIcon.js":false,"./LockClosedIcon.js":false,"./LockOpenIcon.js":false,"./MagnifyingGlassCircleIcon.js":false,"./MagnifyingGlassMinusIcon.js":false,"./MagnifyingGlassPlusIcon.js":false,"./MagnifyingGlassIcon.js":"emtIN","./MapPinIcon.js":false,"./MapIcon.js":false,"./MegaphoneIcon.js":false,"./MicrophoneIcon.js":false,"./MinusCircleIcon.js":false,"./MinusSmallIcon.js":false,"./MinusIcon.js":false,"./MoonIcon.js":false,"./MusicalNoteIcon.js":false,"./NewspaperIcon.js":false,"./NoSymbolIcon.js":false,"./PaintBrushIcon.js":false,"./PaperAirplaneIcon.js":false,"./PaperClipIcon.js":false,"./PauseCircleIcon.js":false,"./PauseIcon.js":false,"./PencilSquareIcon.js":false,"./PencilIcon.js":false,"./PhoneArrowDownLeftIcon.js":false,"./PhoneArrowUpRightIcon.js":false,"./PhoneXMarkIcon.js":false,"./PhoneIcon.js":false,"./PhotoIcon.js":false,"./PlayCircleIcon.js":false,"./PlayPauseIcon.js":false,"./PlayIcon.js":false,"./PlusCircleIcon.js":false,"./PlusSmallIcon.js":false,"./PlusIcon.js":false,"./PowerIcon.js":false,"./PresentationChartBarIcon.js":false,"./PresentationChartLineIcon.js":false,"./PrinterIcon.js":false,"./PuzzlePieceIcon.js":false,"./QrCodeIcon.js":false,"./QuestionMarkCircleIcon.js":false,"./QueueListIcon.js":false,"./RadioIcon.js":false,"./ReceiptPercentIcon.js":false,"./ReceiptRefundIcon.js":false,"./RectangleGroupIcon.js":false,"./RectangleStackIcon.js":false,"./RocketLaunchIcon.js":false,"./RssIcon.js":false,"./ScaleIcon.js":false,"./ScissorsIcon.js":false,"./ServerStackIcon.js":false,"./ServerIcon.js":false,"./ShareIcon.js":false,"./ShieldCheckIcon.js":false,"./ShieldExclamationIcon.js":false,"./ShoppingBagIcon.js":false,"./ShoppingCartIcon.js":false,"./SignalSlashIcon.js":false,"./SignalIcon.js":false,"./SparklesIcon.js":false,"./SpeakerWaveIcon.js":false,"./SpeakerXMarkIcon.js":false,"./Square2StackIcon.js":false,"./Square3Stack3DIcon.js":false,"./Squares2X2Icon.js":false,"./SquaresPlusIcon.js":false,"./StarIcon.js":"5D09L","./StopCircleIcon.js":false,"./StopIcon.js":false,"./SunIcon.js":false,"./SwatchIcon.js":false,"./TableCellsIcon.js":false,"./TagIcon.js":false,"./TicketIcon.js":false,"./TrashIcon.js":false,"./TrophyIcon.js":false,"./TruckIcon.js":false,"./TvIcon.js":false,"./UserCircleIcon.js":false,"./UserGroupIcon.js":false,"./UserMinusIcon.js":false,"./UserPlusIcon.js":false,"./UserIcon.js":false,"./UsersIcon.js":false,"./VariableIcon.js":false,"./VideoCameraSlashIcon.js":false,"./VideoCameraIcon.js":false,"./ViewColumnsIcon.js":false,"./ViewfinderCircleIcon.js":false,"./WalletIcon.js":false,"./WifiIcon.js":false,"./WindowIcon.js":false,"./WrenchScrewdriverIcon.js":false,"./WrenchIcon.js":false,"./XCircleIcon.js":false,"./XMarkIcon.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"28ckR":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function AdjustmentsHorizontalIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 20 20",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        d: "M10 3.75a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM17.25 4.5a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM5 3.75a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5a.75.75 0 0 1 .75.75ZM4.25 17a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM17.25 17a.75.75 0 0 0 0-1.5h-5.5a.75.75 0 0 0 0 1.5h5.5ZM9 10a.75.75 0 0 1-.75.75h-5.5a.75.75 0 0 1 0-1.5h5.5A.75.75 0 0 1 9 10ZM17.25 10.75a.75.75 0 0 0 0-1.5h-1.5a.75.75 0 0 0 0 1.5h1.5ZM14 10a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM10 16.25a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z"
+    }));
+}
+const ForwardRef = _react.forwardRef(AdjustmentsHorizontalIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"58QhU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function ChevronLeftIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 20 20",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(ChevronLeftIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kpWqr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function ChevronRightIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 20 20",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(ChevronRightIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"emtIN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function MagnifyingGlassIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 20 20",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(MagnifyingGlassIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5D09L":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+function StarIcon({ title, titleId, ...props }, svgRef) {
+    return /*#__PURE__*/ _react.createElement("svg", Object.assign({
+        xmlns: "http://www.w3.org/2000/svg",
+        viewBox: "0 0 20 20",
+        fill: "currentColor",
+        "aria-hidden": "true",
+        "data-slot": "icon",
+        ref: svgRef,
+        "aria-labelledby": titleId
+    }, props), title ? /*#__PURE__*/ _react.createElement("title", {
+        id: titleId
+    }, title) : null, /*#__PURE__*/ _react.createElement("path", {
+        fillRule: "evenodd",
+        d: "M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z",
+        clipRule: "evenodd"
+    }));
+}
+const ForwardRef = _react.forwardRef(StarIcon);
+exports.default = ForwardRef;
+
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6erxC":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3002 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3002.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _constant = require("../utils/constant");
+var _react = require("react");
+var _solid = require("@heroicons/react/20/solid");
+var _s = $RefreshSig$();
+const MindList = ({ data })=>{
+    _s();
+    const list = data.card.card.gridElements.infoWithStyle.info;
+    const scrollContainerRef = (0, _react.useRef)(null);
+    const handleScrollLeft = ()=>{
+        if (scrollContainerRef.current) scrollContainerRef.current.scrollLeft -= 200; // Adjust the scroll distance as needed
+    };
+    const handleScrollRight = ()=>{
+        if (scrollContainerRef.current) scrollContainerRef.current.scrollLeft += 200; // Adjust the scroll distance as needed
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "w-11/12 m-auto mt-10",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "text-xl  font-bold ",
+                        children: "Prathap What's on your mind?"
+                    }, void 0, false, {
+                        fileName: "src/components/MindList.js",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex px-1",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "sm:right-10 flex px-2  cursor-pointer",
+                                onClick: handleScrollLeft,
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "w-4 h-4 sm:w-8 sm:h-8 bg-gray-400 rounded-full flex items-center justify-center text-white",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.ChevronRightIcon), {
+                                        className: "w-3 h-3  sm:w-5 sm:h-5 transform rotate-180"
+                                    }, void 0, false, {
+                                        fileName: "src/components/MindList.js",
+                                        lineNumber: 31,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/MindList.js",
+                                    lineNumber: 30,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/MindList.js",
+                                lineNumber: 26,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex  cursor-pointer",
+                                onClick: handleScrollRight,
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "w-4 h-4 sm:w-8 sm:h-8 bg-gray-400 rounded-full flex items-center justify-center text-white",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.ChevronLeftIcon), {
+                                        className: "w-3 h-3  sm:w-5 sm:h-5 transform rotate-180"
+                                    }, void 0, false, {
+                                        fileName: "src/components/MindList.js",
+                                        lineNumber: 36,
+                                        columnNumber: 15
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/MindList.js",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/MindList.js",
+                                lineNumber: 34,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MindList.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MindList.js",
+                lineNumber: 23,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "relative  overflow-hidden  shadow-md bg-white  rounded-xl",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "flex-shrink-0 flex overflow-hidden h-50",
+                    ref: scrollContainerRef,
+                    style: {
+                        scrollBehavior: "smooth"
+                    },
+                    children: list.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "flex-shrink-0 px-2",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: `/collection/${collectionId(item.entityId)}`,
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "w-16 h-17 sm:w-32 h-34  rounded-md hover:cursor-pointer hover:scale-105 transition-transform",
+                                    src: `${(0, _constant.CDN_LINK)}${item.imageId}`,
+                                    alt: item.id
+                                }, void 0, false, {
+                                    fileName: "src/components/MindList.js",
+                                    lineNumber: 52,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/MindList.js",
+                                lineNumber: 51,
+                                columnNumber: 15
+                            }, undefined)
+                        }, item.id, false, {
+                            fileName: "src/components/MindList.js",
+                            lineNumber: 50,
+                            columnNumber: 13
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/components/MindList.js",
+                    lineNumber: 44,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/MindList.js",
+                lineNumber: 42,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/MindList.js",
+        lineNumber: 22,
+        columnNumber: 5
+    }, undefined);
+};
+_s(MindList, "Gfm/oEKPzfcG/oikjUDPHSjaGoQ=");
+_c = MindList;
+function collectionId(s) {
+    const inputString = s;
+    const numbersOnly = inputString.match(/\d+/g);
+    return numbersOnly.pop();
+}
+exports.default = MindList;
+var _c;
+$RefreshReg$(_c, "MindList");
+
+  $parcel$ReactRefreshHelpers$3002.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../utils/constant":"6mqGZ","react":"21dqq","@heroicons/react/20/solid":"biQa5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "animate-pulse space-y-2 m-4",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "w-full bg-gray-200 rounded-md aspect-video min-h-[180px] object-cover block card-img relative"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 4,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-lg font-semibold mt-2 h-4 rounded-md bg-gray-200"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 6,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex items-center gap-2 w-1/3 h-2 rounded-md bg-gray-200"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 7,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"av4Pf":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$992b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$992b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useOnlinestatus = ()=>{
+    _s();
+    const [onlinestatus, setonlinestatus] = (0, _react.useState)(true);
+    window.addEventListener("online", ()=>{
+        setonlinestatus(true);
+    });
+    window.addEventListener("offline", ()=>{
+        setonlinestatus(false);
+    });
+    return onlinestatus;
+};
+_s(useOnlinestatus, "HqED/3tBaG5zaaBZlZeKgwU1UIk=");
+exports.default = useOnlinestatus;
+
+  $parcel$ReactRefreshHelpers$992b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bj4e5":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0faf = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0faf.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _user = require("../components/User");
+var _userDefault = parcelHelpers.interopDefault(_user);
+var _react = require("react");
+var _s = $RefreshSig$();
+const About = ()=>{
+    _s();
+    const [show, setShow] = (0, _react.useState)(false);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "text-center mt-4",
+                children: show ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "text-center ",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: " bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded",
+                                onClick: ()=>setShow(false),
+                                children: "Hide My Profile"
+                            }, void 0, false, {
+                                fileName: "src/mainpages/About.js",
+                                lineNumber: 13,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/mainpages/About.js",
+                            lineNumber: 12,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {}, void 0, false, {
+                            fileName: "src/mainpages/About.js",
+                            lineNumber: 20,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/mainpages/About.js",
+                    lineNumber: 11,
+                    columnNumber: 11
+                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: " bg-orange-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded",
+                        onClick: ()=>setShow(true),
+                        children: "Show My Profile"
+                    }, void 0, false, {
+                        fileName: "src/mainpages/About.js",
+                        lineNumber: 24,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/mainpages/About.js",
+                    lineNumber: 23,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/mainpages/About.js",
+                lineNumber: 8,
+                columnNumber: 8
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "mt-8  grid grid-cols-1 md:grid-cols-2 md:mt-10",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "",
+                        children: [
+                            " ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "font-bold ml-10 text-gray-600 text-4xl sm:text-7xl sm:sm:mt-20 sm:pt-20",
+                                children: "Welcome to Our "
+                            }, void 0, false, {
+                                fileName: "src/mainpages/About.js",
+                                lineNumber: 37,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "font-bold ml-10  text-gray-600 text-4xl sm:text-7xl",
+                                children: "Delicious Universe!"
+                            }, void 0, false, {
+                                fileName: "src/mainpages/About.js",
+                                lineNumber: 38,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "font-bold pl-10  text-gray-600 text-3xl sm:ztext-7xl",
+                                children: " "
+                            }, void 0, false, {
+                                fileName: "src/mainpages/About.js",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "rounded-lg flex  items-center text-center mt-8 font-bold text-2xl sm:text-3xl ",
+                                children: '"Food for the body is not enough.there must be food for the soul that Red Food provides."'
+                            }, void 0, false, {
+                                fileName: "src/mainpages/About.js",
+                                lineNumber: 42,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/mainpages/About.js",
+                        lineNumber: 35,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "w-full mb-8 ",
+                            src: "https://foodfire-app.netlify.app/burger-image.ec55d069.png"
+                        }, void 0, false, {
+                            fileName: "src/mainpages/About.js",
+                            lineNumber: 47,
+                            columnNumber: 9
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/mainpages/About.js",
+                        lineNumber: 46,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/mainpages/About.js",
+                lineNumber: 34,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/mainpages/About.js",
+        lineNumber: 7,
+        columnNumber: 5
+    }, undefined);
+};
+_s(About, "NKb1ZOdhT+qUsWLXSgjSS2bk2C4=");
+_c = About;
+exports.default = About;
+var _c;
+$RefreshReg$(_c, "About");
+
+  $parcel$ReactRefreshHelpers$0faf.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../components/User":"4iQHT","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4iQHT":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9c32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9c32.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _reactRedux = require("react-redux");
 var _constant = require("../utils/constant");
+var _s = $RefreshSig$();
+const User = ()=>{
+    _s();
+    const [userdata, setuserdata] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        fetchdata();
+    }, []);
+    const fetchdata = async ()=>{
+        const data = await fetch("https://api.github.com/users/vprathap21");
+        const json = await data.json();
+        setuserdata(json);
+        console;
+    };
+    const { avatar_url, login } = userdata;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " mx-8 mb-8 sm:w-4/12  sm:mx-auto mt-10  shadow-xl rounded-lg  bg-white",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "font-bold text-center text-2xl",
+                children: "About Me"
+            }, void 0, false, {
+                fileName: "src/components/User.js",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: (0, _constant.Github_Link),
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "rounded-full object-cover h-28 w-28   m-auto mt-4",
+                    src: avatar_url,
+                    alt: login
+                }, void 0, false, {
+                    fileName: "src/components/User.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/User.js",
+                lineNumber: 18,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "text-center",
+                children: "react.js | javascript | tailwind"
+            }, void 0, false, {
+                fileName: "src/components/User.js",
+                lineNumber: 26,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                className: "flex justify-center items-center py-2",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "px-1",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: (0, _constant.Github_Link),
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                class: "w-8 h-8 text-gray-800 ",
+                                "aria-hidden": "true",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "currentColor",
+                                viewBox: "0 0 24 24",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    "fill-rule": "evenodd",
+                                    d: "M12 2c-2.4 0-4.7.9-6.5 2.4a10.5 10.5 0 0 0-2 13.1A10 10 0 0 0 8.7 22c.5 0 .7-.2.7-.5v-2c-2.8.7-3.4-1.1-3.4-1.1-.1-.6-.5-1.2-1-1.5-1-.7 0-.7 0-.7a2 2 0 0 1 1.5 1.1 2.2 2.2 0 0 0 1.3 1 2 2 0 0 0 1.6-.1c0-.6.3-1 .7-1.4-2.2-.3-4.6-1.2-4.6-5 0-1.1.4-2 1-2.8a4 4 0 0 1 .2-2.7s.8-.3 2.7 1c1.6-.5 3.4-.5 5 0 2-1.3 2.8-1 2.8-1 .3.8.4 1.8 0 2.7a4 4 0 0 1 1 2.7c0 4-2.3 4.8-4.5 5a2.5 2.5 0 0 1 .7 2v2.8c0 .3.2.6.7.5a10 10 0 0 0 5.4-4.4 10.5 10.5 0 0 0-2.1-13.2A9.8 9.8 0 0 0 12 2Z",
+                                    "clip-rule": "evenodd"
+                                }, void 0, false, {
+                                    fileName: "src/components/User.js",
+                                    lineNumber: 37,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/User.js",
+                                lineNumber: 30,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/User.js",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/User.js",
+                        lineNumber: 28,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "px-1",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: (0, _constant.Linkedin_Link),
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                class: "w-7 h-7 bg-blue-400 rounded-full p-1 text-white",
+                                "aria-hidden": "true",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "currentColor",
+                                viewBox: "0 0 24 24",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        "fill-rule": "evenodd",
+                                        d: "M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z",
+                                        "clip-rule": "evenodd"
+                                    }, void 0, false, {
+                                        fileName: "src/components/User.js",
+                                        lineNumber: 54,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        d: "M7.2 8.8H4v10.7h3.2V8.8Z"
+                                    }, void 0, false, {
+                                        fileName: "src/components/User.js",
+                                        lineNumber: 59,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/User.js",
+                                lineNumber: 47,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/User.js",
+                            lineNumber: 46,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/User.js",
+                        lineNumber: 45,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        className: "px-1",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                            href: (0, _constant.Twitter_Link),
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                class: "w-6 h-6 text-black",
+                                "aria-hidden": "true",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    fill: "currentColor",
+                                    d: "M13.8 10.5 20.7 2h-3l-5.3 6.5L7.7 2H1l7.8 11-7.3 9h3l5.7-7 5.1 7H22l-8.2-11.5Zm-2.4 3-1.4-2-5.6-7.9h2.3l4.5 6.3 1.4 2 6 8.5h-2.3l-4.9-7Z"
+                                }, void 0, false, {
+                                    fileName: "src/components/User.js",
+                                    lineNumber: 72,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/User.js",
+                                lineNumber: 65,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/User.js",
+                            lineNumber: 64,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/User.js",
+                        lineNumber: 63,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                            class: "w-6 h-6",
+                            stroke: "currentColor",
+                            fill: "currentColor",
+                            "stroke-width": "0",
+                            role: "img",
+                            viewBox: "0 0 24 24",
+                            height: "1em",
+                            width: "1em",
+                            xmlns: "http://www.w3.org/2000/svg",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {
+                                    children: "Any Query! Mail me"
+                                }, void 0, false, {
+                                    fileName: "src/components/User.js",
+                                    lineNumber: 91,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("title", {}, void 0, false, {
+                                    fileName: "src/components/User.js",
+                                    lineNumber: 92,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                    d: "M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"
+                                }, void 0, false, {
+                                    fileName: "src/components/User.js",
+                                    lineNumber: 93,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/User.js",
+                            lineNumber: 80,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/User.js",
+                        lineNumber: 79,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/User.js",
+                lineNumber: 27,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/User.js",
+        lineNumber: 16,
+        columnNumber: 5
+    }, undefined);
+};
+_s(User, "iJCh43f+eShd3gjfqN3C4/eiwM4=");
+_c = User;
+exports.default = User;
+var _c;
+$RefreshReg$(_c, "User");
+
+  $parcel$ReactRefreshHelpers$9c32.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utils/constant":"6mqGZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hKnmw":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$00e4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$00e4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "grid grid-cols-1 sm:grid-cols-2 items-center  md:mx-20 min-h-full",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: " w-[70%] ml-14 items-center ju",
+                    src: "https://foodfire-app.netlify.app/Contact-Us.13c5d28a.png"
+                }, void 0, false, {
+                    fileName: "src/mainpages/Contact.js",
+                    lineNumber: 6,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/mainpages/Contact.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                class: "",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    class: "py-8 lg:py-16 px-4 mx-auto max-w-screen-md",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                            class: "mb-4 text-4xl tracking-tight font-extrabold text-center",
+                            children: "Contact Us"
+                        }, void 0, false, {
+                            fileName: "src/mainpages/Contact.js",
+                            lineNumber: 13,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                            class: "mb-8 lg:mb-16 font-light text-center"
+                        }, void 0, false, {
+                            fileName: "src/mainpages/Contact.js",
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
+                            action: "#",
+                            class: "space-y-8",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                            for: "email",
+                                            class: "block mb-2 text-sm font-medium",
+                                            children: "Your email"
+                                        }, void 0, false, {
+                                            fileName: "src/mainpages/Contact.js",
+                                            lineNumber: 21,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                            type: "email",
+                                            id: "email",
+                                            class: "shadow-sm border border-gray-300  text-sm rounded-lg  w-full p-2.5 ",
+                                            placeholder: "name@gmail.com",
+                                            required: true
+                                        }, void 0, false, {
+                                            fileName: "src/mainpages/Contact.js",
+                                            lineNumber: 27,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/mainpages/Contact.js",
+                                    lineNumber: 20,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                            for: "subject",
+                                            class: "block mb-2 text-sm font-medium",
+                                            children: "Subject"
+                                        }, void 0, false, {
+                                            fileName: "src/mainpages/Contact.js",
+                                            lineNumber: 36,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                            type: "text",
+                                            id: "subject",
+                                            class: "block p-3 w-full text-sm  rounded-lg border border-gray-300 shadow-sm ",
+                                            placeholder: "Let us know how we can help you",
+                                            required: true
+                                        }, void 0, false, {
+                                            fileName: "src/mainpages/Contact.js",
+                                            lineNumber: 42,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/mainpages/Contact.js",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    class: "sm:col-span-2",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                            for: "message",
+                                            class: "block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400",
+                                            children: "Your message"
+                                        }, void 0, false, {
+                                            fileName: "src/mainpages/Contact.js",
+                                            lineNumber: 51,
+                                            columnNumber: 15
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                                            id: "message",
+                                            rows: "6",
+                                            class: "block p-2.5 w-full text-sm rounded-lg shadow-sm border border-gray-300 ",
+                                            placeholder: "Leave a comment..."
+                                        }, void 0, false, {
+                                            fileName: "src/mainpages/Contact.js",
+                                            lineNumber: 57,
+                                            columnNumber: 15
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/mainpages/Contact.js",
+                                    lineNumber: 50,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    type: "submit",
+                                    class: "py-3 px-5 text-sm font-medium text-center rounded-lg bg-blue-500 ",
+                                    children: "Send message"
+                                }, void 0, false, {
+                                    fileName: "src/mainpages/Contact.js",
+                                    lineNumber: 64,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/mainpages/Contact.js",
+                            lineNumber: 19,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/mainpages/Contact.js",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/mainpages/Contact.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/mainpages/Contact.js",
+        lineNumber: 4,
+        columnNumber: 5
+    }, undefined);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$00e4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0ba4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const Error = ()=>{
+    _s();
+    const error = (0, _reactRouterDom.useRouteError)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "opps!!1"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "something wrond!!!"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: [
+                    error.status,
+                    " : ",
+                    error.statusText
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Error.js",
+                lineNumber: 9,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Error.js",
+        lineNumber: 6,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Error, "oAgjgbJzsRXlB89+MoVumxMQqKM=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
+_c = Error;
+exports.default = Error;
+var _c;
+$RefreshReg$(_c, "Error");
+
+  $parcel$ReactRefreshHelpers$0ba4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cNtZy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8d58 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8d58.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _reactRouterDom = require("react-router-dom");
+var _useRestaurent = require("../utils/useRestaurent");
+var _useRestaurentDefault = parcelHelpers.interopDefault(_useRestaurent);
+var _restaurentCatogory = require("./RestaurentCatogory");
+var _restaurentCatogoryDefault = parcelHelpers.interopDefault(_restaurentCatogory);
+var _react = require("react");
+var _constant = require("../utils/constant");
+var _solid = require("@heroicons/react/24/solid");
+var _s = $RefreshSig$();
+const RestaurentMenu = ()=>{
+    _s();
+    const { id } = (0, _reactRouterDom.useParams)();
+    const MenuData = (0, _useRestaurentDefault.default)(id);
+    console.log(MenuData);
+    const [showindex, setshowindex] = (0, _react.useState)(null);
+    if (MenuData === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/RestaurentMenu.js",
+        lineNumber: 14,
+        columnNumber: 12
+    }, undefined);
+    console.log(MenuData);
+    const { name, cuisines, costForTwoMessage, areaName, avgRating, city, totalRatingsString, cloudinaryImageId, sla } = MenuData.cards[0]?.card?.card?.info;
+    const { itemCards } = MenuData.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
+    const catagories = MenuData.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c)=>c.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "mx-4",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between sm:w-6/12 m-auto border-b-2 mt-8 pb-2",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "text-xl font-bold",
+                                children: name
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurentMenu.js",
+                                lineNumber: 41,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                children: cuisines.join(", ")
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurentMenu.js",
+                                lineNumber: 42,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                children: [
+                                    city + ", ",
+                                    " ",
+                                    areaName,
+                                    " - ",
+                                    sla.lastMileTravelString
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/RestaurentMenu.js",
+                                lineNumber: 43,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurentMenu.js",
+                        lineNumber: 40,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "border rounded-lg  p-2  h-20 items-center justify-center",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex  mb-2 ",
+                                children: [
+                                    avgRating >= "4" ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.StarIcon), {
+                                        className: " w-6 h-6 rounded-full p-1 text-white bg-green-500"
+                                    }, void 0, false, {
+                                        fileName: "src/components/RestaurentMenu.js",
+                                        lineNumber: 50,
+                                        columnNumber: 15
+                                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _solid.StarIcon), {
+                                        className: " w-6 h-6 rounded-full p-1 text-white bg-red-500"
+                                    }, void 0, false, {
+                                        fileName: "src/components/RestaurentMenu.js",
+                                        lineNumber: 52,
+                                        columnNumber: 15
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "font-bold ml-2 text-black text-xl",
+                                        children: avgRating
+                                    }, void 0, false, {
+                                        fileName: "src/components/RestaurentMenu.js",
+                                        lineNumber: 55,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/RestaurentMenu.js",
+                                lineNumber: 48,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                                className: "border-t-2",
+                                children: totalRatingsString
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurentMenu.js",
+                                lineNumber: 58,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/RestaurentMenu.js",
+                        lineNumber: 47,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurentMenu.js",
+                lineNumber: 39,
+                columnNumber: 7
+            }, undefined),
+            catagories.map((catogory, index)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurentCatogoryDefault.default), {
+                    data: catogory?.card?.card,
+                    showitem: index === showindex ? true : false,
+                    setshowindex: ()=>setshowindex(index === showindex ? null : index)
+                }, catogory?.card?.card?.title, false, {
+                    fileName: "src/components/RestaurentMenu.js",
+                    lineNumber: 64,
+                    columnNumber: 11
+                }, undefined);
+            })
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurentMenu.js",
+        lineNumber: 38,
+        columnNumber: 5
+    }, undefined);
+};
+_s(RestaurentMenu, "vSyTX9OfCsHu+FhaBzqypfB1UgI=", false, function() {
+    return [
+        (0, _reactRouterDom.useParams),
+        (0, _useRestaurentDefault.default)
+    ];
+});
+_c = RestaurentMenu;
+exports.default = RestaurentMenu;
+var _c;
+$RefreshReg$(_c, "RestaurentMenu");
+
+  $parcel$ReactRefreshHelpers$8d58.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Shimmer":"g6ZGj","react-router-dom":"9xmpe","../utils/useRestaurent":"Irxh3","./RestaurentCatogory":"is77o","react":"21dqq","../utils/constant":"6mqGZ","@heroicons/react/24/solid":"e3DHC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"Irxh3":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7264 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7264.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _constant = require("./constant");
+var _s = $RefreshSig$();
+const useRestaurentMenu = (id)=>{
+    _s();
+    const [resdata, setresdata] = (0, _react.useState)(null);
+    (0, _react.useEffect)(()=>{
+        fetchdata();
+    }, []);
+    const fetchdata = async ()=>{
+        const data = await fetch((0, _constant.MENU_LINK) + id);
+        const json = await data.json();
+        setresdata(json.data);
+    };
+    return resdata;
+};
+_s(useRestaurentMenu, "gosYWDrwloTf/43/yDIsuAPj1Rw=");
+exports.default = useRestaurentMenu;
+
+  $parcel$ReactRefreshHelpers$7264.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","./constant":"6mqGZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"is77o":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4e48 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4e48.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _itemlist = require("./Itemlist");
 var _itemlistDefault = parcelHelpers.interopDefault(_itemlist);
+const RestaurentCatogory = ({ data, showitem, setshowindex })=>{
+    const onclickHandler = ()=>{
+        setshowindex();
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "sm:w-6/12 bg-gray-50 mx-auto my-8 shadow-sm p-4 rounded-lg",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    onClick: onclickHandler,
+                    className: "flex justify-between hover:cursor-pointer",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: "font-bold text-lg",
+                            children: [
+                                data.title,
+                                " (",
+                                data.itemCards.length,
+                                ")"
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/RestaurentCatogory.js",
+                            lineNumber: 15,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                            className: " text-black hover:cursor-pointer",
+                            children: showitem ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    fill: "none",
+                                    viewBox: "0 0 24 24",
+                                    "stroke-width": "1.5",
+                                    stroke: "currentColor",
+                                    class: "w-6 h-6",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        d: "m4.5 15.75 7.5-7.5 7.5 7.5"
+                                    }, void 0, false, {
+                                        fileName: "src/components/RestaurentCatogory.js",
+                                        lineNumber: 29,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurentCatogory.js",
+                                    lineNumber: 21,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurentCatogory.js",
+                                lineNumber: 20,
+                                columnNumber: 15
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    fill: "none",
+                                    viewBox: "0 0 24 24",
+                                    "stroke-width": "1.5",
+                                    stroke: "currentColor",
+                                    class: "w-6 h-6",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        "stroke-linecap": "round",
+                                        "stroke-linejoin": "round",
+                                        d: "m19.5 8.25-7.5 7.5-7.5-7.5"
+                                    }, void 0, false, {
+                                        fileName: "src/components/RestaurentCatogory.js",
+                                        lineNumber: 46,
+                                        columnNumber: 19
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurentCatogory.js",
+                                    lineNumber: 38,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurentCatogory.js",
+                                lineNumber: 37,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurentCatogory.js",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/RestaurentCatogory.js",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, undefined),
+                showitem && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemlistDefault.default), {
+                    data: data.itemCards
+                }, void 0, false, {
+                    fileName: "src/components/RestaurentCatogory.js",
+                    lineNumber: 56,
+                    columnNumber: 22
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/RestaurentCatogory.js",
+            lineNumber: 10,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/RestaurentCatogory.js",
+        lineNumber: 9,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurentCatogory;
+exports.default = RestaurentCatogory;
+var _c;
+$RefreshReg$(_c, "RestaurentCatogory");
+
+  $parcel$ReactRefreshHelpers$4e48.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Itemlist":"6Wvye","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6Wvye":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$af7b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$af7b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRedux = require("react-redux");
+var _constant = require("../utils/constant");
+var _cartSlice = require("../utils/cartSlice");
+var _s = $RefreshSig$();
+const ItemList = ({ data })=>{
+    _s();
+    const dispatch = (0, _reactRedux.useDispatch)();
+    const addHandler = (item)=>{
+        dispatch((0, _cartSlice.addToCart)(item));
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: data.map((item)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between my-4 p-4 border border-solid-black rounded-lg hover:bg-gray-100",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "w-9/12",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                className: "text-left font-bold py-2",
+                                children: [
+                                    item.card.info.name,
+                                    " - \u20B9",
+                                    item.card.info.price / 100 || item.card.info.defaultPrice / 100
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Itemlist.js",
+                                lineNumber: 19,
+                                columnNumber: 15
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-left py-2",
+                                children: item.card.info.description
+                            }, void 0, false, {
+                                fileName: "src/components/Itemlist.js",
+                                lineNumber: 24,
+                                columnNumber: 15
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Itemlist.js",
+                        lineNumber: 18,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "w-3/12",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "rounded-lg ",
+                                src: (0, _constant.CDN_LINK) + item.card.info.imageId
+                            }, void 0, false, {
+                                fileName: "src/components/Itemlist.js",
+                                lineNumber: 28,
+                                columnNumber: 15
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "items-center text-center ",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: " text-center  p-1 px-2 md:px-4  ms:p-2 bg-green-200 hover:bg-green-500 rounded-md",
+                                    onClick: ()=>addHandler(item),
+                                    children: "Add "
+                                }, void 0, false, {
+                                    fileName: "src/components/Itemlist.js",
+                                    lineNumber: 33,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Itemlist.js",
+                                lineNumber: 32,
+                                columnNumber: 16
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Itemlist.js",
+                        lineNumber: 26,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, item.card.info.id, true, {
+                fileName: "src/components/Itemlist.js",
+                lineNumber: 14,
+                columnNumber: 11
+            }, undefined);
+        })
+    }, void 0, false, {
+        fileName: "src/components/Itemlist.js",
+        lineNumber: 11,
+        columnNumber: 5
+    }, undefined);
+};
+_s(ItemList, "rgTLoBID190wEKCp9+G8W6F7A5M=", false, function() {
+    return [
+        (0, _reactRedux.useDispatch)
+    ];
+});
+_c = ItemList;
+exports.default = ItemList;
+var _c;
+$RefreshReg$(_c, "ItemList");
+
+  $parcel$ReactRefreshHelpers$af7b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-redux":"62sf7","../utils/constant":"6mqGZ","../utils/cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5RXlr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "selectItemsInCart", ()=>selectItemsInCart);
+parcelHelpers.export(exports, "selectTotalPrice", ()=>selectTotalPrice);
+parcelHelpers.export(exports, "addToCart", ()=>addToCart);
+parcelHelpers.export(exports, "removeFromCart", ()=>removeFromCart);
+parcelHelpers.export(exports, "increaseItemQuantity", ()=>increaseItemQuantity);
+parcelHelpers.export(exports, "decreaseItemQuantity", ()=>decreaseItemQuantity);
+parcelHelpers.export(exports, "clearCart", ()=>clearCart);
+var _toolkit = require("@reduxjs/toolkit");
+const initialState = {
+    items: JSON.parse(localStorage.getItem("cart")) || []
+};
+const cartSlice = (0, _toolkit.createSlice)({
+    name: "cart",
+    initialState,
+    reducers: {
+        addToCart: (state, action)=>{
+            state.items.push({
+                item: action.payload,
+                quantity: 1
+            });
+            localStorage.setItem("cart", JSON.stringify(state.items));
+        },
+        removeFromCart: (state, action)=>{
+            state.items = state.items.filter((cartItem)=>cartItem?.item?.card?.info?.id !== action.payload.id);
+            localStorage.setItem("cart", JSON.stringify(state.items));
+        },
+        increaseItemQuantity: (state, action)=>{
+            const { id } = action.payload;
+            const itemToIncrease = state.items.find((cartItem)=>cartItem?.item?.card?.info?.id === id);
+            if (itemToIncrease) {
+                itemToIncrease.quantity += 1;
+                localStorage.setItem("cart", JSON.stringify(state.items));
+            }
+        },
+        decreaseItemQuantity: (state, action)=>{
+            const { id } = action.payload;
+            const itemToDecrease = state.items.find((cartItem)=>cartItem?.item?.card?.info?.id === id);
+            if (itemToDecrease && itemToDecrease.quantity > 1) {
+                itemToDecrease.quantity -= 1;
+                localStorage.setItem("cart", JSON.stringify(state.items));
+            }
+        },
+        clearCart: (state)=>{
+            state.items = [];
+            localStorage.removeItem("cart");
+        }
+    }
+});
+const selectItemsInCart = ({ cart })=>cart?.items;
+const selectTotalPrice = ({ cart })=>{
+    return cart?.items.reduce((total, cartItem)=>{
+        return total + cartItem.item?.card?.info?.price * cartItem.quantity;
+    }, 0);
+};
+const { addToCart, removeFromCart, increaseItemQuantity, decreaseItemQuantity, clearCart } = cartSlice.actions;
+exports.default = cartSlice.reducer;
+
+},{"@reduxjs/toolkit":"fuua8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6A5Ux":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _toolkit = require("@reduxjs/toolkit");
+var _cartSlice = require("./cartSlice");
+var _cartSliceDefault = parcelHelpers.interopDefault(_cartSlice);
+var _appSlices = require("../features/app/appSlices");
+var _appSlicesDefault = parcelHelpers.interopDefault(_appSlices);
+const appStore = (0, _toolkit.configureStore)({
+    reducer: {
+        cart: (0, _cartSliceDefault.default),
+        app: (0, _appSlicesDefault.default)
+    }
+});
+exports.default = appStore;
+
+},{"@reduxjs/toolkit":"fuua8","./cartSlice":"5RXlr","../features/app/appSlices":"48GNY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jSzqV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$458a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$458a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRedux = require("react-redux");
+var _cartItems = require("../components/CartItems");
+var _cartItemsDefault = parcelHelpers.interopDefault(_cartItems);
+var _orderSummary = require("../components/OrderSummary");
+var _orderSummaryDefault = parcelHelpers.interopDefault(_orderSummary);
+var _cartSlice = require("../utils/cartSlice");
 var _s = $RefreshSig$();
 const Cart = ()=>{
     _s();
-    const items = (0, _reactRedux.useSelector)((store)=>store.cart.items);
-    const [cartitems, setCartitems] = (0, _react.useState)(items);
+    const cartItems = (0, _reactRedux.useSelector)((0, _cartSlice.selectItemsInCart));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "w-6/12 m-auto",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemlistDefault.default), {
-            data: cartitems
-        }, void 0, false, {
-            fileName: "src/components/Cart.js",
-            lineNumber: 9,
-            columnNumber: 9
+        className: " w-9/12 m-auto py-8 pb-16 ",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "min-h-[60vh] pb-8 md:flex gap-8",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartItemsDefault.default), {}, void 0, false, {
+                    fileName: "src/mainpages/Cart.js",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined),
+                cartItems && cartItems.length !== 0 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _orderSummaryDefault.default), {}, void 0, false, {
+                    fileName: "src/mainpages/Cart.js",
+                    lineNumber: 16,
+                    columnNumber: 49
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/mainpages/Cart.js",
+            lineNumber: 12,
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
-        fileName: "src/components/Cart.js",
-        lineNumber: 8,
-        columnNumber: 12
+        fileName: "src/mainpages/Cart.js",
+        lineNumber: 10,
+        columnNumber: 5
     }, undefined);
 };
-_s(Cart, "EaWpxI+AQGujhxpzv6shSkDWgpA=", false, function() {
+_s(Cart, "sOGYiwJY+kD+ABxufRt7JbvggIE=", false, function() {
     return [
         (0, _reactRedux.useSelector)
     ];
@@ -41200,12 +43512,419 @@ exports.default = Cart;
 var _c;
 $RefreshReg$(_c, "Cart");
 
-  $parcel$ReactRefreshHelpers$ad24.postlude(module);
+  $parcel$ReactRefreshHelpers$458a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"62sf7","../utils/constant":"6mqGZ","./Itemlist":"6Wvye","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8tKbk":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-redux":"62sf7","../components/CartItems":"fu7yu","../components/OrderSummary":"3AlnY","../utils/cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fu7yu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1824 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1824.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRedux = require("react-redux");
+var _constant = require("../utils/constant");
+var _cartSlice = require("../utils/cartSlice");
+var _s = $RefreshSig$();
+const CartItems = ()=>{
+    _s();
+    const cartItems = (0, _reactRedux.useSelector)((0, _cartSlice.selectItemsInCart));
+    console.log(cartItems);
+    const dispatch = (0, _reactRedux.useDispatch)();
+    const removeItem = (id)=>dispatch((0, _cartSlice.removeFromCart)({
+            id
+        }));
+    const decreaseQuantity = (id)=>dispatch((0, _cartSlice.decreaseItemQuantity)({
+            id
+        }));
+    const increaseQuantity = (id)=>dispatch((0, _cartSlice.increaseItemQuantity)({
+            id
+        }));
+    if (cartItems.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "flex grow min-h-[60vh] justify-center items-center",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+            children: "Your cart is empty!"
+        }, void 0, false, {
+            fileName: "src/components/CartItems.js",
+            lineNumber: 20,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/CartItems.js",
+        lineNumber: 19,
+        columnNumber: 11
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+        className: "basis-7/12",
+        children: cartItems && cartItems.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                className: "flex gap-4 justify-between max-w-[600px] my-4",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "basis-3/12",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "w-full h-full md:h-auto object-cover block rounded-md aspect-square",
+                            src: (0, _constant.CDN_LINK) + item?.item?.card?.info?.imageId,
+                            alt: ""
+                        }, void 0, false, {
+                            fileName: "src/components/CartItems.js",
+                            lineNumber: 36,
+                            columnNumber: 19
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/CartItems.js",
+                        lineNumber: 34,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "basis-9/12",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "text-lg font-semibold",
+                                children: item?.item?.card?.info?.name
+                            }, void 0, false, {
+                                fileName: "src/components/CartItems.js",
+                                lineNumber: 43,
+                                columnNumber: 19
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "hidden md:block",
+                                children: item?.item?.card?.info?.description?.length > 50 ? item?.item?.card?.info?.description.slice(0, 50) + "..." : item?.item?.card?.info?.description
+                            }, void 0, false, {
+                                fileName: "src/components/CartItems.js",
+                                lineNumber: 47,
+                                columnNumber: 19
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "my-2 space-x-1",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "font-semibold",
+                                        children: [
+                                            "\u20B9",
+                                            parseFloat((item?.quantity * parseFloat(item?.item?.card?.info?.price / 100)).toFixed(2))
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/CartItems.js",
+                                        lineNumber: 54,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        className: "text-gray-800 font-normal",
+                                        children: [
+                                            "(",
+                                            item?.item?.card?.info?.price / 100,
+                                            " \xd7 ",
+                                            item?.quantity,
+                                            ")"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/CartItems.js",
+                                        lineNumber: 62,
+                                        columnNumber: 21
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/CartItems.js",
+                                lineNumber: 53,
+                                columnNumber: 19
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "flex justify-between items-center mt-2",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        className: "flex items-center",
+                                        children: [
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                onClick: ()=>decreaseQuantity(item?.item?.card?.info?.id),
+                                                disabled: item?.quantity === 1,
+                                                className: "bg-orange-500 disabled:bg-orange-500/50 disabled:cursor-not-allowed text-white font-bold w-8 h-8 rounded-md",
+                                                children: "-"
+                                            }, void 0, false, {
+                                                fileName: "src/components/CartItems.js",
+                                                lineNumber: 70,
+                                                columnNumber: 23
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                                className: "font-bold w-8 h-8 flex justify-center items-center",
+                                                children: item?.quantity
+                                            }, void 0, false, {
+                                                fileName: "src/components/CartItems.js",
+                                                lineNumber: 79,
+                                                columnNumber: 23
+                                            }, undefined),
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                onClick: ()=>increaseQuantity(item?.item?.card?.info?.id),
+                                                className: "bg-orange-500 text-white font-bold w-8 h-8 rounded-md",
+                                                children: "+"
+                                            }, void 0, false, {
+                                                fileName: "src/components/CartItems.js",
+                                                lineNumber: 82,
+                                                columnNumber: 23
+                                            }, undefined)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/CartItems.js",
+                                        lineNumber: 69,
+                                        columnNumber: 21
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                        onClick: ()=>removeItem(item?.item?.card?.info?.id),
+                                        className: "border border-orange-500 text-xs font-semibold text-orange-500 p-2 px-4 rounded-md",
+                                        children: "Remove"
+                                    }, void 0, false, {
+                                        fileName: "src/components/CartItems.js",
+                                        lineNumber: 90,
+                                        columnNumber: 21
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/CartItems.js",
+                                lineNumber: 68,
+                                columnNumber: 19
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/CartItems.js",
+                        lineNumber: 42,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, item?.item?.card?.info?.id, true, {
+                fileName: "src/components/CartItems.js",
+                lineNumber: 30,
+                columnNumber: 15
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/CartItems.js",
+        lineNumber: 26,
+        columnNumber: 9
+    }, undefined);
+};
+_s(CartItems, "ClsVU7OzYQ50hVvtHIih2dVFL+s=", false, function() {
+    return [
+        (0, _reactRedux.useSelector),
+        (0, _reactRedux.useDispatch)
+    ];
+});
+_c = CartItems;
+exports.default = CartItems;
+var _c;
+$RefreshReg$(_c, "CartItems");
+
+  $parcel$ReactRefreshHelpers$1824.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-redux":"62sf7","../utils/constant":"6mqGZ","../utils/cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3AlnY":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$33f8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$33f8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRedux = require("react-redux");
+var _cartSlice = require("../utils/cartSlice");
+var _s = $RefreshSig$();
+const OrderSummary = ()=>{
+    _s();
+    const cartItems = (0, _reactRedux.useSelector)((0, _cartSlice.selectItemsInCart));
+    const totalPrice = (0, _reactRedux.useSelector)((0, _cartSlice.selectTotalPrice));
+    console.log(totalPrice);
+    const discount = totalPrice * 0.1 / 100;
+    const deliveryCharges = totalPrice * 0.05 / 100;
+    const totalAmt = totalPrice / 100 + deliveryCharges - discount;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "basis-5/12 h-fit sticky top-40 p-8 rounded-md border shadow-md my-8 md:m-0",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-xl font-bold border-b pb-4",
+                children: "Order Summary"
+            }, void 0, false, {
+                fileName: "src/components/OrderSummary.js",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "py-4 text-lg space-y-4 border-b",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-between items-center font-semibold",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "font-normal",
+                                children: [
+                                    "Price (",
+                                    cartItems.length,
+                                    " items)"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/OrderSummary.js",
+                                lineNumber: 22,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: [
+                                    "\u20B9 ",
+                                    totalPrice / 100
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/OrderSummary.js",
+                                lineNumber: 23,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/OrderSummary.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-between items-center font-semibold",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "font-normal",
+                                children: "Discount (10%)"
+                            }, void 0, false, {
+                                fileName: "src/components/OrderSummary.js",
+                                lineNumber: 26,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: [
+                                    " - \u20B9 ",
+                                    parseFloat(discount).toFixed(2)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/OrderSummary.js",
+                                lineNumber: 27,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/OrderSummary.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "flex justify-between items-center font-semibold",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                className: "font-normal",
+                                children: "Delivery charges (5%)"
+                            }, void 0, false, {
+                                fileName: "src/components/OrderSummary.js",
+                                lineNumber: 30,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: [
+                                    "+ \u20B9 ",
+                                    parseFloat(deliveryCharges).toFixed(2)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/OrderSummary.js",
+                                lineNumber: 31,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/OrderSummary.js",
+                        lineNumber: 29,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        className: "text-sm my-2",
+                        children: [
+                            "You'll save \u20B9",
+                            parseFloat(discount).toFixed(2),
+                            " on this order \uD83C\uDF89"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/OrderSummary.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/OrderSummary.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "py-4 border-b",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "md:flex justify-between items-center font-bold text-lg md:text-2xl",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            children: "Total Amount"
+                        }, void 0, false, {
+                            fileName: "src/components/OrderSummary.js",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            className: "text-orange-500",
+                            children: [
+                                "\u20B9 ",
+                                parseFloat(totalAmt).toFixed(2)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/OrderSummary.js",
+                            lineNumber: 42,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/OrderSummary.js",
+                    lineNumber: 40,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/OrderSummary.js",
+                lineNumber: 39,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                className: "w-full block mt-4 uppercase font-bold text-lg bg-orange-600 text-white text-center p-4 rounded-md",
+                children: "Place order"
+            }, void 0, false, {
+                fileName: "src/components/OrderSummary.js",
+                lineNumber: 48,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/OrderSummary.js",
+        lineNumber: 16,
+        columnNumber: 5
+    }, undefined);
+};
+_s(OrderSummary, "jUCRiNJseDnn5jMJ/U68nelQUJo=", false, function() {
+    return [
+        (0, _reactRedux.useSelector),
+        (0, _reactRedux.useSelector)
+    ];
+});
+_c = OrderSummary;
+exports.default = OrderSummary;
+var _c;
+$RefreshReg$(_c, "OrderSummary");
+
+  $parcel$ReactRefreshHelpers$33f8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-redux":"62sf7","../utils/cartSlice":"5RXlr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8tKbk":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3c73 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41327,11 +44046,11 @@ $RefreshReg$(_c, "Collections");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../utils/constant":"6mqGZ","react":"21dqq","./RestaurentMenu":"cNtZy","./Rescard":"dIeqo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"hsmcH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5afe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","../utils/constant":"6mqGZ","react":"21dqq","./RestaurentMenu":"cNtZy","./Rescard":"dIeqo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"73XJg":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$60f2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5afe.prelude(module);
+$parcel$ReactRefreshHelpers$60f2.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -41342,12 +44061,12 @@ const Login = ()=>{
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
             children: "login"
         }, void 0, false, {
-            fileName: "src/components/Login.js",
+            fileName: "src/mainpages/Login.js",
             lineNumber: 4,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
-        fileName: "src/components/Login.js",
+        fileName: "src/mainpages/Login.js",
         lineNumber: 3,
         columnNumber: 5
     }, undefined);
@@ -41357,7 +44076,7 @@ exports.default = Login;
 var _c;
 $RefreshReg$(_c, "Login");
 
-  $parcel$ReactRefreshHelpers$5afe.postlude(module);
+  $parcel$ReactRefreshHelpers$60f2.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -41375,14 +44094,14 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const Footer = ()=>{
     const year = new Date().getFullYear();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex text-lg  flex-wrap justify-center items-center  rounded-md bg-blue-200 p-2",
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("footer", {
+        className: "mt-auto flex text-lg  flex-wrap justify-center items-center  rounded-md bg-blue-200 p-4",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                 children: "Made with love \u2764\uFE0F by "
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 6,
+                lineNumber: 7,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -41397,12 +44116,12 @@ const Footer = ()=>{
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Footer.js",
-                    lineNumber: 13,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 8,
+                lineNumber: 9,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -41413,7 +44132,7 @@ const Footer = ()=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
@@ -41425,25 +44144,25 @@ const Footer = ()=>{
                             children: "Red"
                         }, void 0, false, {
                             fileName: "src/components/Footer.js",
-                            lineNumber: 21,
+                            lineNumber: 22,
                             columnNumber: 28
                         }, undefined),
                         " Food"
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Footer.js",
-                    lineNumber: 21,
+                    lineNumber: 22,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 20,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Footer.js",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 5
     }, undefined);
 };
@@ -41457,6 +44176,35 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequire11e5")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dzzXp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ee4c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ee4c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _body = require("../components/Body");
+var _bodyDefault = parcelHelpers.interopDefault(_body);
+const Home = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+        fileName: "src/mainpages/Home.js",
+        lineNumber: 4,
+        columnNumber: 12
+    }, undefined);
+};
+_c = Home;
+exports.default = Home;
+var _c;
+$RefreshReg$(_c, "Home");
+
+  $parcel$ReactRefreshHelpers$ee4c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../components/Body":"8yaV8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequire11e5")
 
 //# sourceMappingURL=index.7271efb6.js.map

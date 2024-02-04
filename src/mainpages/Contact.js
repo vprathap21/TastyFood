@@ -1,6 +1,7 @@
 const Contact = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 items-center my-4 mx-20">
+    
+    <div className="grid grid-cols-1 sm:grid-cols-2 items-center  md:mx-20 min-h-full">
       <div>
         <img
           className=" w-[70%] ml-14 items-center ju"

@@ -2,7 +2,8 @@
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div className="flex text-lg  flex-wrap justify-center items-center  rounded-md bg-blue-200 p-2">
+  
+    <footer className="mt-auto flex text-lg  flex-wrap justify-center items-center  rounded-md bg-blue-200 p-4">
       <span>Made with love ❤️ by </span>
 
       <a
@@ -20,7 +21,7 @@ const Footer = () => {
       <strong>
         <span className=""><span className="px text-red-700">Red</span> Food</span>
       </strong>
-    </div>
+    </footer>
   );
 };
 

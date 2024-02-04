@@ -1,11 +1,11 @@
 import { useDispatch } from "react-redux";
 import { CDN_LINK } from "../utils/constant";
-import { addItem } from "../utils/cartSlice";
+import { addToCart } from "../utils/cartSlice";
 
 const ItemList = ({ data }) => {
   const dispatch = useDispatch();
   const addHandler = (item) => {
-    dispatch(addItem(item));
+    dispatch(addToCart(item));
   }
   return (
     <div>
@@ -29,8 +29,8 @@ const ItemList = ({ data }) => {
                 className="rounded-lg "
                 src={CDN_LINK + item.card.info.imageId}
               ></img>
-               <div className="">
-                <button className="p-2 bg-green-200 rounded-md" onClick={() => addHandler(item)}>Add +</button>
+               <div className="items-center text-center ">
+                <button className=" text-center  p-1 px-2 md:px-4  ms:p-2 bg-green-200 hover:bg-green-500 rounded-md" onClick={() => addHandler(item)}>Add </button>
               </div>
             </div>
           </div>

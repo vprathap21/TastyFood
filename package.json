@@ -4,7 +4,8 @@
   "description": "simple food ordering app",
   "scripts": {
     "start": "parcel index.html",
-    "test": "jest"
+    "test": "jest",
+    "build": "parcel build index.html"
   },
   "author": "prathp",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
     "@reduxjs/toolkit": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

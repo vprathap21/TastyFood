@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import User from "./User";
+import User from "../components/User";
 import {useState} from "react";
 const About = () => {
   const [show, setShow] = useState(false);
@@ -31,7 +31,7 @@ const About = () => {
         )}
       </div>
       
-      <div className="mt-8  grid grid-cols-1 sm:grid-cols-2 sm:mt-10">
+      <div className="mt-8  grid grid-cols-1 md:grid-cols-2 md:mt-10">
         <div className="">
           {" "}
           <h1 className="font-bold ml-10 text-gray-600 text-4xl sm:text-7xl sm:sm:mt-20 sm:pt-20">Welcome to Our </h1>

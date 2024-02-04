@@ -2,28 +2,38 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import About from "./mainpages/About";
+import Contact from "./mainpages/Contact";
 import Error from "./components/Error";
 import RestaurentMenu from "./components/RestaurentMenu";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
-import Cart from "./components/Cart";
+import Cart from "./mainpages/Cart";
 import Collections from "./components/Collections";
-import Login from "./components/Login";
+import Login from "./mainpages/Login";
 import Footer from "./components/Footer";
+import useOnlinestatus from "./utils/useOnliestatus";
+import Home from "./mainpages/Home";
 const Applayet = () => {
-  return (
+  const onlinestatus = useOnlinestatus();
+  return onlinestatus? (
     <Provider store={appStore}>
-      <div className="app flex flex-col h-screen bg-gray-50 font-serif box-border">
+      <div className="app flex flex-col min-h-screen bg-gray-50 font-serif box-border">
         <Header />
         <Outlet />
         <Footer/>
       </div>
     </Provider>
-  );
+  ):(
+    <div className=' justify-center items-center '>
+          <h1 className='text-4xl font-bold'>Oops! Connection lost</h1>
+          <p>
+            Looks like you're offline, please check your internet connection.
+          </p>
+        </div>
+  )
 };
 const router = createBrowserRouter([
   {
@@ -32,7 +42,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: <Home/>
       },
       {
         path: "/about",

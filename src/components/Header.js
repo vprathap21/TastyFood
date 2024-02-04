@@ -1,73 +1,152 @@
 import { LOGO } from "../utils/constant";
-import { useContext, useState } from "react";
+import { useState } from "react";
+import {
+  Bars3Icon,
+  BuildingOfficeIcon,
+  HomeIcon,
+  PhoneIcon,
+  ShoppingCartIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
-import useOnlinestatus from "../utils/useOnliestatus";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleMenu } from "../features/app/appSlices";
 
 const Header = () => {
   const [btn, setbtn] = useState("Login");
-  const onlinestatus = useOnlinestatus();
+  const { isMenuOpen } = useSelector((store) => store.app);
+  const dispatch = useDispatch();
+  const handleToggleMenu = () => dispatch(toggleMenu());
   const cartitems = useSelector((store) => store.cart.items);
-  console.log(cartitems);
+  const loginHandle =() => {
+    if(btn === "Login"){
+      setbtn("Logout");
+    }else{
+      setbtn("Login");
+    }
+  }
   return (
-    <div className="flex justify-between bg-white  shadow-lg">
-      <div className="pl-2">
-        <Link to={"/"}>
-          <img className=" w-12 sm:w-24" src={LOGO}></img>
-        </Link>
-      </div>
-      <div className="flex items-center">
-        <ul className="flex sm:p-4 mx-4">
-          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500  hover:text-orange-500">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500">
-            <Link to="/about">About</Link>
-          </li>
-          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500">
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li className="sm:px-4 sm:text-xl font-bold text-gray-500 hover:text-orange-500">
-            <Link to="/cart">
-              <div class="relative pb-2 ">
-                <div class="t-0 absolute left-4 bottom-5">
-                  <p class="flex h-1 w-1 sm:h-2 sm:w-2 items-center justify-center rounded-full bg-red-500 p-2 text-xs text-white">
-                    {cartitems.length}
-                  </p>
-                </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="file: h-6 w-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                  />
-                </svg>
-              </div>
+    <header className="sticky w-full  bg-white z-20 px-4 border-b shadow-sm border-gray-200">
+      <div className="container-max flex justify-between items-center">
+        <div className="flex items-center gap-2 md:gap-4">
+          <Link to={"/"}>
+            <img className=" w-12 sm:w-24 hover:scale-105" src={LOGO}></img>
+          </Link>
+        </div>
+
+        <ul className="text-zinc-700 ml-auto gap-2 md:gap-4 items-center hidden md:flex">
+          <li>
+            <Link
+              to="/"
+              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+            >
+              <HomeIcon className="w-5 h-5 " />{" "}
+              <p className="hidden md:block">Home</p>
             </Link>
           </li>
-          <li className="px-2 sm:text-xl sm:px-4 font-bold text-gray-500 hover:text-orange-500">
-            <Link to={"/login"}>
-              <button
-                className="login"
-                onClick={() => {
-                  btn === "Login" ? setbtn("Logout") : setbtn("Login");
-                }}
-              >
-                {btn}
-              </button>
+          <li>
+            <Link
+              to="/about"
+              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+            >
+              <BuildingOfficeIcon className="w-5 h-5" />{" "}
+              <p className="hidden md:block">About</p>
             </Link>
           </li>
-          {/* <li className="w-1">{onlinestatus ? "" : "🔴️"}</li> */}
+          <li>
+            <Link
+              to="/contact"
+              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+            >
+              <PhoneIcon className="w-5 h-5 " />{" "}
+              <p className="hidden md:block">Contact</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/cart"
+              className="p-2 relative md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+            >
+              <ShoppingCartIcon className="w-5 h-5 " />{" "}
+              <p className="hidden md:block">Cart</p>
+              {
+                <p className="absolute top-1 right-1 bg-orange-500 text-white flex justify-center items-center w-4 h-4 text-xs rounded-full">
+                  {cartitems.length}
+                </p>
+              }
+            </Link>
+          </li>
+          <li>
+            <Link
+              to=""
+              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+            >
+              
+              <p className="hidden md:block" onClick={loginHandle}>{btn}</p>
+              {btn==="Logout"?<UserCircleIcon className="w-5 h-5" />:""}
+            </Link>
+          </li>
         </ul>
+
+        {!isMenuOpen ? null : (
+          <div className="shadow-lg transition-all md:hidden  absolute top-full right-0 bg-white h-screen p-4 px-8">
+            <>
+              <ul className="text-zinc-700 space-y-4">
+                <li>
+                  <Link
+                    to="/"
+                    className="p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold rounded-md flex items-center gap-2"
+                  >
+                    <HomeIcon className="w-4 h-4 " /> <p>Home</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/about"
+                    className="p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold rounded-md flex items-center gap-2"
+                  >
+                    <BuildingOfficeIcon className="w-4 h-4 " /> <p>About</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/contact"
+                    className="p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold  flex items-center gap-2"
+                  >
+                    <PhoneIcon className="w-4 h-4 " /> <p>Contact</p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/cart"
+                    className="p-2 relative md:px-4 text-gray-500 hover:text-orange-500 font-bold rounded-md flex items-center gap-2"
+                  >
+                    <ShoppingCartIcon className="w-4 h-4 " /> <p>Cart</p>
+                    {
+                      <p className="absolute top-1 right-1 bg-orange-500 text-white flex justify-center items-center w-4 h-4 text-xs rounded-full">
+                        {cartitems.length}
+                      </p>
+                    }
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to=""
+                    className="p-2 md:px-4 text-gray-500 hover:text-orange-500 font-bold  flex items-center gap-2"
+                  >
+                    <UserCircleIcon className="w-5 h-5" /> <p>Login</p>
+                  </Link>
+                </li>
+              </ul>
+            </>
+          </div>
+        )}
+
+        <button className="block md:hidden" onClick={handleToggleMenu}>
+          <Bars3Icon className="w-6 h-6" />
+        </button>
       </div>
-    </div>
+    </header>
   );
 };
 

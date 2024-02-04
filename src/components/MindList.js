@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { CDN_LINK } from "./constant";
+import { CDN_LINK } from "../utils/constant";
 import { useRef } from "react";
-
-const Mind = ({ data }) => {
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+const MindList = ({ data }) => {
   const list = data.card.card.gridElements.infoWithStyle.info;
   const scrollContainerRef = useRef(null);
 
@@ -23,46 +23,17 @@ const Mind = ({ data }) => {
       <div className="flex justify-between">
         <h1 className="text-xl  font-bold ">Prathap What's on your mind?</h1>
         <div className="flex px-1">
-          {" "}
-          {/* Left Arrow */}
           <div
             className="sm:right-10 flex px-2  cursor-pointer"
             onClick={handleScrollLeft}
           >
-            <div className="w-4 h-4 sm:w-8 sm:h-8 bg-gray-500 rounded-full flex items-center justify-center text-white">
-              <svg
-                className="w-3 h-3 sm:w-4 sm:h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 19l-7-7 7-7"
-                ></path>
-              </svg>
+            <div className="w-4 h-4 sm:w-8 sm:h-8 bg-gray-400 rounded-full flex items-center justify-center text-white">
+              <ChevronRightIcon className="w-3 h-3  sm:w-5 sm:h-5 transform rotate-180" />
             </div>
           </div>
-          {/* Right Arrow */}
           <div className="flex  cursor-pointer" onClick={handleScrollRight}>
-            <div className="w-4 h-4 sm:w-8 sm:h-8 bg-gray-500 rounded-full flex items-center justify-center text-white">
-              <svg
-                className="w-3 h-3  sm:w-4 sm:h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
+            <div className="w-4 h-4 sm:w-8 sm:h-8 bg-gray-400 rounded-full flex items-center justify-center text-white">
+              <ChevronLeftIcon className="w-3 h-3  sm:w-5 sm:h-5 transform rotate-180" />
             </div>
           </div>
         </div>
@@ -98,4 +69,4 @@ function collectionId(s) {
   return numbersOnly.pop();
 }
 
-export default Mind;
+export default MindList;
