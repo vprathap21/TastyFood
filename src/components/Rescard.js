@@ -9,7 +9,7 @@ const Rescard = (props) => {
   const s = "  ";
   return (
     <>
-    <div className="p-2  m-1 rounded-lg shadow-2xl ease-in-out transition hover:scale-90 bg-white">
+    <div className="p-2 m-2 md:m-4 rounded-lg  ease-in-out transition hover:scale-90 md:shadow-2xl">
       <div className="overlay-container">
         <img
           className=" object-cover h-[185px] sm:h-[221px]  rounded-xl shadow-inner  w-full"

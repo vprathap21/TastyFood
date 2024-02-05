@@ -7,8 +7,9 @@ import {
 } from "@heroicons/react/20/solid";
 import Mind from "./MindList";
 import Shimmer from "./Shimmer";
+import axios from "axios";
 import useOnlinestatus from "../utils/useOnliestatus";
-
+import { generateProxyUrl, PROXY_CORS} from "../utils/constant";
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState([]);
   const [filleterdrestraunt, setfilleterdrestraunt] = useState([]); //listofRestaurant.filter((Data) => Data.info.avgRating > 4.5)
@@ -19,27 +20,37 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
-  const fetchData = async () => {
-    const data1 = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json1 = await data1.json();
-    console.log(json1.data)
-    const data2 = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json2 = await data2.json();
-    let listofRestaurants =
-      json1.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-    const merge = [
-      ...listofRestaurants,
-      ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
-    ];
-    setminddata(json2.data.cards[0]);
-    setlistofRestaurant(merge);
-    setfilleterdrestraunt(merge);
-  };
+  async function fetchData() {
+    try {
+      const response = await axios.get('https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+      console.log(response.data);
+      setminddata(response.data.cards[0]);
+      setlistofRestaurant(response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+      setfilleterdrestraunt(response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+  // const fetchData = async () => {
+  //   const resource = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  //   );
+  //   const resource2 = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  //   );
+  //   const data1 = await fetch(resource);
+  //   const json1 = await data1.json();
+  //   console.log(json1.data)
+  //   const data2 = await fetch(resource2);
+  //   const json2 = await data2.json();
+  //   let listofRestaurants =
+  //     json1.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+  //   const merge = [
+  //     ...listofRestaurants,
+  //     ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
+  //   ];
+  //   setminddata(json2.data.cards[0]);
+  //   setlistofRestaurant(merge);
+  //   setfilleterdrestraunt(merge);
+  // };
 
   if (!onlinestatus) return <h1>it seems like your in offline!!!</h1>;
   if (listofRestaurant.length === 0) {
@@ -61,7 +72,7 @@ const Body = () => {
     <div className="sm:px-10 my-2 ">
       <Mind data={minddata} />
       <div className="flex items-center mx-2 md:w-6/12 md:m-auto">
-        <div className=" w-3/4  py-10 ">
+        <div className=" w-3/4  py-10 p-4 ">
           <form>
             <div class="relative">
               <MagnifyingGlassIcon className="w-6 h-6 text-gray-400 absolute top-2 md:top-3 md:left-2 p-1 md:p-0 " />
@@ -106,7 +117,7 @@ const Body = () => {
       </div>
 
       <div className="  ">
-        <h1 className=" ml-2 md:ml-20  text-2xl font-bold mb-4 text-gray-700">Restaurants near you</h1>
+        <h1 className=" ml-3 md:ml-24  text-2xl font-bold mb-4 text-gray-700">Restaurants near you</h1>
         <div className="  sm:w-11/12 sm:m-auto  grid grid-cols-2  sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4">
           {filleterdrestraunt.map((Data) => {
             return (

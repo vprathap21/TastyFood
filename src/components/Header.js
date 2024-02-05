@@ -26,11 +26,11 @@ const Header = () => {
     }
   }
   return (
-    <header className="sticky w-full  bg-white z-20 px-4 border-b shadow-sm border-gray-200">
+    <header className="sticky   bg-white z-20 px-2 md:px-4 border-b shadow-sm border-gray-200">
       <div className="container-max flex justify-between items-center">
         <div className="flex items-center gap-2 md:gap-4">
           <Link to={"/"}>
-            <img className=" w-12 sm:w-24 hover:scale-105" src={LOGO}></img>
+            <img className=" w-16 sm:w-24 hover:scale-105" src={LOGO}></img>
           </Link>
         </div>
 
@@ -38,7 +38,7 @@ const Header = () => {
           <li>
             <Link
               to="/"
-              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+              className="p-2 md:px-4 md:text-xl text-gray-600 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
             >
               <HomeIcon className="w-5 h-5 " />{" "}
               <p className="hidden md:block">Home</p>
@@ -47,7 +47,7 @@ const Header = () => {
           <li>
             <Link
               to="/about"
-              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+              className="p-2 md:px-4 md:text-xl text-gray-600 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
             >
               <BuildingOfficeIcon className="w-5 h-5" />{" "}
               <p className="hidden md:block">About</p>
@@ -56,7 +56,7 @@ const Header = () => {
           <li>
             <Link
               to="/contact"
-              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+              className="p-2 md:px-4 md:text-xl text-gray-600 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
             >
               <PhoneIcon className="w-5 h-5 " />{" "}
               <p className="hidden md:block">Contact</p>
@@ -65,7 +65,7 @@ const Header = () => {
           <li>
             <Link
               to="/cart"
-              className="p-2 relative md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+              className="p-2 relative md:px-4 md:text-xl text-gray-600 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
             >
               <ShoppingCartIcon className="w-5 h-5 " />{" "}
               <p className="hidden md:block">Cart</p>
@@ -79,7 +79,7 @@ const Header = () => {
           <li>
             <Link
               to=""
-              className="p-2 md:px-4 md:text-xl text-gray-500 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
+              className="p-2 md:px-4 md:text-xl text-gray-600 font-bold  hover:text-orange-500 rounded-md flex items-center gap-2"
             >
               
               <p className="hidden md:block" onClick={loginHandle}>{btn}</p>

@@ -33,3 +33,5 @@ export const options = {
     Authorization: "",
   },
 };
+export const PROXY_CORS = "https://corsproxy.org/?";
+export const generateProxyUrl = (URL) => PROXY_CORS + encodeURIComponent(URL)
