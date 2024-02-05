@@ -7,9 +7,9 @@ import {
 } from "@heroicons/react/20/solid";
 import Mind from "./MindList";
 import Shimmer from "./Shimmer";
-import axios from "axios";
 import useOnlinestatus from "../utils/useOnliestatus";
 import { generateProxyUrl, PROXY_CORS} from "../utils/constant";
+import axios from "axios";
 const Body = () => {
   const [listofRestaurant, setlistofRestaurant] = useState([]);
   const [filleterdrestraunt, setfilleterdrestraunt] = useState([]); //listofRestaurant.filter((Data) => Data.info.avgRating > 4.5)
@@ -20,37 +20,27 @@ const Body = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  async function fetchData() {
-    try {
-      const response = await axios.get('https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
-      console.log(response.data);
-      setminddata(response.data.cards[0]);
-      setlistofRestaurant(response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-      setfilleterdrestraunt(response.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  }
-  // const fetchData = async () => {
-  //   const resource = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-  //   );
-  //   const resource2 = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-  //   );
-  //   const data1 = await fetch(resource);
-  //   const json1 = await data1.json();
-  //   console.log(json1.data)
-  //   const data2 = await fetch(resource2);
-  //   const json2 = await data2.json();
-  //   let listofRestaurants =
-  //     json1.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
-  //   const merge = [
-  //     ...listofRestaurants,
-  //     ...json2.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
-  //   ];
-  //   setminddata(json2.data.cards[0]);
-  //   setlistofRestaurant(merge);
-  //   setfilleterdrestraunt(merge);
-  // };
+
+  const fetchData = async () => {
+    const resource = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const resource2 = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
+    const data1 = await axios.get(resource);
+   // const json1 = await data1.json();
+    const data2 = await axios.get(resource2);
+   // const json2 = await data2.json();
+   console.log(data1)
+    let listofRestaurants =
+      data1?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    const merge = [
+      ...listofRestaurants,
+      ...data2?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants,
+    ];
+    setminddata(data2?.data?.data?.cards[0]);
+    setlistofRestaurant(merge);
+    setfilleterdrestraunt(merge);
+  };
 
   if (!onlinestatus) return <h1>it seems like your in offline!!!</h1>;
   if (listofRestaurant.length === 0) {
@@ -74,7 +64,7 @@ const Body = () => {
       <div className="flex items-center mx-2 md:w-6/12 md:m-auto">
         <div className=" w-3/4  py-10 p-4 ">
           <form>
-            <div class="relative">
+            <div className="relative">
               <MagnifyingGlassIcon className="w-6 h-6 text-gray-400 absolute top-2 md:top-3 md:left-2 p-1 md:p-0 " />
               <input
                 type="search"

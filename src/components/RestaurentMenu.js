@@ -11,7 +11,16 @@ const RestaurentMenu = () => {
   console.log(MenuData);
   const [showindex, setshowindex] = useState(null);
   if (MenuData === null) {
-    return <Shimmer />;
+    return  <div className="  sm:w-11/12 sm:m-auto  grid grid-cols-2 mx-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4">
+    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((Data) => {
+      return (
+        <div key={Data}>
+          {" "}
+          <Shimmer />
+        </div>
+      );
+    })}
+  </div>
   }
   console.log(MenuData);
   const {
