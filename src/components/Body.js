@@ -22,28 +22,28 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const resource = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    // const resource = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    // );
     const resource2 = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    const data1 = await axios.get(resource);
+    // const data1 = await axios.get(resource);
    // const json1 = await data1.json();
     const data2 = await axios.get(resource2);
    // const json2 = await data2.json();
-   console.log(data1)
-    let listofRestaurants =
-      data1?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-    const merge = [
-      ...listofRestaurants,
-      ...data2?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants,
-    ];
+  //  console.log(data1)
+    const data =
+      data2?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+  //   const merge = [
+  //     ...listofRestaurants,
+  //     ...data2?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants,
+  //   ];
     setminddata(data2?.data?.data?.cards[0]);
-    setlistofRestaurant(merge);
-    setfilleterdrestraunt(merge);
+    setlistofRestaurant(data);
+    setfilleterdrestraunt(data);
   };
 
   if (!onlinestatus) return <h1>it seems like your in offline!!!</h1>;
-  if (listofRestaurant.length === 0) {
+  if (listofRestaurant?.length === 0) {
     return (
       <div className="  sm:w-11/12 sm:m-auto  grid grid-cols-2 mx-4 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((Data) => {

@@ -40602,21 +40602,22 @@ const Body = ()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const resource = (0, _constant.generateProxyUrl)("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        // const resource = generateProxyUrl("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        // );
         const resource2 = (0, _constant.generateProxyUrl)("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0826802&lng=80.2707184&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const data1 = await (0, _axiosDefault.default).get(resource);
+        // const data1 = await axios.get(resource);
         // const json1 = await data1.json();
         const data2 = await (0, _axiosDefault.default).get(resource2);
         // const json2 = await data2.json();
-        console.log(data1);
-        let listofRestaurants = data1?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
-        const merge = [
-            ...listofRestaurants,
-            ...data2?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-        ];
+        //  console.log(data1)
+        let listofRestaurants = data2?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        //   const merge = [
+        //     ...listofRestaurants,
+        //     ...data2?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants,
+        //   ];
         setminddata(data2?.data?.data?.cards[0]);
-        setlistofRestaurant(merge);
-        setfilleterdrestraunt(merge);
+        setlistofRestaurant(listofRestaurants);
+        setfilleterdrestraunt(listofRestaurants);
     };
     if (!onlinestatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
         children: "it seems like your in offline!!!"
@@ -48414,7 +48415,7 @@ const Collections = ()=>{
                         children: mindrestaruants[0]?.card?.card?.title
                     }, void 0, false, {
                         fileName: "src/components/Collections.js",
-                        lineNumber: 34,
+                        lineNumber: 35,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -48422,7 +48423,7 @@ const Collections = ()=>{
                         children: mindrestaruants[0]?.card?.card?.description
                     }, void 0, false, {
                         fileName: "src/components/Collections.js",
-                        lineNumber: 35,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -48430,18 +48431,18 @@ const Collections = ()=>{
                         children: mindrestaruants[0]?.card?.card?.count
                     }, void 0, false, {
                         fileName: "src/components/Collections.js",
-                        lineNumber: 36,
+                        lineNumber: 37,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
                         fileName: "src/components/Collections.js",
-                        lineNumber: 37,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Collections.js",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -48453,24 +48454,24 @@ const Collections = ()=>{
                             resData: Data.card.card
                         }, void 0, false, {
                             fileName: "src/components/Collections.js",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 15
                         }, undefined)
                     }, Data.card.card.info.id, false, {
                         fileName: "src/components/Collections.js",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 13
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Collections.js",
-                lineNumber: 40,
+                lineNumber: 41,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Collections.js",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
