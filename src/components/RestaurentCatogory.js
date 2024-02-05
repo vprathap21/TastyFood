@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ItemList from "./Itemlist";
-
+import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 const RestaurentCatogory = ({ data, showitem, setshowindex }) => {
   const onclickHandler = () => {
     setshowindex();
@@ -18,37 +18,11 @@ const RestaurentCatogory = ({ data, showitem, setshowindex }) => {
           <span className=" text-black hover:cursor-pointer">
             {showitem ? (
               <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m4.5 15.75 7.5-7.5 7.5 7.5"
-                  />
-                </svg>
+               <ChevronUpIcon className="w-6 h-6"></ChevronUpIcon>
               </div>
             ) : (
               <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
+                <ChevronDownIcon className="w-6 h-6"></ChevronDownIcon>
               </div>
             )}
           </span>

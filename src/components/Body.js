@@ -79,12 +79,12 @@ const Body = () => {
                   setfilleterdrestraunt(newlist);
                 }}
                 id="default-search"
-                class="block w-full p-2 md:p-3 md:pl-8 ps-10 text-sm text-black border border-gray-400 outline-none hover:border-orange-500 rounded-lg bg-gray-50"
+                className="block w-full p-2 md:p-3 md:pl-8 ps-10 text-sm text-black border border-gray-400 outline-none hover:border-orange-500 rounded-lg bg-gray-50"
                 placeholder="Search your restaurent..."
               />
               <button
                 type="submit"
-                class="text-white absolute end-[1PX] bottom-[1PX] bg-orange-500 hover:bg-green-700 font-medium rounded-md text-sm md:px-6 md:py-3 px-4 py-2"
+                className="text-white absolute end-[1PX] bottom-[1PX] bg-orange-500 hover:bg-green-700 font-medium rounded-md text-sm md:px-6 md:py-3 px-4 py-2"
               >
                 Search
               </button>
