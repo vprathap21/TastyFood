@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { COLLECTION_LINK1, COLLECTION_LINK2 } from "../utils/constant";
 import { useEffect, useState } from "react";
 import RestaurentCatogory from "./RestaurentMenu";
+from
 import Rescard from "./Rescard";
 const Collections = () => {
   const { id } = useParams();
