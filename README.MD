@@ -55,7 +55,7 @@ To set up the Food Ordering App project locally, follow these steps:
 
     ## Images
 
-   ![image](https://ibb.co/phwxHsX)
+   ![image](https://i.ibb.co/8Ys0yR8/Screenshot-from-2024-02-08-09-33-16.png)
    
    ![image](https://github.com/RandomThacker/random-eats/assets/141705990/73c6a271-3d13-43c6-a276-f3af1596efe6)
    
