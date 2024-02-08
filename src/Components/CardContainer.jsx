@@ -37,40 +37,13 @@ function CardContainer() {
     setFilteredData(filterData);
   };
 
-  const handlePizza = () => {
-    const filterData = data?.filter((res) =>
-      res?.info?.cuisines?.join()?.includes("Pizza")
-    );
-    setFilteredData(filterData);
-  };
-
-  const handleDesserts = () => {
-    const filterData = data?.filter((res) =>
-      res?.info?.cuisines?.join()?.includes("Desserts")
-    );
-    setFilteredData(filterData);
-  };
-
-  const handleNorthIndian = () => {
-    const filterData = data?.filter((res) =>
-      res?.info?.cuisines?.join()?.includes("North Indian")
-    );
-    setFilteredData(filterData);
-  };
-
-  const handleChinese = () => {
-    const filterData = data?.filter((res) =>
-      res?.info?.cuisines?.join()?.includes("Chinese")
-    );
-    setFilteredData(filterData);
-  };
-
   const onClickHandle = ({props}) => {
+  
     const item = props.charAt(0).toUpperCase() + props.slice(1);
     const filterData = data?.filter((res) =>
       res?.info?.cuisines?.join()?.includes(item)
     );
-    console.log(filterData)
+    
     setFilteredData(filterData);
   };
 

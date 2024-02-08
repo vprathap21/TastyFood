@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@material-tailwind/react";
 import { MENU_IMAGE } from "../Utils/constants";
 import { useDispatch } from "react-redux";
-import { addItem } from "../Utils/cartSlice";
+import { addToCart } from "../Utils/cartSlice";
 
 function Menu({ resMenu }) {
 
@@ -14,7 +14,7 @@ function Menu({ resMenu }) {
 
   const handleAddItem = (resMenu) => {
     //dispatch an action
-    dispatch(addItem(resMenu));
+    dispatch(addToCart(resMenu));
   };
 
   return (

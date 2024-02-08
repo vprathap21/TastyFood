@@ -12,8 +12,9 @@ import {
   Bars3Icon,
   XMarkIcon,
   MagnifyingGlassIcon,
+  ShoppingCartIcon,
+  UserCircleIcon,
 } from "@heroicons/react/24/outline";
-import { LOGO_URL } from "../Utils/constants";
 import { SearchContext } from "../Utils/SearchContext";
 import { useSelector } from "react-redux";
 import { useState } from "react";
@@ -53,7 +54,7 @@ const NavList = () => {
 
 export const Header =() => {
   const [openNav, setOpenNav] = useState(false);
-
+  const [btn, setbtn] = useState("Login");
   //subscribing to the store
   const cartItems = useSelector((store) => store.cart.items);
 
@@ -63,41 +64,36 @@ export const Header =() => {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
-
+  const btnhandler = () => {
+    btn === "Login" ? setbtn("Logout") : setbtn("Login");
+  }
   return (
     <Navbar className="mx-auto my-5 max-w-screen-xl px-4 py-2 bg-white">
       <div className="flex items-center justify-between text-blue-gray-900">
         <NavLink to="/">
-          <img src={LOGO_URL} className="h-[5em]" />
+          {/* <img src={LOGO_URL} className="h-[5em]" /> */}
+        
+          <span className="text-blue-900 font-bold text-4xl font-serif">Tasty</span>
+          <span className="text-blue-800 font-extrabold text-4xl font-serf">Bite</span>
         </NavLink>
         <div className="hidden lg:block">
         <NavList />
         </div>
-        <div className="hidden gap-2 lg:flex">
+        <div className="hidden gap-2 lg:flex lg:justify-center items-center">
           <NavLink to="/cart">
             <Button variant="text" size="sm" color="blue-gray">
               <Badge
                 content={cartItems.length}
                 className={cartItems.length === 0 ? "hidden" : ""}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                  />
-                </svg>
+               <ShoppingCartIcon className="h-6 w-6" />
               </Badge>
             </Button>
           </NavLink>
-          <Link to="https://github.com/RandomThacker/random-eats">
+          <Button variant="text" size="sm" color="blue-gray" onClick={btnhandler}>
+           {btn == "Login"?btn: <UserCircleIcon className="h-6 w-6" />}
+          </Button>
+          <Link to="https://github.com/vprathap21">
             <Button variant="gradient" size="sm">
               Github
             </Button>
@@ -121,20 +117,7 @@ export const Header =() => {
               content={cartItems.length}
               className={cartItems.length === 0 ? "hidden" : ""}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                />
-              </svg>
+                 <ShoppingCartIcon className="h-6 w-6" />
             </Badge>
           </Button>
         </NavLink>
@@ -143,11 +126,14 @@ export const Header =() => {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center justify-between gap-2 lg:hidden">
-          <Link to="https://github.com/RandomThacker/random-eats">
+          <Link to="https://github.com/vprathap21">
             <Button variant="gradient" className="w-[100%]">
               Github
             </Button>
           </Link>
+          <Button variant="text" size="sm" color="blue-gray" onClick={btnhandler}>
+           {btn == "Login"?btn: <UserCircleIcon className="h-6 w-6" />}
+          </Button>
         </div>
       </Collapse>
     </Navbar>

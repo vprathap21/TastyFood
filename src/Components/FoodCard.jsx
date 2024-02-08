@@ -87,8 +87,8 @@ export function FoodCard({ resData }) {
           >
             {cuisines.join(", ")}
           </Typography>
-          <div className="flex items-center ">
-          <MapPinIcon className="h-6 w-4 text-red-400 mr-1  " />
+          
+          
           <Typography
             color="gray"
             className="bg-red-1000 text-sm"
@@ -102,7 +102,7 @@ export function FoodCard({ resData }) {
            
             {locality}
           </Typography>
-          </div>
+        
          
         </CardBody>
       </Link>

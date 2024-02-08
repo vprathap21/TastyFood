@@ -1,8 +1,8 @@
 import React from "react";
 import { Button } from "@material-tailwind/react";
-import { MENU_IMAGE } from "../Utils/constants";
+import { CDN_LINK, MENU_IMAGE } from "../Utils/constants";
 import { useDispatch } from "react-redux";
-import { removeItem } from "../Utils/cartSlice";
+import { removeFromCart } from "../Utils/cartSlice";
 
 function CartMenu({ resMenu }) {
 
@@ -13,7 +13,7 @@ function CartMenu({ resMenu }) {
 
   const handleAddItem = (resMenu) => {
     //dispatch an action
-    dispatch(removeItem(resMenu));
+    dispatch(removeFromCart(resMenu));
   };
 
   return (
@@ -33,7 +33,7 @@ function CartMenu({ resMenu }) {
         </div>
         <div className="flex flex-col py-3 justify-center relative">
           <img
-            src={MENU_IMAGE + imageId}
+            src={CDN_LINK + imageId}
             className="h-32 w-32 rounded-md object-cover"
           />
         </div>

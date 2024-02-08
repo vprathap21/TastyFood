@@ -1,6 +1,6 @@
-# Random Eats
+# Tasty Bite
 
-Welcome to 'Random Eats,' a React-fueled delight that turns food ordering into a thrilling adventure! With Swiggy's real-time API, our platform adds a pinch of randomness to every meal – because why settle for ordinary when you can savor the unexpected?  🍔🛵
+Welcome to 'TastyBite,' a React-fueled delight that turns food ordering into a thrilling adventure! With Swiggy's real-time API, our platform adds a pinch of randomness to every meal – because why settle for ordinary when you can savor the unexpected?  🍔🛵
 
 
 ## 🔗 Live link
@@ -24,6 +24,7 @@ Welcome to 'Random Eats,' a React-fueled delight that turns food ordering into a
 - Styling: Tailwind CSS 
 - State Management: Redux Toolkit 
 - Package Manager: npm 
+- bundler : parcel
 - Transpiler: Babel
 - Routing: React Router
 - SwiggyAPI: Fetches restaurant and menu data for the app.
@@ -34,12 +35,12 @@ To set up the Food Ordering App project locally, follow these steps:
 
 1. Clone the repository:
     ```bash
-    [https://github.com/RandomThacker/random-eats.git](https://github.com/RandomThacker/random-eats.git)
+    [https://github.com/vprathap21/TastyFood.git](https://github.com/vprathap21/TastyFood.git)
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd random-eats
+    cd tastybite
     ```
 
 3. Install the required dependencies:
@@ -49,7 +50,7 @@ To set up the Food Ordering App project locally, follow these steps:
 
 4. Start the application:
     ```bash
-    npm run dev
+    npm start
     ```
 
     ## Images

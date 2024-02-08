@@ -4,6 +4,8 @@ import CartMenu from "../Components/CartMenu";
 import { Button } from "@material-tailwind/react";
 import { clearCart } from "../Utils/cartSlice";
 import { Link } from "react-router-dom";
+import OrderSummary from "../Components/OrderSummary";
+import CartItems from "../Components/CartItems";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
@@ -61,36 +63,42 @@ const Cart = () => {
         </div>
         <div className="flex flex-row">
           <div className="sm:w-[60%] sm:px-32 w-[100%] px-6 m-auto">
-            {cartItems.map((item) => (
+            {/* {cartItems.map((item) => (
               <CartMenu resMenu={item} />
-            ))}
+            ))} */}
+            {/* <CartItems /> */}
           </div>
-          
         </div>
         <Link to="/checkout">
           <div className="w-[100%] my-16 items-center justify-center align-middle sm:hidden flex">
-                <Button
-                  className="bg-green-500 w-[80%] "
-                  onClick={handleClearCart}
-                >
-                  Checkout
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6 sm:block hidden"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                    />
-                  </svg>
-                </Button>
-                </div>
-              </Link>
+            <Button className="bg-green-500 w-[80%] " onClick={handleClearCart}>
+              Checkout
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6 sm:block hidden"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </Button>
+          </div>
+        </Link>
+        <div className=" w-9/12 m-auto py-8 pb-16 ">
+          {/* cart details */}
+          <div className="min-h-[60vh] pb-8 md:flex gap-8">
+            {/* cart items */}
+            <CartItems />
+            {/* order summary */}
+            {cartItems && cartItems.length !== 0 && <OrderSummary />}
+          </div>
+        </div>
       </div>
     );
   }

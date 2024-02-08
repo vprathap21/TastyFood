@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+
  
 const SITEMAP = [
   {
@@ -54,8 +55,8 @@ export function Footer() {
           <Typography
             variant="small"
             className="mb-4 text-center font-normal text-gray-500 md:mb-0"
-          >
-            &copy; {currentYear} <a href="https://material-tailwind.com/">Random Thacker</a>. All
+          > Made with ❤️ by Prathap
+            &copy; {currentYear} . All
             Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-gray-100 sm:justify-center">
@@ -83,6 +84,7 @@ export function Footer() {
               </svg>
             </Typography>
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <a href="https://github.com/vprathap21">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fillRule="evenodd"
@@ -90,8 +92,10 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
+              </a>
             </Typography>
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+           
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fillRule="evenodd"
@@ -99,6 +103,7 @@ export function Footer() {
                   clipRule="evenodd"
                 />
               </svg>
+              
             </Typography>
           </div>
         </div>
