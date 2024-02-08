@@ -5,7 +5,7 @@ Welcome to 'TastyBite,' a React-fueled delight that turns food ordering into a t
 
 ## 🔗 Live link
 
-**[https://randomeats.vercel.app/](https://randomeats.vercel.app/)**
+**[https://tastybite-two.vercel.app/](https://tastybite-two.vercel.app/)**
 
 
 ## 📓Features 
@@ -55,7 +55,7 @@ To set up the Food Ordering App project locally, follow these steps:
 
     ## Images
 
-   ![image](https://github.com/RandomThacker/random-eats/assets/141705990/c6cdbc24-f4f1-4c3d-bf52-8bac64583227)
+   ![image](https://ibb.co/phwxHsX)
    
    ![image](https://github.com/RandomThacker/random-eats/assets/141705990/73c6a271-3d13-43c6-a276-f3af1596efe6)
    
